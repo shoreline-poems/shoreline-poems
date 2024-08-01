@@ -686,7 +686,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     
     var disqus_config = function () {
         var hash = window.location.hash.substr(1);  // Get the hash part of the URL
-        this.page.url = "https://lyricals.w3spaces.com/"+hash       // Set the page URL
+        this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
         this.page.identifier = hash; // Set the identifier based on the hash
     };
     
@@ -717,7 +717,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 
 
 
-    <script src="https://lyricals.w3spaces.com/entries.js"></script>
+    <script src="/entries.js"></script>
 
 <script type="module">
   /*// Import Firebase modules
@@ -826,7 +826,7 @@ function reloadDisqus() {
         DISQUS.reset({
             reload: true,
             config: function () {
-                this.page.url = "https://lyricals.w3spaces.com/"+hash       // Set the page URL
+                this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
                 this.page.identifier = hash ? hash : 'default'; // Set the identifier based on the hash
             }
         });
@@ -884,7 +884,7 @@ function reloadDisqus() {
             modalDate.innerText = `Written in ${poem.date}`;
             document.getElementById("shareButton").addEventListener("click", function() {
                 var textToCopy = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-                navigator.clipboard.writeText("https://lyricals.w3spaces.com/#"+textToCopy);
+                navigator.clipboard.writeText("https://shoreline-poems.github.io/#"+textToCopy);
                 shareButton.innerText = "Poem link copied! :D";
             });
             if (poem.context !== "") {
