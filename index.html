@@ -204,7 +204,7 @@
             animation: bob 3s infinite alternate; /* Add bobbing animation */
         }
         
-        #themeSelect, #sortSelect, #searchInput, #shareButton {
+        .animButton, #themeSelect, #sortSelect, #searchInput, #shareButton {
             background-color: var(--themessb);
             border: none;
             font-family: Pangolin, display;
@@ -215,7 +215,7 @@
 
         }
         
-        .closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+        .animButton:hover, .closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
             background-color: #a1c6e3; 
             color: white;
         }
@@ -637,7 +637,7 @@ button {
             <option value="violet">Violet</option>
         </select>
         <input type="text" id="searchInput" placeholder="Search...">
-        <button id="animation-toggle" class="closeButton" type="button">Pause Animation</button>
+        <button id="animation-toggle" class="animButton" type="button">Pause Animation</button>
     </div>
 
     <br>
@@ -830,6 +830,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const running = animation.style.animationPlayState || 'running';
       animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
       animtoggle.textContent = running === 'running' ? "Pause Animations" : "Unpause Animations";
+        alert(running);
     })
   });
 
