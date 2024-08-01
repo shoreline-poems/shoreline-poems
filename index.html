@@ -192,7 +192,7 @@
             position: relative;
         }
         
-        #closeButton {
+        .closeButton {
             background-color: var(--themessb);
             border: none;
             font-family: Pangolin, display;
@@ -215,7 +215,7 @@
 
         }
         
-        #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+        .closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
             background-color: #a1c6e3; 
             color: white;
         }
@@ -637,6 +637,7 @@ button {
             <option value="violet">Violet</option>
         </select>
         <input type="text" id="searchInput" placeholder="Search...">
+        <button id="animation-toggle" class="closeButton" type="button">Pause Animation</button>
     </div>
 
     <br>
@@ -674,7 +675,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <p class="modalContext" id="modalContext"></p>
             <p id="modalContent"></p>
             <br>
-            <button id="closeButton" onclick="closeModal()"><h2>Close</h2></button>
+            <button class="closeButton" onclick="closeModal()"><h2>Close</h2></button>
             <br>
             <br><br>
         </div></div>
@@ -821,7 +822,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });*/
 
+  /* Toggle Animations */
+  const animtoggle = document.getElementById('animation-toggle');
+  animtoggle.addEventListener('click', () => {
+    const animations = document.querySelectorAll('[data-animation');
+    animations.forEach(animation => {
+      const running = animation.style.animationPlayState || 'running';
+      animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
+      animtoggle.textContent = running === 'running' ? "Pause Animations" : "Unpause Animations";
+    })
+  });
 
+    
 function reloadDisqus() {
         var hash = window.location.hash.substr(1);  // Get the hash part of the URL
         DISQUS.reset({
