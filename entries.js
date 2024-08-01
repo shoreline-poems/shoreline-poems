@@ -1436,7 +1436,7 @@ It’s at the ledge of death that life is entranced.
                 `
             },
             {
-                title: "Style!",
+                title: "Your Own Style!",
                 date: "August 2023",
                 context: "This one’s about the fact that you shouldn’t care what others think of you. Be proud of your own style! I’m happy to announce that my pronouns are they/them! Hehe.",
                 content: `
@@ -1505,7 +1505,7 @@ Be yourself, your own style.
                 `
             },
             {
-                title: "I’m…",
+                title: "On Drug Addiction",
                 date: "August 2023",
                 context: "Treading into scary territory… this one’s about drug addiction…",
                 content: `
@@ -3342,7 +3342,7 @@ Yet still he weeps and promises vengeance.
 His burning hope is our source of light, 
 But deep down, we know we won't win this fight.
 
-He's written books with pantaking effort, 
+He's written books with painstaking effort, 
 To "undo the damage they've done, forever." 
 He wants to rescue every Jew, 
 For atter all, "we're human too”. 
@@ -3771,7 +3771,7 @@ I don't like this sense of guilt, it's only weighing me down.
 
 I don't like how the roots of my past cause me to trip, 
 I'm the one holding the dagger, but it's like I'm losing my grip. 
-Yet it no longer hurts whert I'm stabbed by its tip.
+Yet it no longer hurts when I'm stabbed by its tip.
 
 Hope is deadly when it turns to blind optimism, 
 Selflessness is deadly when it turns to masochism. 
