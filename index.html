@@ -828,7 +828,12 @@ window.addEventListener('DOMContentLoaded', () => {
   //const animtoggle = document.getElementById('animation-toggle');
   //animtoggle.addEventListener('click', () => {
 function pauseAnimations() {
-    
+        var sRoot = document.querySelector(':root');
+        const animToggleVal = sRoot.style.getPropertyValue('--animationToggle');
+        if (animToggleVal == '1') {
+            sRoot.style.setProperty('--animationToggle', '0');
+        }
+        else {sRoot.style.setProperty('--animationToggle', '1');}
     }
   //});
 
