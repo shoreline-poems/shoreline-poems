@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you shouldn't be here lol</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hihi, you aren't supposed to be here. Go away. shoo!! <br>-page ghost :]</h1>
+    <ul id="poemList"></ul>
+
+<script src="entries.js"></script>
+    <script>
+       
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the ul element where we'll populate the list of poem titles
+            const poemList = document.getElementById("poemList");
+
+            // Iterate through each poem object in the poems array and create list items with hyperlinks
+            poems.forEach(poem => {
+                // Create a lowercase and formatted version of the title for the URL
+                const lowercaseTitle = poem.title.toLowerCase().replace(/\s+/g, '_').replace(/[^\w\s]/gi, '');
+
+                // Create a list item
+                const listItem = document.createElement("li");
+
+                // Create a hyperlink
+                const link = document.createElement("a");
+                link.href = `https://lyricals.w3spaces.com/#${lowercaseTitle}`;
+                link.textContent = poem.title;
+
+                // Append the hyperlink to the list item
+                listItem.appendChild(link);
+
+                // Append the list item to the unordered list
+                poemList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>

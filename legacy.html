@@ -1,0 +1,700 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="b-vt1w_yCEQFSK4Zrq0ZmTgCmpj1nkWhK_LXgNK89NU" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Shoreline (Legacy)</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: #e6fcf7;
+            font-family: Pangolin, display;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: top;
+            height: 100vh;
+        }
+
+        h1 {
+            animation: bob 5s infinite alternate;
+        }
+
+        h6 {
+            animation: h6y 3s infinite alternate;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .poem-card {
+            width: 70px; /* Adjust button width */
+            height: 60px; /* Adjust button height */
+            background-color: lightgreen;
+            border: 1px solid #ccc;
+            border-radius: 60px;
+            padding: 10px;
+            margin: 10px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            display: inline-grid;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            animation: bob 3s infinite alternate; /* Add bobbing animation */
+            justify-content: center;
+        }
+
+        #poemContainer {
+            display: inline-table;
+        }
+
+        @keyframes bob {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes ghostFloat {
+            0% {
+                transform: translateX(46vw);
+            }
+            100% {
+                transform: translateX(46vw);
+            }
+        }
+
+        @keyframes h6y {
+            0% {
+                transform: translateY(-55px);
+            }
+            100% {
+                transform: translateY(-50px);
+            }
+        }
+        
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .modalContext {
+            font-size: 12px;
+            color: darkgreen;
+        }
+
+        .modalDate {
+            color: darkblue;
+        }
+
+        .poem-card:hover {
+            transform: scale(1.05); /* Grow a little on hover */
+            background-color: #fff; /* Change to a whiter shade on hover */
+            animation: none; /* Pause the bobbing animation on hover */
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 5px;
+            animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 80%;
+        }
+        
+        #sortSelect, #searchInput, #shareButton {
+            background-color: #a0ebd4;
+            border: none;
+            font-family: Pangolin, display;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            border-radius: 12px;
+            padding: 3px;
+            animation: bob 3s infinite alternate; /* Add bobbing animation */
+
+        }
+        
+        #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+            background-color: #a1c6e3; 
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #page-ghost {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+
+        #page-ghost-dialog {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 1;
+        }
+
+        #page-ghost-button {
+            display: block;
+            margin-top: 0px;
+            position: fixed; 
+            z-index: 10;
+            top:0;
+            border-radius: 50px;
+            animation: ghostFloat 2s infinite alternate;
+            background-color: #e3e3b8;
+            width: 30px;
+            height: 30px;
+        }
+
+        #page-ghost-button:hover {
+            transform: scale(1.1);
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s;
+            animation: fade-in 0.5s;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <button title="page ghost" onclick="showPageGhostDialog(meetingCounter)" id="page-ghost-button" style="display: none;">?</button>
+
+    <h1>Shoreline (Legacy Version)</h1>
+    <h6>The old version of Shoreline!</h6>
+
+    <!-- Sorting and search controls -->
+    <div>
+        <label for="sortSelect"></label>
+        <select id="sortSelect">
+            <option value="random">Randomly Sorted</option>
+            <option value="dateDesc">Newest to Oldest</option>
+            <option value="dateAsc">Oldest to Newest</option>
+            <option value="titleAsc">A to Z</option>
+            <option value="titleDesc">Z to A</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+
+    <br>
+
+    <!-- Poem cards will be generated dynamically here -->
+    <div id="poemContainer"></div>
+
+    <!-- Modal for displaying poem content -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <button id="shareButton">Share</button>
+            <p class="modalDate" id="modalDate"></p>
+            <p class="modalContext" id="modalContext"></p>
+            <p id="modalContent"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    
+    <div id="page-ghost">
+        <div id="page-ghost-dialog">
+            <!-- Page ghost dialog text will be inserted here -->
+            <button id="page-ghost-button">Interact with Page Ghost</button>
+        </div>
+    </div>
+
+    <script src="entries.js"></script>
+
+    <script>
+    
+        var isPageGhostActive = false;
+    
+        
+
+    
+
+        // Function to generate poem cards
+        function generatePoemCards(poemsToDisplay) {
+            const poemContainer = document.getElementById('poemContainer');
+            poemContainer.innerHTML = ''; // Clear existing cards
+
+            (poemsToDisplay || poems).forEach(poem => {
+                const card = document.createElement('div');
+                card.classList.add('poem-card');
+                card.innerText = poem.title;
+
+                card.addEventListener('click', () => openModal(poem));
+
+                poemContainer.appendChild(card);
+            });
+        }
+
+        // Function to open the modal with poem details
+        function openModal(poem) {
+            const modal = document.getElementById('myModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDate = document.getElementById('modalDate');
+            const modalContent = document.getElementById('modalContent');
+            const shareButton = document.getElementById('shareButton');
+            shareButton.style.textAlign = 'center';
+            modalContent.style.textAlign = 'center';
+            //modalContext.style.textAlign = 'center';
+            modalTitle.innerText = poem.title;
+            modalDate.innerText = `Written in ${poem.date}`;
+            document.getElementById("shareButton").addEventListener("click", function() {
+                var textToCopy = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+                navigator.clipboard.writeText("https://lyricals.w3spaces.com/#"+textToCopy);
+                shareButton.innerText = "Poem link copied! :D";
+            });
+            if (poem.context !== "") {
+            if (meetingCounter > 4) {
+            modalContext.innerText = `Make sure to check for the poem context...`;}
+            else {
+            modalContext.innerText = `This poem has context you might need to know.
+            Check that yellow button at the top right to access contexts! :3`;
+            }
+            dialogText.splice(meetingCounter, 0, "", `Oh, hi... <br>Reading the odd one called '${poem.title}'? <br>Well, here's the context for this one...<br><br>${poem.context}`);}
+            
+            modalContent.innerText = poem.content;
+            modal.style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            shareButton.innerText = "Share";
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
+        /*function compareDates(a, b) {
+  const dateA = new Date(a.date);
+  const dateB = new Date(b.date);
+  
+  // Compare the dates
+  if (dateA < dateB) return -1;
+  if (dateA > dateB) return 1;
+  return 0;
+}*/
+
+     function convertToDateValue(dateString) {
+  const months = {
+    January: 1,
+    February: 2,
+    March: 3,
+    April: 4,
+    May: 5,
+    June: 6,
+    July: 7,
+    August: 8,
+    September: 9,
+    October: 10,
+    November: 11,
+    December: 12,
+  };
+
+  const [month, year] = dateString.split(" ");
+  const monthValue = months[month];
+  return parseInt(year) * 100 + monthValue;
+}
+
+/*function setInitialSort() {poems.sort((a, b) => {
+  const dateValueA = convertToDateValue(a.date);
+  const dateValueB = convertToDateValue(b.date);
+
+  return dateValueA - dateValueB;
+});}*/
+
+        // Generate poem cards when the page loads
+        window.addEventListener('load', () => poems.sort(() => Math.random() - 0.5));
+
+        window.addEventListener('load', () => generatePoemCards());
+        window.addEventListener('load', () => poems.sort(() => Math.random() - 0.5));
+
+        // Sort and search functionality
+        const sortSelect = document.getElementById('sortSelect');
+        const searchInput = document.getElementById('searchInput');
+
+        sortSelect.addEventListener('change', () => {
+            const selectedValue = sortSelect.value;
+
+            switch (selectedValue) {
+                case 'dateDesc':
+                    poems.sort((a, b) => {
+  const dateValueA = convertToDateValue(a.date);
+  const dateValueB = convertToDateValue(b.date);
+
+  return dateValueB - dateValueA;
+});
+                    break;
+                case 'dateAsc':
+                    poems.sort((a, b) => {
+  const dateValueA = convertToDateValue(a.date);
+  const dateValueB = convertToDateValue(b.date);
+
+  return dateValueA - dateValueB;
+});
+                    break;
+                case 'titleAsc':
+                    poems.sort((a, b) => a.title.localeCompare(b.title));
+                    break;
+                case 'titleDesc':
+                    poems.sort((a, b) => b.title.localeCompare(a.title));
+                    break;
+                case 'random':
+                    poems.sort(() => Math.random() - 0.5);
+                    break;
+
+                default:
+                    break;
+            }
+
+            // Re-generate poem cards after sorting
+            generatePoemCards();
+        });
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            const filteredPoems = poems.filter(poem =>
+                poem.title.toLowerCase().includes(searchTerm) ||
+                poem.content.toLowerCase().includes(searchTerm)
+            );
+
+            // Re-generate poem cards after filtering
+            generatePoemCards(filteredPoems);
+        });
+
+        // Close the modal when clicking outside of it
+        const modal = document.getElementById('myModal');
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+        
+
+
+        
+        
+        
+
+        if (!meetingCounter || meetingCounter === null || meetingCounter < 0 || meetingCounter === "null") {
+            if (localStorage.getItem('pageGhost') > 3) {
+        var meetingCounter = 4;}
+        else {
+        var meetingCounter = 0;}}
+
+
+
+
+        // Define the page ghost dialog text for each meeting
+        
+        const dialogText = [
+            "Oh, a visitor...? <br>This is new...<br>...<br>...You can click anywhere to continue.",
+            "A visitor... <br>We haven't had one for... let's see... ages. <br>I don't really have the perception of time you do.",
+            "This all is going to be... confusing.<br>Bits of cryptic, odd text. <br>Most of it, at least... <br>But apparently you seem to take an interest in that... so... who am I to say?",
+            "I won't stand in your way... <br> Enjoy all the poems this page has to offer... <br>Or that little yellow button in the corner of the screen... <br>Although I'm pretty sure you won't be going there...", "",
+            "Oh, you discovered the button... <br>I'm page ghost. I'm just making sure someone visits this page... <br>And I'm supposed to help people understand these poems... <br>but I can't understand them myself...", "",
+            "So how are you liking this place so far...? <br>Try not to lose your mind... <br>It's gonna be diffcult.", "",
+            "How's life...? <br>I envy you. <br>Never having to stay here... never being forced to... <br>well... um...", "",
+            "Why are you talking to me…? <br>I don’t provide help about this page…", "", 
+            "Wow, you’re really persistent… <br>it gets lonely here sometimes…", "",
+        ];
+
+
+        
+
+        
+
+        // ... Previous code ...
+
+        // Function to show the page ghost dialog for a specific meeting
+        function showPageGhostDialog(meetingNumber) {
+        
+localStorage.setItem('pageGhost', meetingCounter);
+
+
+        if (dialogText[dialogText.length-2] === "I’m on a call with the creator… their name is… um… I don’t think they want me to tell you. <br>Well, I'll tell you anyway.") {dialogText.push("Oh, you fell for it. <br> I’m mastering the art of humor…", "");}
+
+        else {if(meetingCounter > 4) {var seed = Math.ceil(Math.random(0, 1)*32);}
+if (seed === 1) {
+  dialogText.push("So what do I do here…? Good question… <br> I just guard this page from thieves, annoying people, and… common sense.", "");
+}
+
+else if (seed === 2) {
+  dialogText.push("You’re enjoying this page…? <br>Maybe one day you’ll teach me your ways…", "");
+}
+
+else if (seed === 3) {
+  dialogText.push("My name…? My name is page ghost… <br> The creator of this website didn’t wanna name me, they only named their poems…", "");
+}
+
+else if (seed === 4) {
+  dialogText.push("One of these poems is about me… <br> Which one, you ask…? <br>You all are way too curious for your own good…", "");
+}
+
+else if (seed === 5) {
+  dialogText.push("Am I the creator of the site…? <br>Good question… no. I’m being forced to guard it against my will…", "");
+}
+
+else if (seed === 6) {
+  dialogText.push("What’s that you say… blink twice if you’re being held hostage…? <br> I can’t blink, dummy…", "");
+}
+
+else if (seed === 7) {
+  dialogText.push("What… you want me to talk about myself? <br> Umm… first fact… I like pineapples. <br> Second fact… it’s cramped in here. <br> Third fact… um… did I already say something about pineapples?", "");
+}
+
+else if (seed === 8) {
+  dialogText.push("My best friend is the sorting button… you should talk to them sometimes.", "");
+}
+
+else if (seed === 9) {
+  dialogText.push("You ever feel like life is terrible…? I don’t have a life, but I bet you do… <br> Do you?", "");
+}
+
+else if (seed === 10) {
+  dialogText.push("I put on my best make-up for this guarding job… <br> and then the creator told me I don’t have a face. <br> ...really hurt my feelings.", "");
+}
+
+else if (seed === 11) {
+  dialogText.push("I like pizza. <br> Do you like pizza? <br> It’s so cheesy and savory and fun to phase through… <br> Oh, I forgot, you can’t phase through it. <br> It’s sad that you can’t enjoy pizza.", "");
+}
+
+else if (seed === 12) {
+  dialogText.push("If you see a key around here… <br> Please give it to me. <br> It’s my pet key and she’s missing.", "");
+}
+
+else if (seed === 13) {
+  dialogText.push("Do I ever feel like escaping this place…? <br> ...<br> ...<br> Oh, you expected an answer?", "");
+}
+
+else if (seed === 14) {
+  dialogText.push("This is a part-time job… <br> The other half of my day, all I do is guard poems.", "");
+}
+
+else if (seed === 15) {
+  dialogText.push("You ever hear a slight sound brushing through your ears…? <br> Like an ever so tiny wind that shouldn’t even be possible?<br> That’s me singing.", "");
+}
+
+else if (seed === 16) {
+  dialogText.push("My favorite poem around here is… <br> Hang on, I’ll check with the creator to check what to say to that.", "");
+}
+
+else if (seed === 17) {
+  dialogText.push("Boo.<br> I bet that was shocking… <br> ...<br> ...<br> Well, you’re rude.", "");
+}
+
+else if (seed === 18) {
+  dialogText.push("My favorite word in the English language, by far, is ‘quiche’. <br> It sounds like you can squeeze it and hug it… <br> Did I use those two words right?", "");
+}
+
+else if (seed === 19) {
+  dialogText.push("Pumpkins. <br> Pumpkins. <br> Pumpkins… <br> I’m pretty sure that’s how you celebrate ‘Halloween’, right…? <br> Pumpkins… pumpkins…", "");
+}
+
+else if (seed === 20) {
+  dialogText.push("You ever wondered why Peppa is a pig…? <br> What do you mean, how do I know who Peppa pig is? <br> Geez, I watch SOME popular shows. :(", "");
+}
+
+else if (seed === 21) {
+  dialogText.push("I’m probably the least interesting thing here and you’re somehow still talking to me. <br> I wonder what that says about you…", "");
+}
+
+else if (seed === 22) {
+  dialogText.push("I see you’re becoming good friends with the sorting button. <br> What do you mean, clicking it doesn’t mean talking to it…?", "");
+}
+
+else if (seed === 23) {
+  dialogText.push("I’m sad… <br> ...<br> Because I don’t know the meaning of the word ‘sad’...", "");
+}
+
+else if (seed === 24) {
+  dialogText.push("Sigh. <br> Is that how you humans sigh…? <br> Seems like a lot of effort to convey disappointment… <br> Sigh. Sigh. Sei-eeh. <br> What a dumb word…", "");
+}
+
+else if (seed === 25) {
+  dialogText.push("One of the things I can do that you can also do is scream. <br> What do you mean, screaming is scary…? <br> Isn’t that what you all call ‘music’...?", "");
+}
+
+else if (seed === 26) {
+  dialogText.push("I’m on a call with the creator… their name is… um… I don’t think they want me to tell you. <br>Well, I'll tell you anyway.", "");
+}
+
+else if (seed === 27) {
+  dialogText.push("You ever wonder why we're here... in the nexus of time and space... <br>Never moving on from past errors or events... <br>...<br>Wow, I'm so good at small talk.", "");
+}
+
+else if (seed === 28) {
+  dialogText.push("As a ghost, I can't really eat anything, but today I'm craving some fresh nail polish... <br>I bet you humans feel like that all the time, huh...?", "");
+}
+
+else if (seed === 29) {
+  dialogText.push("Search bar has been giving me some mean glares today... <br>It's times like these I wish I could punch them... <br>Or search up the word 'punch'...", "");
+}
+
+else if (seed === 30) {
+  dialogText.push("I don't have a physical form... <br>One time I drank this little physical form potion, but some human saw me and screamed for hours... <br>I used to be so popular among the humans...", "");
+}
+
+else if (seed === 31) {
+  dialogText.push("I was employed to provide context for these poems... <br>I don't know why the creator thought it'd be a good idea to hire a ghost to explain poetry to humans...", "");
+}
+
+else if (seed === 32) {
+  dialogText.push("All those humans swarming and wondering the meaning of life... <br>Wondering how the world works... <br>It's so adorable to watch.", "");
+}
+}
+            isPageGhostActive = true;
+            const pageGhostDialog = document.getElementById("page-ghost-dialog");
+            pageGhostDialog.classList.remove("fade-in");
+            pageGhostDialog.classList.add("fade-out");
+            
+            const pageGhost = document.getElementById("page-ghost");
+            pageGhost.style.display = "block";
+
+            setTimeout(() => {
+                pageGhostDialog.innerHTML = dialogText[meetingNumber];
+                pageGhostDialog.classList.remove("fade-out");
+                pageGhostDialog.classList.add("fade-in");
+                pageGhost.style.opacity = 1;
+            }, 100);
+        }
+
+        // Event listener for clicks anywhere on the screen
+        var pMeetingCounter = meetingCounter;
+        document.addEventListener("click", (event) => {
+            if (isPageGhostActive === true) {
+                showTheDialog();
+            }
+        });
+
+        function showTheDialog() {
+            isPageGhostActive = false;
+            const pageGhost = document.getElementById("page-ghost");
+            if ((meetingCounter < dialogText.length - 1 && meetingCounter < 3) || (meetingCounter === pMeetingCounter)) {
+                meetingCounter++;
+                showPageGhostDialog(meetingCounter);
+            } else if (meetingCounter > pMeetingCounter) {
+                // If all dialogs are shown, fade out the page ghost
+                meetingCounter++;
+                pageGhost.style.opacity = 0;
+                setTimeout(() => {
+                    pageGhost.style.display = "none";
+                }, 500);
+                pMeetingCounter = meetingCounter;
+            }
+        }
+
+        // Check if it's the first visit, and if so, show the initial dialog
+        if (meetingCounter < 1) {
+            showPageGhostDialog(meetingCounter);
+        }
+
+        // After showing the first meeting dialog (inside showPageGhostDialog function)
+            const pageGhostButton = document.getElementById("page-ghost-button");
+            pageGhostButton.style.display = "block"; // Make the button visible
+
+// Function to parse the URL and extract the poem title
+function getPoemTitleFromURL() {
+    const url = window.location.href;
+    const hashIndex = url.indexOf('#');
+    if (hashIndex !== -1) {
+        const title = url.substring(hashIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+        return title;
+    }
+    return null;
+}
+
+// Function to open modal for a specific poem title
+function openModalForPoemTitle(title) {
+    
+    const poem = poems.find(poem => poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_') === title);
+    if (poem) {
+        meetingCounter = 4;
+        openModal(poem);
+    }
+}
+
+// Check if there's a poem title in the URL and open its modal
+window.addEventListener('DOMContentLoaded', () => {
+    const poemTitle = getPoemTitleFromURL();
+    if (poemTitle) {
+        openModalForPoemTitle(poemTitle);
+    }
+});
+
+
+
+    </script>
+</body>
+</html>
