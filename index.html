@@ -876,7 +876,7 @@ function reloadDisqus() {
                 const randomGradientDuration = (Math.random() * 40 + 10).toFixed(1);
 
                 // Set inline styles for animations
-                card.style.animationDuration = `${randomGradientDuration}s, ${randomBobDuration}s`;
+                card.style.animationDuration = `calc(var(--animationToggle)*${randomGradientDuration}s), calc(var(--animationToggle)*${randomBobDuration}s)`;
                 document.getElementById("bubblesContainer").setAttribute("class","bubbles");
                 poemContainer.appendChild(card);
             });
