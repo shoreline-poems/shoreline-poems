@@ -866,7 +866,11 @@ function reloadDisqus() {
         }
 
         var modalWaveOpenedCompletely = false;
+        function setModalAsOpened() {
+            modalWaveOpenedCompletely = true;
+        }
 
+    
         // Function to open the modal with poem details
         function openModal(poem) {
             modalWaveOpenedCompletely = false;
@@ -899,7 +903,7 @@ function reloadDisqus() {
             modal.style.display = 'block';
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
-            modalWaveOpenedCompletely = true;
+            setTimeout(setModalAsOpened, 200);
         }
 
         // Function to close the modal
