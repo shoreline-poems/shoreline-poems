@@ -166,7 +166,7 @@
             //background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
             max-height: 80vh; /* Constrain modal height */
             padding: 20vh;
-            animation: fadeIn var(--animationToggle)*2.5s ease-in-out;
+            animation: fadeIn calc(var(--animationToggle)*2.5s) ease-in-out;
         }
 
         .modal-content {
@@ -199,10 +199,10 @@
             font-family: Pangolin, display;
             height:40px;
             width:90px;
-            transition: transform var(--animationToggle)*0.3s ease-in-out, background-color var(--animationToggle)*0.3s ease-in-out;
+            transition: transform calc(var(--animationToggle)*0.3s) ease-in-out, background-color calc(var(--animationToggle)*0.3s) ease-in-out;
             border-radius: 7px;
             padding: 3px;
-            animation: bob var(--animationToggle)*3s infinite alternate; /* Add bobbing animation */
+            animation: bob calc(var(--animationToggle)*3s) infinite alternate; /* Add bobbing animation */
         }
         
         .animButton, #themeSelect, #sortSelect, #searchInput, #shareButton {
@@ -212,7 +212,7 @@
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
             border-radius: 12px;
             padding: 3px;
-            animation: bob var(--animationToggle)*3s infinite alternate; /* Add bobbing animation */
+            animation: bob calc(var(--animationToggle)*3s) infinite alternate; /* Add bobbing animation */
 
         }
         
@@ -261,7 +261,7 @@
             z-index: 10;
             top:0;
             border-radius: 50px;
-            animation: ghostFloat var(--animationToggle)*2s infinite alternate;
+            animation: ghostFloat calc(var(--animationToggle)*2s) infinite alternate;
             background-color: #e3e3b8;
             width: 30px;
             height: 30px;
@@ -279,7 +279,7 @@
         .fade-in {
             opacity: 1;
             transition: opacity 0.5s;
-            animation: fade-in var(--animationToggle)*0.5s;
+            animation: fade-in calc(var(--animationToggle)*0.5s);
         }
 
         @keyframes fade-in {
@@ -331,7 +331,7 @@
     4px -5px 6px pink,
     -4px -10px 10px lightgreen,
     0 -10px 30px lightgreen;
-  animation: var(--animationToggle)*2s Glow infinite alternate linear;
+  animation: calc(var(--animationToggle)*2s) Glow infinite alternate linear;
 }
 
 @keyframes Glow {
@@ -391,76 +391,76 @@
   border-radius:50%;
   opacity:0.5;
   overflow: visible;
-  animation: rise var(--animationToggle)*10s infinite ease-in;
+  animation: rise calc(var(--animationToggle)*10s) infinite ease-in;
 }
 .bubble:nth-child(1){
   width:40px;
   height:40px;
   left:10%;
-  animation-duration:var(--animationToggle)*8s;
+  animation-duration:calc(var(--animationToggle)*8s);
 }
 .bubble:nth-child(2){
   width:20px;
   height:20px;
   left:20%;
-  animation-duration:var(--animationToggle)*5s;
-  animation-delay:var(--animationToggle)*1s;
+  animation-duration:calc(var(--animationToggle)*5s);
+  animation-delay:calc(var(--animationToggle)*1s);
 }
 .bubble:nth-child(3){
   width:50px;
   height:50px;
   left:35%;
-  animation-duration:var(--animationToggle)*7s;
-  animation-delay:var(--animationToggle)*2s;
+  animation-duration:calc(var(--animationToggle)*7s);
+  animation-delay:calc(var(--animationToggle)*2s);
 }
 .bubble:nth-child(4){
   width:80px;
   height:80px;
   left:50%;
-  animation-duration:var(--animationToggle)*11s;
-  animation-delay:var(--animationToggle)*0s;
+  animation-duration:calc(var(--animationToggle)*11s);
+  animation-delay:calc(var(--animationToggle)*0s);
 }
 .bubble:nth-child(5){
   width:35px;
   height:35px;
   left:55%;
-  animation-duration:var(--animationToggle)*6s;
-  animation-delay:var(--animationToggle)*1s;
+  animation-duration:calc(var(--animationToggle)*6s);
+  animation-delay:calc(var(--animationToggle)*1s);
 }
 .bubble:nth-child(6){
   width:45px;
   height:45px;
   left:65%;
-  animation-duration:var(--animationToggle)*8s;
-  animation-delay:var(--animationToggle)*3s;
+  animation-duration:calc(var(--animationToggle)*8s);
+  animation-delay:calc(var(--animationToggle)*3s);
 }
 .bubble:nth-child(7){
   width:90px;
   height:90px;
   left:70%;
-  animation-duration:var(--animationToggle)*12s;
-  animation-delay:var(--animationToggle)*2s;
+  animation-duration:calc(var(--animationToggle)*12s);
+  animation-delay:calc(var(--animationToggle)*2s);
 }
 .bubble:nth-child(8){
   width:25px;
   height:25px;
   left:80%;
-  animation-duration:var(--animationToggle)*6s;
-  animation-delay:var(--animationToggle)*2s;
+  animation-duration:calc(var(--animationToggle)*6s);
+  animation-delay:calc(var(--animationToggle)*2s);
 }
 .bubble:nth-child(9){
   width:15px;
   height:15px;
   left:70%;
-  animation-duration:var(--animationToggle)*5s;
-  animation-delay:var(--animationToggle)*1s;
+  animation-duration:calc(var(--animationToggle)*5s);
+  animation-delay:calc(var(--animationToggle)*1s);
 }
 .bubble:nth-child(10){
   width:90px;
   height:90px;
   left:25%;
-  animation-duration:var(--animationToggle)*10s;
-  animation-delay:var(--animationToggle)*4s;
+  animation-duration:calc(var(--animationToggle)*10s);
+  animation-delay:calc(var(--animationToggle)*4s);
 }
 @keyframes rise{
   0%{
@@ -546,23 +546,23 @@
 /* Animation */
 
 .parallax > use {
-  animation: move-forever var(--animationToggle)*25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever calc(var(--animationToggle)*25s) cubic-bezier(.55,.5,.45,.5)     infinite;
 }
 .parallax > use:nth-child(1) {
-  animation-delay: var(--animationToggle)*-2s;
-  animation-duration: var(--animationToggle)*7s;
+  animation-delay: calc(var(--animationToggle)*-2s);
+  animation-duration: calc(var(--animationToggle)*7s);
 }
 .parallax > use:nth-child(2) {
-  animation-delay: var(--animationToggle)*-3s;
-  animation-duration: var(--animationToggle)*10s;
+  animation-delay: calc(var(--animationToggle)*-3s);
+  animation-duration: calc(var(--animationToggle)*10s);
 }
 .parallax > use:nth-child(3) {
-  animation-delay: var(--animationToggle)*-4s;
-  animation-duration: var(--animationToggle)*13s;
+  animation-delay: calc(var(--animationToggle)*-4s);
+  animation-duration: calc(var(--animationToggle)*13s);
 }
 .parallax > use:nth-child(4) {
-  animation-delay: var(--animationToggle)*-5s;
-  animation-duration: var(--animationToggle)*20s;
+  animation-delay: calc(var(--animationToggle)*-5s);
+  animation-duration: calc(var(--animationToggle)*20s);
 }
 @keyframes move-forever {
   0% {
