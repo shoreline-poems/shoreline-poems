@@ -220,7 +220,7 @@ And I’ll tell you the story of my Fabulous Feat.
                 `
             },
             {
-                title: "Shakespeare\n-’s Tales",
+                title: "Shakespeare’s Tales",
                 date: "March 2022",
                 context: "As this poem is about the stories of the plays written by Shakespeare, you might need to know those... At least these ones- Romeo and Juliet, Taming of the Shrew, The Tempest, The Merchant of Venice, As You Like It.",
                 content: `
@@ -241,7 +241,7 @@ Maybe breaking a heart or two.
 But now let’s look at Katharine
 The shrew whose heart none could win.
 Many tempers she would throw
-Until tamed by Petruchio.
+Until 'tamed' by Petruchio.
 This being all he would demand,
 He at last won the lady’s hand.
 
@@ -257,7 +257,7 @@ Antonio, who, for his friend, sent
 His precious ships with money in need,
 And willingly signed Shylock’s deed.
 Ultimately risking his life,
-Till he was saved by Bassanio’s wife.
+Till he was saved by Portia, Bassanio’s wife.
 
 Many a tale Shakespeare has told,
 Such as of Orlando the bold
