@@ -866,15 +866,9 @@ function reloadDisqus() {
             });
         }
 
-        var modalWaveOpenedCompletely = false;
-        function setModalAsOpened() {
-            modalWaveOpenedCompletely = true;
-        }
-
     
         // Function to open the modal with poem details
         function openModal(poem) {
-            modalWaveOpenedCompletely = false;
             const poemTitleHash = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
             window.location.hash = poemTitleHash;
             const modal = document.getElementById('myModal');
@@ -909,15 +903,12 @@ function reloadDisqus() {
 
         // Function to close the modal
         function closeModal() {
-            if (modalWaveOpenedCompletely === true) {
             window.location.hash = "";
             shareButton.innerText = "Share";
             const modal = document.getElementById('myModal');
             modal.style.display = 'none';
             const modalContent = document.getElementById('modalContent');
             modalContent.scrollTop = 0;
-            modalWaveOpenedCompletely = false;
-            }
         }
 
      
@@ -1061,12 +1052,12 @@ function reloadDisqus() {
         });
 
         // Close the modal when clicking outside of it
-        const modal = document.getElementById('myModal');
+        /*const modal = document.getElementById('myModal');
         modal.addEventListener('click', (event) => {
             if (event.target === modal) {
                 closeModal();
             }
-        });
+        });*/
         
 
 
