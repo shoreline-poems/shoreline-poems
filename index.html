@@ -637,7 +637,7 @@ button {
             <option value="violet">Violet</option>
         </select>
         <input type="text" id="searchInput" placeholder="Search...">
-        <button id="animation-toggle" class="animButton" type="button">Pause Animation</button>
+        <button id="animation-toggle" class="animButton" type="button" onclick="pauseAnimations()">Pause Animation</button>
     </div>
 
     <br>
@@ -823,16 +823,18 @@ window.addEventListener('DOMContentLoaded', () => {
 });*/
 
   /* Toggle Animations */
-  const animtoggle = document.getElementById('animation-toggle');
-  animtoggle.addEventListener('click', () => {
+
+  //const animtoggle = document.getElementById('animation-toggle');
+  //animtoggle.addEventListener('click', () => {
+function pauseAnimations() {
     const animations = document.querySelectorAll('[data-animation');
     animations.forEach(animation => {
       const running = animation.style.animationPlayState || 'running';
       animation.style.animationPlayState = running === 'running' ? 'paused' : 'running';
-      animtoggle.textContent = running === 'running' ? "Pause Animations" : "Unpause Animations";
+      animtoggle.textContent = running === 'running' ? "Pause Animation" : "Unpause Animation";
         alert(running);
-    })
-  });
+    })}
+  //});
 
     
 function reloadDisqus() {
