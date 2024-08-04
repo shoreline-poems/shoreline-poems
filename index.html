@@ -915,6 +915,11 @@ function reloadDisqus() {
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
             setTimeout(setModalAsOpened, 400);
+    // Find the guest checkbox and check it by default
+    var guestCheckbox = document.querySelector('input[type="checkbox"][id^="disqus_thread"]');
+    if (guestCheckbox) {
+        guestCheckbox.checked = true;
+});
         }
 
         // Function to close the modal
@@ -1369,11 +1374,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const poemTitle = getPoemTitleFromURL();
     if (poemTitle) {
         openModalForPoemTitle(poemTitle);
-    }
-    // Find the guest checkbox and check it by default
-    var guestCheckbox = document.querySelector('input[type="checkbox"][id^="disqus_thread"]');
-    if (guestCheckbox) {
-        guestCheckbox.checked = true;
     }
 });
 
