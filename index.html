@@ -700,28 +700,38 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-</script>
-        <script>
-// Run after Disqus has loaded
-function disableDisqusLogin() {
-    // Hide the login button
-    var loginButton = document.querySelector('.login-link');
-    if (loginButton) {
-        loginButton.style.display = 'none';
-    }
+function forceGuestCommenting() {
+    // Hide all login options
+    var loginButtons = document.querySelectorAll('.login-link, .provider-link, .guest-to-login');
+    loginButtons.forEach(function(button) {
+        button.style.display = 'none';
+    });
 
     // Automatically focus on the guest name/email fields
-    var guestNameField = document.querySelector('#dsq-combo-box-name');
+    var guestNameField = document.querySelector('input#dsq-combo-box-name, input#dsq-combo-box-email');
     if (guestNameField) {
         guestNameField.focus();
     }
 
-    // Hide the option to log in with other services
-    var socialLoginButtons = document.querySelectorAll('.provider-link');
-    socialLoginButtons.forEach(function(button) {
-        button.style.display = 'none';
-    });
+    // Modify the UI to encourage guest comments
+    var commentField = document.querySelector('.comment-box-wrapper');
+    if (commentField) {
+        commentField.insertAdjacentHTML('beforebegin', '<p>Commenting as a guest is enabled by default.</p>');
+    }
 }
+
+// Observe the Disqus thread to detect when it loads
+var disqusObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        if (document.getElementById('disqus_thread').getElementsByClassName('post-content').length > 0) {
+            forceGuestCommenting();
+            disqusObserver.disconnect();
+        }
+    });
+});
+
+disqusObserver.observe(document.getElementById('disqus_thread'), { childList: true, subtree: true });
+</script>
 
 // Wait for Disqus to fully load
 var disqusThread = document.getElementById('disqus_thread');
