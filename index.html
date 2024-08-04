@@ -916,10 +916,10 @@ function reloadDisqus() {
             modalContent.scrollTop = 0; 
             setTimeout(setModalAsOpened, 400);
     // Find the guest checkbox and check it by default
-    var guestCheckbox = document.querySelector('input[type="checkbox"][id^="disqus_thread"]');
-    if (guestCheckbox) {
-        guestCheckbox.checked = true;
-});
+            var guestCheckbox = document.querySelector('input[type="checkbox"][id^="disqus_thread"]');
+            if (guestCheckbox) {
+                guestCheckbox.checked = true;
+            }
         }
 
         // Function to close the modal
