@@ -3783,6 +3783,253 @@ I don't like when it hits me... what if I'm the deadly one?
                 `
             },
 
+                {
+                title: "Dishonesty",
+                date: "August 2024",
+                context: "This one's a pretty plain piece about the dualities of lies. Also littered with metaphors, hehe.",
+                content: `
+                Truth is like a blunt axe, 
+With brawny, brutal, blunt attacks,
+Lies are like its sharpening-stones, 
+For then, it cuts right to the bone.
+
+Though lies seem to heal and soothe, 
+They’ll only bottle up the truth. 
+Lie all you want, but when spills, 
+It’s only then that truth can kill. 
+
+It bleeds together reality and hopes, 
+But in the end, it's all a hoax. 
+You see, the truth is quite depressing. 
+Dishonesty's a curse disguised as a blessing.
+
+Run all you want, but truth will find you, 
+The best that lies can do is hide you.
+Through fragile shields and reassurance, 
+Lies test the limits of blind endurance.
+
+Lies stitch counterfeit truths together,
+But it’ll always be loosely tethered. 
+Shattered hopes and broken ties, 
+All whitewashed by fragile lies.
+
+But then you're struck by life's duality, 
+White lies are brighter than reality. 
+A fragile shield is better than none, 
+To defend your lies, your life becomes one.
+
+One lie, two lies, you've spun a web,
+Until the sharp truth intercepts. 
+Lie all you want, for the truth hurts:
+Dishonesty's a blessing disguised as a curse.
+                `
+            },
+
+                {
+                title: "Snowmelt",
+                date: "August 2024",
+                context: "This one's about the effects of global warming and the effects it's having on the world. It's a kind of alternate reality, or an exploration of a worst-case scenario. Save the Earth, people.",
+                content: `
+                Hailstorms wreck skies overhead, 
+They melt before they hit the ground, 
+Rains descending in its stead, 
+Droplets crashing down, down, down. 
+
+From the buildings, smoke billows, 
+Yet they shamelessly stand tall. 
+Burning trees, weeping like willows, 
+Tears and raindrops fall, fall, fall.
+
+Frigid walls of ice are fractured. 
+Heat rises, sickeningly slow,
+Glaciers slowly lose their grandeur,
+Freshwater starts to flow, flow, flow.
+
+The drops now start to hit the grounds, 
+Falling into earth's hold, 
+They beg to return to the clouds. 
+Where it was cold, cold, cold.
+
+New rains polluted with acid, 
+Skies behazed with smog, 
+Grieving groves, greenhouse gases, 
+…and then the waters log, log, log.
+
+And now they know that it's too late. 
+Hopes of redemption drown, 
+And soon enough, they doom to fate. 
+Droplets crashing down, down, down.
+
+Humans don't know who to blame, 
+For humans will never, ever learn. 
+They roast marshmallows on the flames,
+And watch the world burn, burn, burn.
+
+And they preserve it all in rhymes,
+Stories of the past are told, 
+They reminisce about the times 
+When it was cold, cold, cold.
+
+Fields and flowers start to wilt, 
+The clouds all start to cry, 
+But their tears only pollute the silt, 
+As nature's wonders die, die, die.
+
+What you you sow, so shall you reap,
+So now there's nothing to harvest. 
+Now it's humans’ turn to weep, 
+For they caused each mess, mess, mess.
+
+Others, from galaxies far away
+Watch the flames turn to ash, 
+Now nowhere near the earth they stray,
+For then they'd surely crash, crash, crash.
+
+And soon, the fated heat-death hits, 
+Sooner than they foretold, 
+And, in a cruel, ironic twist, 
+Now it's all just cold, cold, cold, cold, cold.
+                `
+            },
+
+                {
+                title: "Make Me Right",
+                date: "August 2024",
+                context: "This one is an exploration of the creator's insecurities and the things they view as flaws in themselves. 'Make me right' is a way to say 'fix my flaws', essentially. Content warning: mentions of harm.",
+                content: `
+                [CW]
+
+                In the corner of my house, there's a little room, 
+And in it, I think some kind of spirit's supposed to loom.
+Never before in my life have I looked to god, 
+There hasn't test been any such faith that I sought.
+
+I still don't believe that blind faith will guide me, 
+But I don't like bottling up all this pain inside me. 
+Sometimes, at night, I get overwhelmed with the fear,
+Head buried in my hands, face stained with tears.
+...
+
+When I find it hard to sleep, 
+When it's just not enough to weep, 
+Secretly, into that room I creep, 
+In the middle of the night.
+
+I stumble around, crash into walls, 
+My eyes can't see in the dimly-lit hall. 
+I catch myself before I fall, 
+And I switch on the light.
+
+I set my glasses on my face, 
+For without them, my vision's hazed. 
+To the fabled ‘god’ I turn my gaze, 
+And state my pathetic plight. 
+
+"If you really hear my cries, 
+I want you to fix my eyes. 
+They say I'm normal, that’s all lies.
+I hate my stunted sight."
+
+"God, if you're really real,
+If you really see the pain I feel,
+If you think I deserve to heal, 
+Please just make me right."
+
+"I want to see the world normally, 
+Please take this curse off from me, 
+Please fix up this anomaly, 
+Please just make me right."
+...
+
+Some days, I'm just too tired to work,
+My family berates me, calls me a jerk. 
+I think they're gone fully berserk, 
+So I just start a fight.
+
+They broke the locks I put on my door,
+I feel like I can't take it anymore, 
+I miss who I used to be before
+I lost to unearned pride.
+
+And by the end, I feel exhausted, 
+I tell myself that they've all lost it, 
+But what If I'm the one who caused it? 
+Something tells me I might.
+
+If they live for me, I'm making them die, 
+They see right through me when I lie. 
+Another lump in my throat, another tear in my eye.
+The guilt smothers me tight. 
+
+I lie to my mother, my words are like an axe, 
+Because I'm scared of how she reacts. 
+Harsh breakdowns, panic attacks, 
+Caused by my petulant spite.
+
+"So, god, if my pleas aren't in vain, 
+Please help, she doesn't deserve this pain. 
+I don't want to drive us all insane, 
+Please just make me right."
+
+"I hate the way I lose control, 
+I'm too vain to see the dark spots in my soul,
+I'm turning harsh, I'm turning cold, 
+Please just make me right."
+...
+
+I hate the person I'm becoming, 
+The pain's too sharp, it's stopped numbing. 
+I can't face my demons, and I'm tired of running, 
+But it's either fight or flight.
+
+But both those options hurt me somehow, 
+My sickly tears all pool at sundown, 
+They run down salt my face, it's like they're stuck now. 
+Their salt in wound just bites.
+
+My friendships are all built on false words,
+A fake version of me, one I've rehearsed, 
+One I built up in each pretentious verse,
+But now it hurts to write. 
+
+For there's bleeding cuts on all my fingers, 
+They let my pain escape in splinters, 
+And without them, the guilt just lingers, 
+And it's all trapped inside.
+
+And then I'm smothered by that guilt, 
+My dagger’s red with the hopes I've killed. 
+But now it only hurts to hold the hilt, 
+As I struggle to stand upright.
+
+"God, if you do really exist, 
+Don't let the cuts reach my wrists. 
+I want to try, I want to resist, 
+Please just make me right."
+
+"I want to close the wounds with a stitch, 
+I want to build back every bridge, 
+But I can't climb out of this ditch,
+Please just make me right."
+
+But I think I might be in too deep, 
+For all I ever do about it is weep. 
+I sigh, and trudge on back to sleep, 
+"Please... make me right."
+
+I stumble the whole way back, because I'm blind,
+I woke up my mother, because I'm unkind, 
+If there’s any hope left, it's so hard to find, 
+"So please, please make me right." 
+...
+
+Never since in my life have I looked to god, 
+Maybe no one can fix me, maybe I wished for a lot. 
+But I'm still grasping on to straws, trying to stay strong, 
+Please, please, make me right, I came out all wrong.
+                `
+            },
+
 
 /* here, the template for future poems-
 
