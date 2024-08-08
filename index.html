@@ -684,11 +684,21 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <div class="commentbox"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>
-    var pageHash = window.location.hash.substring(1); // Get the hash without the '#' symbol
-    commentBox('YOUR_PROJECT_ID', {
-        className: 'commentbox', 
-        identifier: window.location.pathname + '#' + pageHash // Combine pathname with hash
-    });
+    function loadCommentBox() {
+        var pageHash = window.location.hash.substring(1); // Get the hash without the '#' symbol
+        commentBox('YOUR_PROJECT_ID', {
+            className: 'commentbox', 
+            identifier: window.location.pathname + '#' + pageHash // Combine pathname with hash
+        });
+    }
+
+    // Load the CommentBox initially
+    loadCommentBox();
+
+    // Listen for changes in the URL hash and reload CommentBox
+    window.onhashchange = function() {
+        loadCommentBox();
+    };
 </script>
         </div>
 <script>
