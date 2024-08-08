@@ -681,7 +681,15 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <br><br>
         </div></div>
         <div class="disqus-div">
-        <div id="disqus_thread"></div>
+        <div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>
+    var pageHash = window.location.hash.substring(1); // Get the hash without the '#' symbol
+    commentBox('YOUR_PROJECT_ID', {
+        className: 'commentbox', 
+        identifier: window.location.pathname + '#' + pageHash // Combine pathname with hash
+    });
+</script>
         </div>
 <script>
     /**
