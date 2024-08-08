@@ -751,19 +751,6 @@ var disqusObserver = new MutationObserver(function(mutations) {
 disqusObserver.observe(document.getElementById('disqus_thread'), { childList: true, subtree: true });
 </script>
 
-// Wait for Disqus to fully load
-var disqusThread = document.getElementById('disqus_thread');
-var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        if (disqusThread.getElementsByClassName('post-content').length > 0) {
-            disableDisqusLogin();
-            observer.disconnect();
-        }
-    });
-});
-
-observer.observe(disqusThread, { childList: true, subtree: true });
-</script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <!--<div class="comments">
                 <h2>Comments</h2>
