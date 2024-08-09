@@ -3984,8 +3984,8 @@ But it's either fight or flight.
 
 But both those options hurt me somehow, 
 My sickly tears all pool at sundown, 
-They run down salt my face, it's like they're stuck now. 
-Their salt in wound just bites.
+They run down my face, it's like they're stuck now. 
+Their salt in the wound just bites.
 
 My friendships are all built on false words,
 A fake version of me, one I've rehearsed, 
