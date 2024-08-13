@@ -4049,7 +4049,7 @@ It's all because of just another jealous victory-stealer.
 It ends with boards upturned, as I storm out the casino, 
 And that's just how the games I play usually go.
 
-I must be someone else's fault, I know it's not mine, 
+It must be someone else's fault, I know it's not mine, 
 Diamonds are all a hoax if they don't even shine. 
 Clubs can break me down to pieces, I'm just that brittle, 
 Spades can carve into my soul, I'm that easy to whittle. 
@@ -4068,7 +4068,7 @@ And I can't reach out, gotta keep my cards in my hands.
 But they give me papercuts, and it always stings, 
 And it’s like I blame the deck for pretty much everything.
 I topple others' houses of cards to build up my city, 
-I’m keep on reeling, because I’m always fishing for pity.
+I keep on reeling, because I’m always fishing for pity.
 
 But I’m too deep in to know if it's my fault I’m scarred,
 Too deep in victimhood to finish the fights I start.
@@ -4081,8 +4081,6 @@ Clubs can smash my ego into pretty little shards,
 Spades can break apart all the walls of lies I carved. 
 Hearts aren't my thing either, though I'm the ace of broken hearts, 
 And when I find another ace, I play the victim card.
-
-
                 `
             },
 
