@@ -4030,6 +4030,62 @@ Please, please, make me right, I came out all wrong.
                 `
             },
 
+                {
+                title: "Victim Card",
+                date: "August 2024",
+                context: "This one's about externalisation of blame and victim mentality - all mixed up with card game metaphors. Enjoy, and see if you can spot all the references to different card games and their phrases. :)",
+                content: `
+                I was never that great at playing blackjack, 
+Always resorted to drawing more from the stack. 
+And then I'd go too far over, and hit and miss and bust,
+And add it to the list of games that I couldn't trust. 
+Tarot blames misfortune, but it must've been a trick, 
+I'm not bad at playing, the deck must've been rigged.
+
+And so next round, I shuffle it the best that it can be, 
+I retry my luck, and it deals out to twenty-three.
+But it can’t have been my fault, it must have been the dealer,
+It's all because of just another jealous victory-stealer. 
+It ends with boards upturned, as I storm out the casino, 
+And that's just how the games I play usually go.
+
+I must be someone else's fault, I know it's not mine, 
+Diamonds are all a hoax if they don't even shine. 
+Clubs can break me down to pieces, I'm just that brittle, 
+Spades can carve into my soul, I'm that easy to whittle. 
+Hearts aren’t my thing either, though I'm the jack of broken hearts, 
+I never have an ace, so I just play the victim card. 
+
+I was never really that good at playing whist or rummy, 
+It's hard to feel safe when everything seems to trump me. 
+It's hard to arrange them when it's all so muddled, 
+There’s always at least one piece missing from the puzzle.
+I hide my cards so they can't see that I don't have an ace,
+I'm good at poker, because all the time, I keep a poker face.
+
+But now I can't spot my own bluffs, I don't understand, 
+And I can't reach out, gotta keep my cards in my hands. 
+But they give me papercuts, and it always stings, 
+And it’s like I blame the deck for pretty much everything.
+I topple others' houses of cards to build up my city, 
+I’m keep on reeling, because I’m always fishing for pity.
+
+But I’m too deep in to know if it's my fault I’m scarred,
+Too deep in victimhood to finish the fights I start.
+Too numbed to see the faults that are tearing me apart.
+Too barricaded by them to see the doubt I disregard,
+
+But I’m never well protected, though I never let down my guard.
+Diamonds trump my toughness, they're the hardest of the hard. 
+Clubs can smash my ego into pretty little shards, 
+Spades can break apart all the walls of lies I carved. 
+Hearts aren't my thing either, though I'm the ace of broken hearts, 
+And when I find another ace, I play the victim card.
+
+
+                `
+            },
+
 
 /* here, the template for future poems-
 
