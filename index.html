@@ -921,7 +921,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //const animtoggle = document.getElementById('animation-toggle');
   //animtoggle.addEventListener('click', () => {
 
-function updateCommentBoxId() {
+/*function updateCommentBoxId() {
         // Get the hash value from the URL
         const hash = window.location.hash.substring(1); // Remove the '#' character
         const theGreatBox = document.querySelector('.commentbox');
@@ -943,7 +943,7 @@ function updateCommentBoxId() {
 
     // Initial call to set the ID based on the current hash (if any)
     updateCommentBoxId();
-    
+    */
 function pauseAnimations() {
         var sRoot = document.querySelector(':root');
         const animToggleVal = sRoot.style.getPropertyValue('--animationToggle');
@@ -999,11 +999,19 @@ function reloadDisqus() {
             });
         }
 
+
+        // Function to update the 'poem' query parameter in the URL
+        function updateQueryParameter(poemValue) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('poem', poemValue);
+            window.history.replaceState({}, '', url);
+        }
+        
+
     
         // Function to open the modal with poem details
         function openModal(poem) {
-            const poemTitleHash = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-            window.location.hash = poemTitleHash;
+            updateQueryParameter(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'));
             const modal = document.getElementById('myModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalDate = document.getElementById('modalDate');
@@ -1016,7 +1024,7 @@ function reloadDisqus() {
             modalDate.innerText = `Written in ${poem.date}`;
             document.getElementById("shareButton").addEventListener("click", function() {
                 var textToCopy = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-                navigator.clipboard.writeText("https://shoreline-poems.github.io/#"+textToCopy);
+                navigator.clipboard.writeText("https://shoreline-poems.github.io/?poem="+textToCopy);
                 shareButton.innerText = "Poem link copied! :D";
             });
             if (poem.context !== "") {
@@ -1037,8 +1045,9 @@ function reloadDisqus() {
 
         // Function to close the modal
         function closeModal() {
-            //window.location.href = "https://shoreline-poems.github.io/";
-            window.location.hash = "";
+            const theUrl = new URL(window.location.href);
+            theUrl.search = ''; // Clear all query parameters
+            window.history.replaceState({}, '', theUrl);
             shareButton.innerText = "Share";
             const modal = document.getElementById('myModal');
             modal.style.display = 'none';
@@ -1464,10 +1473,10 @@ else if (seed === 32) {
 
 // Function to parse the URL and extract the poem title
 function getPoemTitleFromURL() {
-    const url = window.location.href;
-    const hashIndex = url.indexOf('#');
-    if (hashIndex !== -1) {
-        const title = url.substring(hashIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+    const url = new URL(window.location.href);
+    const thePoemFound = url.searchParams.get('poem');
+    if (thePoemFound) {
+        const title = thePoemFound.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
         return title;
     }
     return null;
