@@ -958,17 +958,15 @@ function reloadDisqus() {
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
             setTimeout(setModalAsOpened, 400);
-            const commentBox = document.querySelector('.commentbox');
-            // Check if the comment box exists
-            if (commentBox) {
-                // Change its ID to the value of x
-                commentBox.id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-                alert(`ID changed to: ${commentBox.id}`);
+            const theGreatBox = document.querySelector('.commentbox');
+            if (theGreatBox) {
+                theGreatBox.id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+                alert(`ID changed to: ${theGreatBox.id}`);
             } else {
                 alert('No comment box found.');
             }
     }
-        }
+        
 
         // Function to close the modal
         function closeModal() {
