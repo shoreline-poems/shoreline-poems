@@ -885,7 +885,9 @@ function updateCommentBoxId() {
         // Check if the comment box exists
         if (theGreatBox) {
             // Change its ID to the hash value
-            theGreatBox.id = hash;
+            if (hash) {
+            theGreatBox.id = hash;}
+            else {theGreatBox.id = "none";}
             console.log(`Comment box ID changed to: ${theGreatBox.id}`);
         } else {
             console.log('No div with the class "commentbox" found.');
