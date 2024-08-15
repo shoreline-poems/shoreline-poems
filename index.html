@@ -689,11 +689,11 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 commentBox('5757839691743232-proj', {
     createBoxUrl(boxId, pageLocation) {
 
-        const queryParams = qs.parse(pageLocation.search.replace('#', ''));
+        const queryParams = qs.parse(pageLocation.hash.replace('#', ''));
         const relevantParams = {
             'page_id': queryParams['page_id']
         };
-        pageLocation.search = qs.stringify(relevantParams); // we will now include "?page_id=5" in the box URL
+        pageLocation.hash = qs.stringify(relevantParams); // we will now include "?page_id=5" in the box URL
         //pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
         return pageLocation.href; // return url string
     }
