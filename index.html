@@ -688,7 +688,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 commentBox('5757839691743232-proj', {
     createBoxUrl(boxId, pageLocation) {
 
-        const queryParams = qs.parse(pageLocation.search.replace('#', ''));
+        const queryParams = qs.parse(pageLocation.search.replace('?', ''));
         const relevantParams = {
             'page_id': queryParams['page_id']
         };
@@ -1420,9 +1420,9 @@ else if (seed === 32) {
 // Function to parse the URL and extract the poem title
 function getPoemTitleFromURL() {
     const url = window.location.href;
-    const hashIndex = url.indexOf('?');
-    if (hashIndex !== -1) {
-        const title = url.substring(hashIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+    const queryIndex = url.indexOf('?');
+    if (queryIndex !== -1) {
+        const title = url.substring(queryIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
         return title;
     }
     return null;
