@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -688,12 +689,12 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 commentBox('5757839691743232-proj', {
     createBoxUrl(boxId, pageLocation) {
 
-        const queryParams = qs.parse(pageLocation.search.replace('?', ''));
+        const queryParams = qs.parse(pageLocation.search.replace('#', ''));
         const relevantParams = {
             'page_id': queryParams['page_id']
         };
         pageLocation.search = qs.stringify(relevantParams); // we will now include "?page_id=5" in the box URL
-        pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
+        //pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
         return pageLocation.href; // return url string
     }
 });
@@ -877,7 +878,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //const animtoggle = document.getElementById('animation-toggle');
   //animtoggle.addEventListener('click', () => {
 
-    /*function updateCommentBoxId() {
+function updateCommentBoxId() {
         // Get the hash value from the URL
         const hash = window.location.hash.substring(1); // Remove the '#' character
         const theGreatBox = document.querySelector('.commentbox');
@@ -898,7 +899,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', updateCommentBoxId);
 
     // Initial call to set the ID based on the current hash (if any)
-    updateCommentBoxId();*/
+    updateCommentBoxId();
     
 function pauseAnimations() {
         var sRoot = document.querySelector(':root');
@@ -911,7 +912,7 @@ function pauseAnimations() {
   //});
 
     
-/*function reloadDisqus() {
+function reloadDisqus() {
         var hash = window.location.hash.substr(1);  // Get the hash part of the URL
         DISQUS.reset({
             reload: true,
@@ -924,7 +925,7 @@ function pauseAnimations() {
 
     window.addEventListener('hashchange', function() {
         reloadDisqus();
-    });*/
+    });
 
         var isPageGhostActive = false;
     
@@ -958,8 +959,8 @@ function pauseAnimations() {
     
         // Function to open the modal with poem details
         function openModal(poem) {
-            const poemTitleQuery = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-            window.location.search = poemTitleQuery;
+            const poemTitleHash = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            window.location.hash = poemTitleHash;
             const modal = document.getElementById('myModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalDate = document.getElementById('modalDate');
@@ -993,7 +994,7 @@ function pauseAnimations() {
 
         // Function to close the modal
         function closeModal() {
-            window.location.search = "";
+            window.location.hash = "";
             shareButton.innerText = "Share";
             const modal = document.getElementById('myModal');
             modal.style.display = 'none';
@@ -1420,9 +1421,9 @@ else if (seed === 32) {
 // Function to parse the URL and extract the poem title
 function getPoemTitleFromURL() {
     const url = window.location.href;
-    const queryIndex = url.indexOf('?');
-    if (queryIndex !== -1) {
-        const title = url.substring(queryIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+    const hashIndex = url.indexOf('#');
+    if (hashIndex !== -1) {
+        const title = url.substring(hashIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
         return title;
     }
     return null;
