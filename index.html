@@ -8,7 +8,7 @@
     var currentUrl = window.location.href;
     
     // Check if the URL has a hash
-    if (window.location.hash) {
+    if (window.location.hash.substring(1)) {
       // Extract the hash substring (excluding the '#' character)
       var hashSubstring = window.location.hash.substring(1);
       
@@ -1023,6 +1023,7 @@ function reloadDisqus() {
 
         // Function to close the modal
         function closeModal() {
+            window.location.search = "";
             window.location.hash = "";
             shareButton.innerText = "Share";
             const modal = document.getElementById('myModal');
