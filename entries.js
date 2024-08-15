@@ -4084,6 +4084,76 @@ And when I find another ace, I play the victim card.
                 `
             },
 
+                {
+                title: "Lucy",
+                date: "August 2024",
+                context: "This one's about doctors and patients - specifically doctors who have to deal with losses of patients. It's dedicated to one of most special doctors in my life.",
+                content: `
+                Now, my dear, look up, slowly open your eyes, 
+I'll draw the window curtains so you can watch the sunrise. 
+You're up in the morning, that's an early rise and shine, 
+But don't worry, it's okay, that's always a good sign. 
+You don't need to be scared, I promise you'll get better, 
+And look, while you were sleeping, your brother wrote you a letter.
+
+I'll read it out to you, since I know your vision's blurry, 
+But that's a usual symptom, you have no reason to worry. 
+I know your anxiety spikes at the smell of chloroform, 
+And the slow footsteps pacing from the clinic to the dorm. 
+I know the white fluorescent lights look like a sickly haze, 
+But look beside you, at those lilies in your favorite vase.
+
+There's one thing I never tell you, something confidential, 
+Your chances of survival are, at best, potential. 
+But you will never know that, I won't add to your stress, 
+I wouldn't ruin what might be your last week of happiness. 
+So I sit down next to you, and wait for your results, 
+And hum along to the soft beat of your steady pulse.
+
+I think about the senders of your letter as I read, 
+How I fought to convince them to let the surgery proceed. 
+Every day their names appear on the entry register, 
+I know they wonder if it's the last time they’ll see their sister. 
+They still write down their hopes in each 'get well soon' card, 
+But I know the fears they don't convey tear them apart.
+
+I hear the plastic crinkle as they grasp your shaky hand, 
+They say you'll get better, though inside, they're scared that you can't.
+Please be brave like them, please hold on to that hope,
+Oh, no, don't be scared, this is just my stethoscope. 
+I know it's difficult, I know your face is tear-stained 
+As you hear the other patients talk about the dreadful pain.
+
+But what you don't hear about is the ones who don't make it, 
+Med training toughened my heart, but deaths always break it.
+Every night I cry for all the lives I couldn't save, 
+The splintered bones of promises of recovery that I gave. 
+If just one thing was done differently, there'd be life in those skulls, 
+But now that it's too late, all I hear is your steady pulse.
+
+Your family’s here to visit you before you enter quarantine. 
+Before all you're accompanied by are lozenges and vaccines. 
+Anxiety sears enough to flare up your palpitations 
+When there's only three days left till the final operation. 
+So gather all your courage, for you’ll have to be a fighter, 
+I'll take care of you, and pray throughout all my all-nighters.
+
+Your parents visit, it might be the last time they see their daughter, 
+Your sighs hitch in your throat, so I fetch you a cup of water. 
+Your shaky hands spill it, it mixes with your tears of sorrow,
+Or maybe it's anticipation for what's to come tomorrow. 
+One more surgery to brace through, one more brutal fight, 
+I'm scared it's the last time your cardiac monitor reaches this height.
+
+Now, my dear, slowly look at me, and close your eyes, 
+Tell me about the happiest moments of your life. 
+Breathe in, hear your family tell you how much they love you, 
+Breathe out, let all of your regrets rise above you. 
+I watch the the anaesthesic kick in, the light in your eyes dulls, 
+And you fall asleep, softly humming to your steady pulse.
+                `
+            },
+
 
 /* here, the template for future poems-
 
