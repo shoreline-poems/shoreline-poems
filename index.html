@@ -870,6 +870,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //const animtoggle = document.getElementById('animation-toggle');
   //animtoggle.addEventListener('click', () => {
+
+function updateCommentBoxId() {
+        // Get the hash value from the URL
+        const hash = window.location.hash.substring(1); // Remove the '#' character
+        const theGreatBox = document.querySelector('.commentbox');
+
+        // Check if the comment box exists
+        if (theGreatBox) {
+            // Change its ID to the hash value
+            theGreatBox.id = hash;
+            console.log(`Comment box ID changed to: ${theGreatBox.id}`);
+        } else {
+            console.log('No div with the class "commentbox" found.');
+        }
+    }
+
+    // Event listener for hash change
+    window.addEventListener('hashchange', updateCommentBoxId);
+
+    // Initial call to set the ID based on the current hash (if any)
+    updateCommentBoxId();
+    
 function pauseAnimations() {
         var sRoot = document.querySelector(':root');
         const animToggleVal = sRoot.style.getPropertyValue('--animationToggle');
@@ -958,13 +980,6 @@ function reloadDisqus() {
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
             setTimeout(setModalAsOpened, 400);
-            const theGreatBox = document.querySelector('.commentbox');
-            if (theGreatBox) {
-                theGreatBox.id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-                alert(`ID changed to: ${theGreatBox.id}`);
-            } else {
-                alert('No comment box found.');
-            }
     }
         
 
