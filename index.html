@@ -3,23 +3,37 @@
 <html lang="en">
 <head>
     <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  function updateUrl() {
     // Get the current URL
     var currentUrl = window.location.href;
     
     // Check if the URL has a hash
-    if (window.location.hash.substring(1)) {
+    if (window.location.hash) {
       // Extract the hash substring (excluding the '#' character)
       var hashSubstring = window.location.hash.substring(1);
       
-      // Construct the new URL with the '?poem=' parameter
-      var newUrl = currentUrl.split('#')[0] + "?poem=" + hashSubstring;
-      
-      // Replace the current URL without reloading the page
-      window.history.replaceState(null, null, newUrl);
+      // Check if the URL already has '?poem=' to avoid duplicates
+      if (!currentUrl.includes("?poem=")) {
+        // Construct the new URL with the '?poem=' parameter
+        var newUrl = currentUrl.split('#')[0] + "?poem=" + hashSubstring;
+        
+        // Replace the current URL without reloading the page
+        window.history.replaceState(null, null, newUrl);
+      }
     }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initial check when the page loads
+    updateUrl();
+    
+    // Add event listener for hash changes
+    window.addEventListener("hashchange", function() {
+      updateUrl();
+    });
   });
 </script>
+
 
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <script type="text/javascript" src="entries.js"></script>
