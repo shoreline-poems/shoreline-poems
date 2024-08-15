@@ -687,27 +687,9 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     function loadCommentBox() {
                 var pageHash = window.location.hash.substring(1); // Get the hash without the '#' symbol
 
-        const firstBox = document.querySelector('.commentbox');
-
-    
-    if (firstBox) {
-
-    // Remove the existing comment box (clears comments)
-    firstBox.remove();}
-
-    // Create a new div with the new box ID
-    const newBox = document.createElement('div');
-    newBox.className = 'commentbox';
-    newBox.id = window.location.hash.substring(1);
-
-    // Append the new comment box to the body or its original parent
-    document.getElementById("theCommentsBox").appendChild(newBox);
-
-    // Reinitialize commentbox.io with the new box ID
-    commentBox('5761293667532800-proj', {
-        defaultBoxId: window.location.hash.substring(1)
-    });
-
+        const theGreatBox = document.querySelector('.commentbox');
+    let id = document.getElementsByTagName("a")[0].id;
+    document.theGreatBox.id = pageHash;
     console.log(`Comment box ID changed to: ${newBoxId}`);
 }
     
