@@ -562,7 +562,7 @@
   background-color: white;
 }
 
-.commentbox, #zoomment {
+.commentbox, #chirpy-comment {
   background: rgb(81,163,240);
   background: var(--thedarkblue);
   width: 100vw;
@@ -717,7 +717,11 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <br><br>
         </div> 
             <!--<div class="commentbox" id="none"></div>-->
-        <!--//SCRIPTHERE111112-->
+        <div
+          data-chirpy-theme="dark"
+          data-chirpy-comment="true"
+          id="chirpy-comment"
+        ></div>
             
 <script src="https://cdn.zoomment.com/zoomment.min.js"></script>
 </div>
@@ -842,6 +846,9 @@ disqusObserver.observe(document.getElementById('disqus_thread'), { childList: tr
   // You can now use `db` to interact with Firestore*/
 </script>
 
+
+    <script defer src="https://chirpy.dev/bootstrapper.js" data-chirpy-domain="shoreline-poems.github.io"></script>
+    
 <script>
   /*// Firebase configuration
   const firebaseConfig = {
