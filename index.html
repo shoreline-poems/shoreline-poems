@@ -529,7 +529,7 @@
   background-color: white;
 }
 
-.commentbox {
+.commentbox, #zoomment {
   background: rgb(81,163,240);
   background: var(--thedarkblue);
   width: 100vw;
@@ -682,7 +682,16 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button class="closeButton" onclick="closeModal()"><h2>Close</h2></button>
             <br>
             <br><br>
-        </div> <div class="commentbox" id="none"></div>
+        </div> 
+            <!--<div class="commentbox" id="none"></div>-->
+        <div
+  id="zoomment"
+  data-theme="light"
+  data-language="en"
+  data-gravatar="monsterid"
+  data-emotions="😀,🤔,😢"
+></div>
+<script src="https://cdn.zoomment.com/zoomment.min.js"></script>
 </div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5757839691743232-proj')</script>
