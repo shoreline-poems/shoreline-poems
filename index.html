@@ -2,6 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get the current URL
+    var currentUrl = window.location.href;
+    
+    // Check if the URL has a hash
+    if (window.location.hash) {
+      // Extract the hash substring (excluding the '#' character)
+      var hashSubstring = window.location.hash.substring(1);
+      
+      // Construct the new URL with the '?poem=' parameter
+      var newUrl = currentUrl.split('#')[0] + "?poem=" + hashSubstring;
+      
+      // Replace the current URL without reloading the page
+      window.history.replaceState(null, null, newUrl);
+    }
+  });
+</script>
+
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <script type="text/javascript" src="entries.js"></script>
     <meta name="google-site-verification" content="b-vt1w_yCEQFSK4Zrq0ZmTgCmpj1nkWhK_LXgNK89NU" />
@@ -684,13 +703,8 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <br><br>
         </div> 
             <!--<div class="commentbox" id="none"></div>-->
-        <div
-  id="zoomment"
-  data-theme="light"
-  data-language="en"
-  data-gravatar="monsterid"
-  data-emotions="😀,🤔,😢"
-></div>
+        <!--//SCRIPTHERE111112-->
+            
 <script src="https://cdn.zoomment.com/zoomment.min.js"></script>
 </div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
