@@ -1189,9 +1189,10 @@ function incrementVersion() {
 
         // Function to close the modal
         function closeModal() {
-            const theUrl = new URL(window.location.href);
-            theUrl.search = ''; // Clear all query parameters
-            window.history.replaceState({}, '', theUrl);
+            window.location.search = "poem="+poemValue;
+            //const theUrl = new URL(window.location.href);
+            //theUrl.search = ''; // Clear all query parameters
+            //window.history.replaceState({}, '', theUrl);
             shareButton.innerText = "Share";
             const modal = document.getElementById('myModal');
             modal.style.display = 'none';
