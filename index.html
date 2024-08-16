@@ -1097,7 +1097,7 @@ function incrementVersion() {
                 const card = document.createElement('div');
                 card.classList.add('poem-card');
                 card.innerText = poem.title;
-                card.addEventListener('click', () => openModal(poem));
+                card.addEventListener('click', () => actuallyOpenModal(poem));
 
 
             
@@ -1148,11 +1148,13 @@ function incrementVersion() {
             window.location.search = "poem="+poemValue;
         }
         
-
+        function actuallyOpenModal(poem123) {
+            updateQueryParameter(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'));
+            openModal(poem123);
+        }
     
         // Function to open the modal with poem details
         function openModal(poem) {
-            updateQueryParameter(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'));
             const modal = document.getElementById('myModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalDate = document.getElementById('modalDate');
