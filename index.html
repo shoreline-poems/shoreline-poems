@@ -627,10 +627,98 @@ button {
     padding: 10px;
     cursor: pointer;
 }
+
+.spinner {
+            display: none; /* Hidden by default */
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000; /* Ensure it's on top of other content */
+}
     </style>
 </head>
 <body>
 
+    <!-- Spinner SVG -->
+    <div class="spinner" id="spinner">
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple" style="background:0 0">
+            <circle cx="50" cy="50" r="4.719" fill="none" stroke="#fdbff2" stroke-width="2">
+                <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="-1.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="-1.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="50" cy="50" r="27.591" fill="none" stroke="#56b9d2" stroke-width="2">
+                <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite"/>
+            </circle>
+        </svg>
+    </div>
+
+    <!-- Content of your page -->
+
+    <script>
+        // Function to show the spinner
+        function showSpinner() {
+            document.getElementById('spinner').style.display = 'block';
+        }
+
+        // Function to hide the spinner
+        function hideSpinner() {
+            document.getElementById('spinner').style.display = 'none';
+        }
+
+        // Function to handle URL changes
+        function handleUrlChange() {
+            showSpinner();
+
+            // Simulate loading or fetch content as needed
+            // This could be replaced with actual content loading logic
+            setTimeout(() => {
+                hideSpinner();
+            }, 1000); // Adjust this timeout based on expected loading time
+        }
+
+        // Track the current search parameters
+        let currentSearch = window.location.search;
+
+        // Detect changes in URL parameters
+        window.addEventListener('popstate', function() {
+            if (window.location.search !== currentSearch) {
+                currentSearch = window.location.search;
+                handleUrlChange();
+            }
+        });
+
+        // Detect changes made by pushState or replaceState
+        window.addEventListener('pushState', function() {
+            if (window.location.search !== currentSearch) {
+                currentSearch = window.location.search;
+                handleUrlChange();
+            }
+        });
+
+        // Handle initial page load or URL change via JS
+        window.addEventListener('load', function() {
+            if (window.location.search !== currentSearch) {
+                currentSearch = window.location.search;
+                handleUrlChange();
+            }
+        });
+
+        // Override pushState and replaceState to handle URL changes
+        const originalPushState = history.pushState;
+        history.pushState = function(...args) {
+            originalPushState.apply(this, args);
+            window.dispatchEvent(new Event('pushState'));
+        };
+
+        const originalReplaceState = history.replaceState;
+        history.replaceState = function(...args) {
+            originalReplaceState.apply(this, args);
+            window.dispatchEvent(new Event('pushState'));
+        };
+
+    </script>
 
 <section>
   <div id="bubblesContainer">
@@ -1054,9 +1142,10 @@ function incrementVersion() {
 
         // Function to update the 'poem' query parameter in the URL
         function updateQueryParameter(poemValue) {
-            const url = new URL(window.location.href);
+            /*const url = new URL(window.location.href);
             url.searchParams.set('poem', poemValue);
-            window.history.replaceState({}, '', url);
+            window.history.replaceState({}, '', url);*/
+            window.location.search = "poem="+poemValue;
         }
         
 
