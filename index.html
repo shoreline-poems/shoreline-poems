@@ -677,6 +677,13 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br>
+    <script>
+    var idcomments_acct = '680d7478b6d85821010bb3068771cbd8';
+    var idcomments_post_id;
+    var idcomments_post_url;
+    </script>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
     <div id="cusdis_thread"
           data-host="https://cusdis.com"
           data-app-id="b53eb25a-a4d9-40d7-983f-5a3c0ed02be0"
@@ -850,7 +857,7 @@ function reloadDisqus() {
           const cusdisThread = document.getElementById('cusdis_thread');
         
           // Remove the existing Cusdis iframe
-          cusdisThread.innerHTML = '';
+          //cusdisThread.innerHTML = '';
         
           // Update the data attributes
           cusdisThread.setAttribute('data-page-id', pageID);
@@ -860,6 +867,7 @@ function reloadDisqus() {
           // Reload the Cusdis comment thread with new settings
           Cusdis.renderTo(cusdisThread);
         }
+
     
 
         // Function to generate poem cards
@@ -921,6 +929,8 @@ function reloadDisqus() {
             modalContent.scrollTop = 0; 
             modalWaveOpenedCompletely = true;
             loadCusdisWithNewID(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), poem.title);
+            idcomments_post_id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            idcomments_post_url = "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
         }
 
         // Function to close the modal
