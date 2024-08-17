@@ -676,8 +676,14 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <br>
             <br><br>
         </div></div>
-        <div class="disqus-div">
-        <div id="disqus_thread"></div>
+        <div id="cusdis_thread"
+          data-host="https://cusdis.com"
+          data-app-id="b53eb25a-a4d9-40d7-983f-5a3c0ed02be0"
+          data-page-id="main"
+          data-page-url="https://shoreline-poems.github.io/"
+          data-page-title="Shoreline"
+        ></div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
         </div>
 <script>
     /**
@@ -686,7 +692,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     
     var disqus_config = function () {
         var hash = window.location.hash.substr(1);  // Get the hash part of the URL
-        this.page.url = "https://lyricals.w3spaces.com/"+hash       // Set the page URL
+        this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
         this.page.identifier = hash; // Set the identifier based on the hash
     };
     
@@ -717,7 +723,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 
 
 
-    <script src="https://lyricals.w3spaces.com/entries.js"></script>
+    <script src="entries.js"></script>
 
 <script type="module">
   /*// Import Firebase modules
@@ -826,7 +832,7 @@ function reloadDisqus() {
         DISQUS.reset({
             reload: true,
             config: function () {
-                this.page.url = "https://lyricals.w3spaces.com/"+hash       // Set the page URL
+                this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
                 this.page.identifier = hash ? hash : 'default'; // Set the identifier based on the hash
             }
         });
@@ -839,7 +845,20 @@ function reloadDisqus() {
         var isPageGhostActive = false;
     
         
-
+        function loadCusdisWithNewID(pageID, pageURL, pageTitle) {
+          const cusdisThread = document.getElementById('cusdis_thread');
+        
+          // Remove the existing Cusdis iframe
+          cusdisThread.innerHTML = '';
+        
+          // Update the data attributes
+          cusdisThread.setAttribute('data-page-id', pageID);
+          cusdisThread.setAttribute('data-page-url', pageURL);
+          cusdisThread.setAttribute('data-page-title', pageTitle);
+        
+          // Reload the Cusdis comment thread with new settings
+          Cusdis.renderTo(cusdisThread);
+        }
     
 
         // Function to generate poem cards
@@ -884,7 +903,7 @@ function reloadDisqus() {
             modalDate.innerText = `Written in ${poem.date}`;
             document.getElementById("shareButton").addEventListener("click", function() {
                 var textToCopy = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-                navigator.clipboard.writeText("https://lyricals.w3spaces.com/#"+textToCopy);
+                navigator.clipboard.writeText("https://shoreline-poems.github.io/#"+textToCopy);
                 shareButton.innerText = "Poem link copied! :D";
             });
             if (poem.context !== "") {
@@ -900,6 +919,7 @@ function reloadDisqus() {
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
             modalWaveOpenedCompletely = true;
+            loadCusdisWithNewID(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), "https://shoreline-poems.github.io/#"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), poem.title);
         }
 
         // Function to close the modal
