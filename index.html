@@ -532,7 +532,7 @@
   background: var(--darkblue);
 }
 
-#disqus_thread, #cusdis_thread {
+#disqus_thread, #cusdis_thread, #IDCommentsPostTitle {
   text-align: center;
   margin: auto;
   width: 75%;
@@ -857,7 +857,7 @@ function reloadDisqus() {
           const cusdisThread = document.getElementById('cusdis_thread');
         
           // Remove the existing Cusdis iframe
-          //cusdisThread.innerHTML = '';
+          cusdisThread.innerHTML = '';
         
           // Update the data attributes
           cusdisThread.setAttribute('data-page-id', pageID);
