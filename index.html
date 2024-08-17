@@ -677,6 +677,39 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br>
+    
+    <div id="graphcomment"></div>
+<script type="text/javascript">
+
+  /* - - - CONFIGURATION VARIABLES - - - */
+
+  var __semio__params = { //__semio__params.behaviour.uid
+    graphcommentId: "Shoreline", // make sure the id is yours
+
+    behaviour: {
+      // HIGHLY RECOMMENDED
+      uid: "mainpage", // uniq identifer for the comments thread on your page (ex: your page id)
+    },
+
+    // configure your variables here
+
+  }
+
+  /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+  function __semio__onload() {
+    __semio__gc_graphlogin(__semio__params)
+  }
+
+
+  (function() {
+    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+    gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+  })();
+  
+
+</script>
     <script>
     var idcomments_acct = '680d7478b6d85821010bb3068771cbd8';
     var idcomments_post_id;
@@ -931,6 +964,7 @@ function reloadDisqus() {
             loadCusdisWithNewID(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), poem.title);
             idcomments_post_id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
             idcomments_post_url = "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            __semio__params.behaviour.uid = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
         }
 
         // Function to close the modal
@@ -943,6 +977,7 @@ function reloadDisqus() {
             const modalContent = document.getElementById('modalContent');
             modalContent.scrollTop = 0;
             modalWaveOpenedCompletely = false;}
+            __semio__params.behaviour.uid = "mainpage";
         }
 
      
