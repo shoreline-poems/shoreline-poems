@@ -1,42 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<!---<head>
-    <script>
-  function updateUrl() {
-    // Get the current URL
-    var currentUrl = window.location.href;
-    
-    // Check if the URL has a hash
-    if (window.location.hash) {
-      // Extract the hash substring (excluding the '#' character)
-      var hashSubstring = window.location.hash.substring(1);
-      
-      // Check if the URL already has '?poem=' to avoid duplicates
-      if (!currentUrl.includes("?poem=")) {
-        // Construct the new URL with the '?poem=' parameter
-        var newUrl = currentUrl.split('#')[0] + "?poem=" + hashSubstring;
-        
-        // Replace the current URL without reloading the page
-        window.history.replaceState(null, null, newUrl);
-      }
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Initial check when the page loads
-    updateUrl();
-    
-    // Add event listener for hash changes
-    window.addEventListener("hashchange", function() {
-      updateUrl();
-    });
-  });
-</script>-->
-
-
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <script type="text/javascript" src="entries.js"></script>
+<head>
     <meta name="google-site-verification" content="b-vt1w_yCEQFSK4Zrq0ZmTgCmpj1nkWhK_LXgNK89NU" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,8 +57,7 @@
           --themecard: linear-gradient(-45deg, #fdc7d2, #f8f4c5, #ffd3a0);
           --themessb: #ff85be;
           --blue: linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%);
-          --thedarkblue: linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%);
-          --animationToggle: 1;
+          --darkblue: linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%);
         }
       
         .poem-card {
@@ -166,7 +129,7 @@
                 opacity: 1;
             }
             to {
-                opacity: 0;s
+                opacity: 0;
             }
         }
 
@@ -200,7 +163,7 @@
             //background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
             max-height: 80vh; /* Constrain modal height */
             padding: 20vh;
-            animation: fadeIn calc(var(--animationToggle)*2.5s) ease-in-out;
+            animation: fadeIn 2.5s ease-in-out;
         }
 
         .modal-content {
@@ -227,19 +190,19 @@
             position: relative;
         }
         
-        .closeButton {
+        #closeButton {
             background-color: var(--themessb);
             border: none;
             font-family: Pangolin, display;
-            height:40px;
-            width:90px;
-            transition: transform calc(var(--animationToggle)*0.3s) ease-in-out, background-color calc(var(--animationToggle)*0.3s) ease-in-out;
+            height:30px;
+            width:60px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
             border-radius: 7px;
             padding: 3px;
             animation: bob 3s infinite alternate; /* Add bobbing animation */
         }
         
-        .animButton, #themeSelect, #sortSelect, #searchInput, #shareButton {
+        #themeSelect, #sortSelect, #searchInput, #shareButton {
             background-color: var(--themessb);
             border: none;
             font-family: Pangolin, display;
@@ -250,7 +213,7 @@
 
         }
         
-        .animButton:hover, .closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+        #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
             background-color: #a1c6e3; 
             color: white;
         }
@@ -313,7 +276,7 @@
         .fade-in {
             opacity: 1;
             transition: opacity 0.5s;
-            animation: fade-in calc(var(--animationToggle)*0.5s);
+            animation: fade-in 0.5s;
         }
 
         @keyframes fade-in {
@@ -365,7 +328,7 @@
     4px -5px 6px pink,
     -4px -10px 10px lightgreen,
     0 -10px 30px lightgreen;
-  animation: calc(var(--animationToggle)*2s) Glow infinite alternate linear;
+  animation: 2s Glow infinite alternate linear;
 }
 
 @keyframes Glow {
@@ -425,76 +388,76 @@
   border-radius:50%;
   opacity:0.5;
   overflow: visible;
-  animation: rise calc(var(--animationToggle)*10s) infinite ease-in;
+  animation: rise 10s infinite ease-in;
 }
 .bubble:nth-child(1){
   width:40px;
   height:40px;
   left:10%;
-  animation-duration:calc(var(--animationToggle)*8s);
+  animation-duration:8s;
 }
 .bubble:nth-child(2){
   width:20px;
   height:20px;
   left:20%;
-  animation-duration:calc(var(--animationToggle)*5s);
-  animation-delay:calc(var(--animationToggle)*1s);
+  animation-duration:5s;
+  animation-delay:1s;
 }
 .bubble:nth-child(3){
   width:50px;
   height:50px;
   left:35%;
-  animation-duration:calc(var(--animationToggle)*7s);
-  animation-delay:calc(var(--animationToggle)*2s);
+  animation-duration:7s;
+  animation-delay:2s;
 }
 .bubble:nth-child(4){
   width:80px;
   height:80px;
   left:50%;
-  animation-duration:calc(var(--animationToggle)*11s);
-  animation-delay:calc(var(--animationToggle)*0s);
+  animation-duration:11s;
+  animation-delay:0s;
 }
 .bubble:nth-child(5){
   width:35px;
   height:35px;
   left:55%;
-  animation-duration:calc(var(--animationToggle)*6s);
-  animation-delay:calc(var(--animationToggle)*1s);
+  animation-duration:6s;
+  animation-delay:1s;
 }
 .bubble:nth-child(6){
   width:45px;
   height:45px;
   left:65%;
-  animation-duration:calc(var(--animationToggle)*8s);
-  animation-delay:calc(var(--animationToggle)*3s);
+  animation-duration:8s;
+  animation-delay:3s;
 }
 .bubble:nth-child(7){
   width:90px;
   height:90px;
   left:70%;
-  animation-duration:calc(var(--animationToggle)*12s);
-  animation-delay:calc(var(--animationToggle)*2s);
+  animation-duration:12s;
+  animation-delay:2s;
 }
 .bubble:nth-child(8){
   width:25px;
   height:25px;
   left:80%;
-  animation-duration:calc(var(--animationToggle)*6s);
-  animation-delay:calc(var(--animationToggle)*2s);
+  animation-duration:6s;
+  animation-delay:2s;
 }
 .bubble:nth-child(9){
   width:15px;
   height:15px;
   left:70%;
-  animation-duration:calc(var(--animationToggle)*5s);
-  animation-delay:calc(var(--animationToggle)*1s);
+  animation-duration:5s;
+  animation-delay:1s;
 }
 .bubble:nth-child(10){
   width:90px;
   height:90px;
   left:25%;
-  animation-duration:calc(var(--animationToggle)*10s);
-  animation-delay:calc(var(--animationToggle)*4s);
+  animation-duration:10s;
+  animation-delay:4s;
 }
 @keyframes rise{
   0%{
@@ -562,11 +525,9 @@
   background-color: white;
 }
 
-.commentbox, #chirpy-comment {
+.disqus-div {
   background: rgb(81,163,240);
-  background: var(--thedarkblue);
-  width: 100vw;
-  height: 100%;
+  background: var(--darkblue);
 }
 
 #disqus_thread {
@@ -582,23 +543,23 @@
 /* Animation */
 
 .parallax > use {
-  animation: move-forever calc(var(--animationToggle)*25s) cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
 }
 .parallax > use:nth-child(1) {
-  animation-delay: calc(var(--animationToggle)*-2s);
-  animation-duration: calc(var(--animationToggle)*7s);
+  animation-delay: -2s;
+  animation-duration: 7s;
 }
 .parallax > use:nth-child(2) {
-  animation-delay: calc(var(--animationToggle)*-3s);
-  animation-duration: calc(var(--animationToggle)*10s);
+  animation-delay: -3s;
+  animation-duration: 10s;
 }
 .parallax > use:nth-child(3) {
-  animation-delay: calc(var(--animationToggle)*-4s);
-  animation-duration: calc(var(--animationToggle)*13s);
+  animation-delay: -4s;
+  animation-duration: 13s;
 }
 .parallax > use:nth-child(4) {
-  animation-delay: calc(var(--animationToggle)*-5s);
-  animation-duration: calc(var(--animationToggle)*20s);
+  animation-delay: -5s;
+  animation-duration: 20s;
 }
 @keyframes move-forever {
   0% {
@@ -627,98 +588,10 @@ button {
     padding: 10px;
     cursor: pointer;
 }
-
-.spinner {
-            display: none; /* Hidden by default */
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000; /* Ensure it's on top of other content */
-}
     </style>
 </head>
 <body>
 
-    <!-- Spinner SVG -->
-    <div class="spinner" id="spinner">
-        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple" style="background:0 0">
-            <circle cx="50" cy="50" r="4.719" fill="none" stroke="#fdbff2" stroke-width="2">
-                <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="-1.5s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="-1.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="50" cy="50" r="27.591" fill="none" stroke="#56b9d2" stroke-width="2">
-                <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite"/>
-                <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite"/>
-            </circle>
-        </svg>
-    </div>
-
-    <!-- Content of your page -->
-
-    <script>
-        // Function to show the spinner
-        function showSpinner() {
-            document.getElementById('spinner').style.display = 'block';
-        }
-
-        // Function to hide the spinner
-        function hideSpinner() {
-            document.getElementById('spinner').style.display = 'none';
-        }
-
-        // Function to handle URL changes
-        function handleUrlChange() {
-            showSpinner();
-
-            // Simulate loading or fetch content as needed
-            // This could be replaced with actual content loading logic
-            setTimeout(() => {
-                hideSpinner();
-            }, 1000); // Adjust this timeout based on expected loading time
-        }
-
-        // Track the current search parameters
-        let currentSearch = window.location.search;
-
-        // Detect changes in URL parameters
-        window.addEventListener('popstate', function() {
-            if (window.location.search !== currentSearch) {
-                currentSearch = window.location.search;
-                handleUrlChange();
-            }
-        });
-
-        // Detect changes made by pushState or replaceState
-        window.addEventListener('pushState', function() {
-            if (window.location.search !== currentSearch) {
-                currentSearch = window.location.search;
-                handleUrlChange();
-            }
-        });
-
-        // Handle initial page load or URL change via JS
-        window.addEventListener('load', function() {
-            if (window.location.search !== currentSearch) {
-                currentSearch = window.location.search;
-                handleUrlChange();
-            }
-        });
-
-        // Override pushState and replaceState to handle URL changes
-        const originalPushState = history.pushState;
-        history.pushState = function(...args) {
-            originalPushState.apply(this, args);
-            window.dispatchEvent(new Event('pushState'));
-        };
-
-        const originalReplaceState = history.replaceState;
-        history.replaceState = function(...args) {
-            originalReplaceState.apply(this, args);
-            window.dispatchEvent(new Event('pushState'));
-        };
-
-    </script>
 
 <section>
   <div id="bubblesContainer">
@@ -761,7 +634,6 @@ button {
             <option value="underwater">Underwater</option>
             <option value="violet">Violet</option>
         </select>
-        <button id="animation-toggle" class="animButton" type="button" onclick="pauseAnimations()">Pause Animation</button>
         <input type="text" id="searchInput" placeholder="Search...">
     </div>
 
@@ -800,51 +672,21 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <p class="modalContext" id="modalContext"></p>
             <p id="modalContent"></p>
             <br>
-            <button class="closeButton" onclick="closeModal()"><h2>Close</h2></button>
+            <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br>
-        </div> 
-            <!--<div class="commentbox" id="none"></div>-->
-        <!-- begin wwww.htmlcommentbox.com -->
-            
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%248Pyng029J42rpU9Bx6jgw."+"&opts=16798&num=10&ts=1723718706125");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-     
-            
-<script src="https://cdn.zoomment.com/zoomment.min.js"></script>
-</div>
-<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-<script>commentBox('5757839691743232-proj')</script>
-        
-        <!--<script>
-    import qs from 'qs';
-
-commentBox('5757839691743232-proj', {
-    createBoxUrl(boxId, pageLocation) {
-
-        const queryParams = qs.parse(pageLocation.hash.replace('#', ''));
-        const relevantParams = {
-            'page_id': queryParams['page_id']
-        };
-        alert(queryParams);
-        pageLocation.hash = qs.stringify(relevantParams); // we will now include "?page_id=5" in the box URL
-        //pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
-        return pageLocation.href; // return url string
-    }
-});
-</script>-->
-<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+        </div></div>
+        <div class="disqus-div">
+        <div id="disqus_thread"></div>
         </div>
-<!--<script>
+<script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     
     var disqus_config = function () {
         var hash = window.location.hash.substr(1);  // Get the hash part of the URL
-        this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
+        this.page.url = "https://lyricals.w3spaces.com/"+hash       // Set the page URL
         this.page.identifier = hash; // Set the identifier based on the hash
     };
     
@@ -854,41 +696,9 @@ commentBox('5757839691743232-proj', {
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-function forceGuestCommenting() {
-    // Hide all login options
-    var loginButtons = document.querySelectorAll('.login-link, .provider-link, .guest-to-login');
-    loginButtons.forEach(function(button) {
-        button.style.display = 'none';
-    });
-
-    // Automatically focus on the guest name/email fields
-    var guestNameField = document.querySelector('input#dsq-combo-box-name, input#dsq-combo-box-email');
-    if (guestNameField) {
-        guestNameField.focus();
-    }
-
-    // Modify the UI to encourage guest comments
-    var commentField = document.querySelector('.comment-box-wrapper');
-    if (commentField) {
-        commentField.insertAdjacentHTML('beforebegin', '<p>Commenting as a guest is enabled by default.</p>');
-    }
-}
-
-// Observe the Disqus thread to detect when it loads
-var disqusObserver = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-        if (document.getElementById('disqus_thread').getElementsByClassName('post-content').length > 0) {
-            forceGuestCommenting();
-            disqusObserver.disconnect();
-        }
-    });
-});
-
-disqusObserver.observe(document.getElementById('disqus_thread'), { childList: true, subtree: true });
 </script>
-
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            <div class="comments">
+            <!--<div class="comments">
                 <h2>Comments</h2>
                 <div id="comment-list">
                 </div>
@@ -907,8 +717,8 @@ disqusObserver.observe(document.getElementById('disqus_thread'), { childList: tr
 
 
 
+    <script src="https://lyricals.w3spaces.com/entries.js"></script>
 
-       
 <script type="module">
   /*// Import Firebase modules
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js';
@@ -936,9 +746,6 @@ disqusObserver.observe(document.getElementById('disqus_thread'), { childList: tr
   // You can now use `db` to interact with Firestore*/
 </script>
 
-
-    <script defer src="https://chirpy.dev/bootstrapper.js" data-chirpy-domain="shoreline-poems.github.io"></script>
-    
 <script>
   /*// Firebase configuration
   const firebaseConfig = {
@@ -1013,51 +820,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });*/
 
-  /* Toggle Animations */
 
-  //const animtoggle = document.getElementById('animation-toggle');
-  //animtoggle.addEventListener('click', () => {
-
-/*function updateCommentBoxId() {
-        // Get the hash value from the URL
-        const hash = window.location.hash.substring(1); // Remove the '#' character
-        const theGreatBox = document.querySelector('.commentbox');
-
-        // Check if the comment box exists
-        if (theGreatBox) {
-            // Change its ID to the hash value
-            if (hash) {
-            theGreatBox.id = hash;}
-            else {theGreatBox.id = "none";}
-            console.log(`Comment box ID changed to: ${theGreatBox.id}`);
-        } else {
-            console.log('No div with the class "commentbox" found.');
-        }
-    }
-
-    // Event listener for hash change
-    window.addEventListener('hashchange', updateCommentBoxId);
-
-    // Initial call to set the ID based on the current hash (if any)
-    updateCommentBoxId();
-    */
-function pauseAnimations() {
-        var sRoot = document.querySelector(':root');
-        const animToggleVal = sRoot.style.getPropertyValue('--animationToggle');
-        if (animToggleVal == '1') {
-            sRoot.style.setProperty('--animationToggle', '0');
-        }
-        else {sRoot.style.setProperty('--animationToggle', '1');}
-    }
-  //});
-
-    
 function reloadDisqus() {
         var hash = window.location.hash.substr(1);  // Get the hash part of the URL
         DISQUS.reset({
             reload: true,
             config: function () {
-                this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
+                this.page.url = "https://lyricals.w3spaces.com/"+hash       // Set the page URL
                 this.page.identifier = hash ? hash : 'default'; // Set the identifier based on the hash
             }
         });
@@ -1070,23 +839,7 @@ function reloadDisqus() {
         var isPageGhostActive = false;
     
         
-function incrementVersion() {
-        const script = document.getElementById('myScript');
-        const currentSrc = script.getAttribute('src');
 
-        // Use a regex to find the current version number
-        const versionMatch = currentSrc.match(/(\?v=)(\d+)/);
-        let newVersion = 1; // Default version if not found
-
-        if (versionMatch) {
-            // Extract the current version and increment it
-            newVersion = parseInt(versionMatch[2]) + 1;
-        }
-
-        // Update the src attribute with the new version
-        script.setAttribute('src', currentSrc.replace(/(\?v=)\d+/, `$1${newVersion}`));
-        console.log(`Updated script src to: ${script.getAttribute('src')}`);
-    }
     
 
         // Function to generate poem cards
@@ -1097,7 +850,7 @@ function incrementVersion() {
                 const card = document.createElement('div');
                 card.classList.add('poem-card');
                 card.innerText = poem.title;
-                card.addEventListener('click', () => actuallyOpenModal(poem));
+                card.addEventListener('click', () => openModal(poem));
 
 
             
@@ -1106,55 +859,19 @@ function incrementVersion() {
                 const randomGradientDuration = (Math.random() * 40 + 10).toFixed(1);
 
                 // Set inline styles for animations
-                card.style.animationDuration = `calc(var(--animationToggle)*${randomGradientDuration}s), calc(var(--animationToggle)*${randomBobDuration}s)`;
+                card.style.animationDuration = `${randomGradientDuration}s, ${randomBobDuration}s`;
                 document.getElementById("bubblesContainer").setAttribute("class","bubbles");
                 poemContainer.appendChild(card);
             });
         }
 
-        function resetCommentBox() {
-        // Remove the existing comment script
-        const existingScript = document.getElementById('hcb');
-        if (existingScript) {
-            existingScript.remove(); // Remove the original script
+        var modalWaveOpenedCompletely = false;
 
-            // Optionally, remove any existing comment box elements
-            const commentBoxElements = document.querySelectorAll('[id^="hcb_"], .hcb-comment-box');
-            commentBoxElements.forEach(function(element) {
-                element.remove(); // Remove elements related to the comment box
-            });
-        }
-
-        // Re-run the original script
-        (function() {
-            var s = document.createElement("script"),
-                l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
-                h = "https://www.htmlcommentbox.com";
-            
-            s.setAttribute("type", "text/javascript");
-            s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%248Pyng029J42rpU9Bx6jgw." + "&opts=16798&num=10&ts=" + new Date().getTime());
-            
-            if (typeof s != "undefined") 
-                document.getElementsByTagName("head")[0].appendChild(s);
-            alert(s);
-        })();
-    }
-
-        // Function to update the 'poem' query parameter in the URL
-        function updateQueryParameter(poemValue) {
-            /*const url = new URL(window.location.href);
-            url.searchParams.set('poem', poemValue);
-            window.history.replaceState({}, '', url);*/
-            window.location.search = "poem="+poemValue;
-        }
-        
-        function actuallyOpenModal(poem123) {
-            updateQueryParameter(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'));
-            openModal(poem123);
-        }
-    
         // Function to open the modal with poem details
         function openModal(poem) {
+            modalWaveOpenedCompletely = false;
+            const poemTitleHash = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            window.location.hash = poemTitleHash;
             const modal = document.getElementById('myModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalDate = document.getElementById('modalDate');
@@ -1167,7 +884,7 @@ function incrementVersion() {
             modalDate.innerText = `Written in ${poem.date}`;
             document.getElementById("shareButton").addEventListener("click", function() {
                 var textToCopy = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
-                navigator.clipboard.writeText("https://shoreline-poems.github.io/?poem="+textToCopy);
+                navigator.clipboard.writeText("https://lyricals.w3spaces.com/#"+textToCopy);
                 shareButton.innerText = "Poem link copied! :D";
             });
             if (poem.context !== "") {
@@ -1182,22 +899,19 @@ function incrementVersion() {
             modal.style.display = 'block';
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
-            setTimeout(setModalAsOpened, 400);
-            resetCommentBox();
-    }
-        
+            modalWaveOpenedCompletely = true;
+        }
 
         // Function to close the modal
         function closeModal() {
-            window.location.search = "";
-            //const theUrl = new URL(window.location.href);
-            //theUrl.search = ''; // Clear all query parameters
-            //window.history.replaceState({}, '', theUrl);
+            if (modalWaveOpenedCompletely == true) {
+            window.location.hash = "";
             shareButton.innerText = "Share";
             const modal = document.getElementById('myModal');
             modal.style.display = 'none';
             const modalContent = document.getElementById('modalContent');
             modalContent.scrollTop = 0;
+            modalWaveOpenedCompletely = false;}
         }
 
      
@@ -1245,7 +959,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#ff85be');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'aquamarine':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1))');
@@ -1253,7 +967,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#a1c6e3');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'lavender':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
@@ -1261,7 +975,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#5c2a80');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'underwater':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
@@ -1269,7 +983,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#7dc7b5');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               case 'violet':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
@@ -1277,7 +991,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#7e68a6');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               default:
               break;
@@ -1344,7 +1058,7 @@ function incrementVersion() {
         const modal = document.getElementById('myModal');
         modal.addEventListener('click', (event) => {
             if (event.target === modal) {
-                //closeModal();
+                closeModal();
             }
         });
         
@@ -1369,7 +1083,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#ff85be');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'aquamarine':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1))');
@@ -1377,7 +1091,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#a1c6e3');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'lavender':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
@@ -1385,7 +1099,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#5c2a80');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'underwater':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
@@ -1393,7 +1107,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#7dc7b5');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               case 'violet':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
@@ -1401,7 +1115,7 @@ function incrementVersion() {
                   sRoot.style.setProperty('--themessb', '#7e68a6');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--thedarkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               default:
               break;
@@ -1618,10 +1332,10 @@ else if (seed === 32) {
 
 // Function to parse the URL and extract the poem title
 function getPoemTitleFromURL() {
-    const url = new URL(window.location.href);
-    const thePoemFound = url.searchParams.get('poem');
-    if (thePoemFound) {
-        const title = thePoemFound.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+    const url = window.location.href;
+    const hashIndex = url.indexOf('#');
+    if (hashIndex !== -1) {
+        const title = url.substring(hashIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
         return title;
     }
     return null;
@@ -1648,7 +1362,7 @@ window.addEventListener('DOMContentLoaded', () => {
     </script>
 
 <br>
-    
+
 <!--Waves Container-->
 <div>
 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
