@@ -688,7 +688,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 
     behaviour: {
       // HIGHLY RECOMMENDED
-      uid: "mainpage", // uniq identifer for the comments thread on your page (ex: your page id)
+      uid: window.location.hash.substr(1), // uniq identifer for the comments thread on your page (ex: your page id)
     },
 
     // configure your variables here
@@ -881,6 +881,7 @@ function reloadDisqus() {
 
     window.addEventListener('hashchange', function() {
         reloadDisqus();
+        __semio__params.behaviour.uid = window.location.hash.substr(1);
     });
 
         var isPageGhostActive = false;
