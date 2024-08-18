@@ -678,6 +678,9 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <br>
             <br><br>
     
+    <div class="disqus-div">
+        <div id="disqus_thread"></div>
+        
     <div id="graphcomment"></div>
 <script type="text/javascript">
 
@@ -909,7 +912,17 @@ function reloadDisqus() {
           Cusdis.renderTo(cusdisThread);
         }
 
-    
+    document.addEventListener("DOMContentLoaded", function() {
+    var guestCheckbox = document.querySelector('input#post-as-guest-checkbox');
+    if (guestCheckbox) {
+        guestCheckbox.checked = true;
+    }
+
+    var loginOptions = document.querySelector('.disqus-login-container');
+    if (loginOptions) {
+        loginOptions.style.display = 'none';
+    }
+});
 
         // Function to generate poem cards
         function generatePoemCards(poemsToDisplay) {
@@ -975,6 +988,15 @@ function reloadDisqus() {
             //__semio__params.behaviour.uid = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
             const uid = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');  // Example: Generate UID based on the modal index
             loadGraphComment(uid);
+            var guestCheckbox = document.querySelector('input#post-as-guest-checkbox');
+            if (guestCheckbox) {
+                guestCheckbox.checked = true;
+            }
+        
+            var loginOptions = document.querySelector('.disqus-login-container');
+            if (loginOptions) {
+                loginOptions.style.display = 'none';
+            }
         }
 
         // Function to close the modal
