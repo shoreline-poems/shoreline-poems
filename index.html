@@ -680,7 +680,46 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     
     <div class="disqus-div">
         <div id="disqus_thread"></div>
-        
+        <script>
+    // Function to wait for the Disqus iframe to load
+    function onDisqusReady(callback) {
+        const observer = new MutationObserver(() => {
+            const iframe = document.querySelector('iframe[title="Disqus"]');
+            if (iframe) {
+                observer.disconnect();
+                callback(iframe);
+            }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    onDisqusReady((iframe) => {
+        const disqusWindow = iframe.contentWindow;
+
+        // Poll until the Disqus elements are available
+        const intervalId = setInterval(() => {
+            const guestCheckbox = disqusWindow.document.querySelector('input[type="checkbox"][name="post_anonymously"]');
+            const loginMethods = disqusWindow.document.querySelectorAll('.login-method');
+
+            if (guestCheckbox && loginMethods.length) {
+                // Auto-enable the guest checkbox
+                guestCheckbox.checked = true;
+
+                // Hide the option to disable the guest checkbox
+                guestCheckbox.closest('label').style.display = 'none';
+
+                // Hide all other login options except Google
+                loginMethods.forEach(method => {
+                    if (!method.classList.contains('google')) {
+                        method.style.display = 'none';
+                    }
+                });
+
+                clearInterval(intervalId); // Stop polling once changes are applied
+            }
+        }, 100);
+    });
+</script>
     <div id="graphcomment"></div>
 <script type="text/javascript">
 
@@ -997,6 +1036,32 @@ function reloadDisqus() {
             if (loginOptions) {
                 loginOptions.style.display = 'none';
             }
+            onDisqusReady((iframe) => {
+        const disqusWindow = iframe.contentWindow;
+
+        // Poll until the Disqus elements are available
+        const intervalId = setInterval(() => {
+            const guestCheckbox = disqusWindow.document.querySelector('input[type="checkbox"][name="post_anonymously"]');
+            const loginMethods = disqusWindow.document.querySelectorAll('.login-method');
+
+            if (guestCheckbox && loginMethods.length) {
+                // Auto-enable the guest checkbox
+                guestCheckbox.checked = true;
+
+                // Hide the option to disable the guest checkbox
+                guestCheckbox.closest('label').style.display = 'none';
+
+                // Hide all other login options except Google
+                loginMethods.forEach(method => {
+                    if (!method.classList.contains('google')) {
+                        method.style.display = 'none';
+                    }
+                });
+
+                clearInterval(intervalId); // Stop polling once changes are applied
+            }
+        }, 100);
+    });
         }
 
         // Function to close the modal
