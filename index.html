@@ -635,6 +635,19 @@ button {
             <option value="lavender">Lavender</option>
             <option value="underwater">Underwater</option>
             <option value="violet">Violet</option>
+            <option value="sunrise-dark">Sunrise Dark</option>
+            <option value="prismatic-dark">Prismatic Dark</option>
+            <option value="wintergale-light">Wintergale Light</option>
+            <option value="wintergale-dark">Wintergale Dark</option>
+            <option value="parchment-light">Parchment Light</option>
+            <option value="parchment-dark">Parchment Dark</option>
+            <option value="overcast-light">Overcast Light</option>
+            <option value="overcast-dark">Overcast Dark</option>
+            <option value="crashedandburning-light">Crashed and Burning Light</option>
+            <option value="crashedandburning-dark">Crashed and Burning Dark</option>
+            <option value="estuary-light">Estuary Light</option>
+            <option value="treehollow-light">Treehollow Light</option>
+            <option value="treehollow-dark">Treehollow Dark</option>
         </select>
         <input type="text" id="searchInput" placeholder="Search...">
     </div>
@@ -1244,6 +1257,97 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
+            case 'sunrise-dark':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(255,165,0,1), rgba(255,0,255,1), rgba(255,69,0,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(255,200,100,1), rgba(255,182,193,1), rgba(255,228,196,1))');
+                sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                break;
+                case 'prismatic-dark':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(148,0,211,1), rgba(0,100,0,1), rgba(128,0,128,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(173,216,230,1), rgba(144,238,144,1), rgba(224,255,255,1))');
+                sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                break;
+                case 'wintergale-light':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(255,255,255,1), rgba(173,216,230,1), rgba(240,248,255,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,71,171,1), rgba(192,192,192,1), rgba(173,216,230,1))');
+                sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                break;
+                case 'wintergale-dark':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(0,71,171,1), rgba(0,0,139,1), rgba(25,25,112,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(192,192,192,1), rgba(0,0,255,1), rgba(70,130,180,1))');
+                sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                break;
+                case 'parchment-light':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(245,245,220,1), rgba(255,255,0,1), rgba(255,248,220,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(111,78,55,1), rgba(245,245,220,1), rgba(222,184,135,1))');
+                sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                break;
+                case 'parchment-dark':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(165,42,42,1), rgba(255,215,0,1), rgba(210,180,140,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(245,245,220,1), rgba(255,248,220,1), rgba(250,235,215,1))');
+                sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                break;
+                case 'overcast-light':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(119,136,153,1), rgba(169,169,169,1), rgba(176,196,222,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,71,171,1), rgba(169,169,169,1), rgba(211,211,211,1))');
+                sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                break;
+                case 'overcast-dark':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(75,0,130,1), rgba(105,105,105,1), rgba(169,169,169,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,71,171,1), rgba(192,192,192,1), rgba(211,211,211,1))');
+                sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                break;
+                case 'crashedandburning-light':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(169,169,169,1), rgba(255,0,0,1), rgba(192,192,192,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(255,255,0,1), rgba(255,165,0,1), rgba(255,69,0,1))');
+                sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                break;
+                case 'crashedandburning-dark':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(105,105,105,1), rgba(255,0,0,1), rgba(169,169,169,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(255,0,0,1), rgba(255,69,0,1), rgba(255,140,0,1))');
+                sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                break;
+                case 'estuary-light':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,0,255,1), rgba(255,255,255,1), rgba(224,255,255,1))');
+                sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                break;
+                case 'treehollow-light':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(144,238,144,1), rgba(0,255,0,1), rgba(173,255,47,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(245,245,220,1), rgba(210,180,140,1), rgba(222,184,135,1))');
+                sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+                break;
+                case 'treehollow-dark':
+                sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(0,100,0,1), rgba(34,139,34,1), rgba(0,128,0,1))');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(165,42,42,1), rgba(139,69,19,1), rgba(128,0,0,1))');
+                sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+                break;
               default:
               break;
             }
