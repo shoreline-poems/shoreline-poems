@@ -1024,41 +1024,29 @@ function reloadDisqus() {
 
 
             function generatePoemCardsByVolume(volumeNumber) {
-                // Filter and sort the poems by volume
-                const filteredPoems = poems.filter(poem => poem.volume[0] == volumeNumber).sort((a, b) => a.volume[1] - b.volume[1]);
-        
-                const poemContainer = document.getElementById('poemContainer');
-                poemContainer.innerHTML = ''; // Clear existing cards
-        
-                if (filteredPoems.length === 7) {
-                    // Create the hexagonal pattern layout
-                    const row1 = document.createElement('div');
-                    row1.classList.add('poem-row');
-                    const row2 = document.createElement('div');
-                    row2.classList.add('poem-row');
-                    const row3 = document.createElement('div');
-                    row3.classList.add('poem-row');
-        
-                    filteredPoems.slice(0, 2).forEach(poem => {
-                        const card = createPoemCard(poem);
-                        row1.appendChild(card);
-                    });
-        
-                    filteredPoems.slice(2, 5).forEach(poem => {
-                        const card = createPoemCard(poem);
-                        row2.appendChild(card);
-                    });
-        
-                    filteredPoems.slice(5, 7).forEach(poem => {
-                        const card = createPoemCard(poem);
-                        row3.appendChild(card);
-                    });
-        
-                    poemContainer.appendChild(row1);
-                    poemContainer.appendChild(row2);
-                    poemContainer.appendChild(row3);
-                }
+        const filteredPoems = poems.filter(poem => poem.volume[0] === parseInt(volumeNumber)).sort((a, b) => a.volume[1] - b.volume[1]);
+
+        const poemContainer = document.getElementById('poemContainer');
+        poemContainer.innerHTML = ''; // Clear existing cards
+
+        let currentIndex = 0;
+        while (currentIndex < filteredPoems.length) {
+            const row = document.createElement('div');
+            row.classList.add('poem-row');
+
+            // Determine how many cards to place in this row (2 or 3)
+            const cardsInRow = currentIndex % 5 < 2 ? 2 : 3;
+
+            // Add cards to the row
+            for (let i = 0; i < cardsInRow && currentIndex < filteredPoems.length; i++) {
+                const card = createPoemCard(filteredPoems[currentIndex]);
+                row.appendChild(card);
+                currentIndex++;
             }
+
+            poemContainer.appendChild(row);
+        }
+    }
         
             function createPoemCard(poem) {
                 const card = document.createElement('div');
