@@ -986,6 +986,26 @@ function reloadDisqus() {
             });
         }
 
+            // Function to extract the search parameter from the URL and filter poems based on volume
+            function filterPoemsByVolume() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchParam = urlParams.get('search');
+                
+                if (searchParam) {
+                    const matchingPoems = poems.filter(poem => poem.volume === searchParam);
+                    
+                    if (matchingPoems.length > 0) {
+                        generatePoemCards(matchingPoems);
+                    } else {
+                        // No matching poems found, do nothing
+                        console.log('No poems match the search parameter.');
+                    }
+                }
+            }
+            
+            // Call the filter function when the page loads
+            window.addEventListener('load', filterPoemsByVolume);
+    
         var modalWaveOpenedCompletely = false;
 
         // Function to open the modal with poem details
