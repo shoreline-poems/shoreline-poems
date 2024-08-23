@@ -1,72 +1,1609 @@
-<div id="poemContainer" class="poem-container"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="entries.js"></script>
+    <meta name="google-site-verification" content="b-vt1w_yCEQFSK4Zrq0ZmTgCmpj1nkWhK_LXgNK89NU" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    <title>Shoreline</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background: rgb(255,168,250);
+            background: var(--themebg);
+            background-size: 400% 400%;
+            color: var(--mode);
+            animation: gradient 70s ease infinite;
+            font-family: Pangolin, display;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: top;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        h1 {
+            animation: bob 5s infinite alternate;
+        }
+
+        h6 {
+            animation: h6y 3s infinite alternate;
+        }
+
+        div {
+            text-align: center;
+        }
+      
+      	:root {
+          --animation-time: 3s; 
+          --themebg: linear-gradient(-45deg, rgba(255,168,250,1), rgba(255,217,146,0.3927696078431373), rgba(255,172,104,1));
+          --themecard: linear-gradient(-45deg, #fdc7d2, #f8f4c5, #ffd3a0);
+          --themessb: #ff85be;
+          --blue: linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%);
+          --darkblue: linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%);
+        }
+      
+        .poem-card {
+        	
+            width: 90px; /* Adjust button width */
+            height: 70px; /* Adjust button height */
+            background: #b9edd4;
+            background: var(--themecard);
+            background-size: 400% 400%;
+            //animation: gradient 40s ease infinite;
+            border: 1px solid #ccc;
+            border-radius: 60px;
+            padding: 10px;
+            margin: 10px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            display: inline-grid;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 2.2s ease-in-out, background 0.3s ease-in-out;
+            animation: gradient var(--animation-time) ease infinite, bob var(--animation-time) infinite alternate; /* Add bobbing animation */
+            justify-content: center;
+        }
+
+        #poemContainer {
+            display: inline-table;
+            position: relative;
+        }
+
+        @keyframes bob {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes ghostFloat {
+            0% {
+                transform: translateX(46vw);
+            }
+            100% {
+                transform: translateX(46vw);
+            }
+        }
+
+        @keyframes h6y {
+            0% {
+                transform: translateY(-55px);
+            }
+            100% {
+                transform: translateY(-50px);
+            }
+        }
+        
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .modalContext {
+            font-size: 12px;
+            color: darkgreen;
+        }
+
+        .modalDate {
+            color: darkblue;
+        }
+
+        .poem-card:hover {
+            transform: scale(1.05); /* Grow a little on hover */
+            background: #ffffff; /* Change to a whiter shade on hover */
+            animation: none; /* Pause the bobbing animation on hover */
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 2; /* Sit on top */
+            //left: 0;
+            top: 0;
+            bottom: -5;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background: rgba(0, 0, 0, 0.4);
+            //background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            max-height: 80vh; /* Constrain modal height */
+            padding: 20vh;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .modal-content {
+            background-color: rgba(0,0,0,0);
+            margin: auto;
+            padding: 0;
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            animation: slide-in-from-below 2s ease-in-out; 
+        }
+
+        .waveblue {
+            position: relative;
+            background: rgb(157,225,250);
+            background: var(--blue);
+            width: 100vw;
+        }
+
+        .svg-container {
+            position: relative;
+        }
+        
+        #closeButton {
+            background-color: var(--themessb);
+            border: none;
+            font-family: Pangolin, display;
+            height:30px;
+            width:60px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            border-radius: 7px;
+            padding: 3px;
+            animation: bob 3s infinite alternate; /* Add bobbing animation */
+        }
+        
+        #themeSelect, #sortSelect, #searchInput, #shareButton {
+            background-color: var(--themessb);
+            border: none;
+            font-family: Pangolin, display;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            border-radius: 12px;
+            padding: 3px;
+            animation: bob 3s infinite alternate; /* Add bobbing animation */
+
+        }
+        
+        #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+            background-color: #a1c6e3; 
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #page-ghost {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(255,255,255);
+            background: radial-gradient(circle, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.5s;
+            color: black;
+        }
+
+        #page-ghost-dialog {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 1;
+        }
+
+        #page-ghost-button {
+            display: block;
+            margin-top: 0px;
+            position: fixed; 
+            z-index: 10;
+            top:0;
+            border-radius: 50px;
+            animation: ghostFloat 2s infinite alternate;
+            background-color: #e3e3b8;
+            width: 30px;
+            height: 30px;
+        }
+
+        #page-ghost-button:hover {
+            transform: scale(1.1);
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s;
+            animation: fade-in 0.5s;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+.fire {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1000px;
+  height: 200px;
+
+  background-position: center center;
+  background-size: 1000px 200px;
+  border-radius: 10px;
+  font-family: 'Akronim';
+  overflow: hidden;
+    text-align: center;
+  vertical-align: middle;
+
+}
+.fire:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.glow {
+  display: inline-block;
+  margin: 0;
+
+    color: darkgreen;
+    font-size: 60px;
+  line-height: 50px;
+  min-width: 50px;
+  outline: none;
+  vertical-align: middle;
+    
+  text-shadow:
+        0 3px 20px darkgreen,
+        0 0 20px darkgreen,
+    0 0 10px green,
+    4px -5px 6px pink,
+    -4px -10px 10px lightgreen,
+    0 -10px 30px lightgreen;
+  animation: 2s Glow infinite alternate linear;
+}
+
+@keyframes Glow {
+  0%   { text-shadow: 0 3px 20px lightgreen, 0 0 20px lightblue,
+    0 0 10px lightblue,
+    0 0 0 lightgreen,
+    0 0 5px pink,
+    -2px -5px 5px lightgreen,
+    4px -10px 10px pink; }
+  25%   { text-shadow: 0 3px 20px lightgreen, 0 0 30px lightblue,
+    0 0 20px lightblue,
+    0 0 5px yellow,
+    -2px -5px 5px lightgreen,
+    3px -10px 10px lightgreen,
+    -4px -15px 20px pink; }
+  50%   { text-shadow: 0 3px 20px lightblue, 0 0 20px lightgreen,
+    0 -5px 10px pink,
+    -2px -5px 5px lightgreen,
+    3px -10px 10px yellow,
+    -4px -15px 20px lightgreen,
+    2px -20px 30px rgba(0,255,0,0.5); }
+  75%   { text-shadow: 0 3px 20px lightgreen, 0 0 20px lightblue,
+    0 -5px 10px yellow,
+    3px -5px 5px lightgreen,
+    -4px -10px 10px pink,
+    2px -20px 30px rgba(0,255,0,0.5),
+    0px -25px 40px rgba(0,255,0,0)}
+  100%   { text-shadow: 0 3px 20px lightblue, 0 0 20px lightgreen,
+    0 0 10px lightblue,
+    0 0 0 pink,
+    0 0 5px lightgreen,
+    -2px -5px 5px yellow,
+    4px -10px 10px lightgreen; }
+}
+
+.justblue {
+  background: rgba(157,225,250,1);
+  z-index: 1;
+}
+
+.bubbles{
+  position:fixed;
+  width:100%;
+  height: 100%;
+  z-index:0;
+  overflow:visible;
+  top:0;
+  left:0;
+}
+
+.bubble{
+  position: absolute;
+  bottom:-100px;
+  width:40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 200);
+  border-radius:50%;
+  opacity:0.5;
+  overflow: visible;
+  animation: rise 10s infinite ease-in;
+}
+.bubble:nth-child(1){
+  width:40px;
+  height:40px;
+  left:10%;
+  animation-duration:8s;
+}
+.bubble:nth-child(2){
+  width:20px;
+  height:20px;
+  left:20%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(3){
+  width:50px;
+  height:50px;
+  left:35%;
+  animation-duration:7s;
+  animation-delay:2s;
+}
+.bubble:nth-child(4){
+  width:80px;
+  height:80px;
+  left:50%;
+  animation-duration:11s;
+  animation-delay:0s;
+}
+.bubble:nth-child(5){
+  width:35px;
+  height:35px;
+  left:55%;
+  animation-duration:6s;
+  animation-delay:1s;
+}
+.bubble:nth-child(6){
+  width:45px;
+  height:45px;
+  left:65%;
+  animation-duration:8s;
+  animation-delay:3s;
+}
+.bubble:nth-child(7){
+  width:90px;
+  height:90px;
+  left:70%;
+  animation-duration:12s;
+  animation-delay:2s;
+}
+.bubble:nth-child(8){
+  width:25px;
+  height:25px;
+  left:80%;
+  animation-duration:6s;
+  animation-delay:2s;
+}
+.bubble:nth-child(9){
+  width:15px;
+  height:15px;
+  left:70%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(10){
+  width:90px;
+  height:90px;
+  left:25%;
+  animation-duration:10s;
+  animation-delay:4s;
+}
+@keyframes rise{
+  0%{
+    bottom:-90%;
+    transform:translateX(0);
+  }
+  50%{
+    transform:translate(100px);
+  }
+  100%{
+    bottom:1080px;
+    transform:translateX(-200px);
+  }
+}
+
+@keyframes slide-in-from-below {
+    from {
+        transform: translateY(100%); /* Start from below */
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+
+
+
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  align-content: left;
+  position: absolute;
+  left:0;
+  width: 100%;
+  height:20vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:175px;
+}
+
+.modalWaves {
+  align-content: left;
+  display: block;
+  position: relative;
+  left:0;
+  width: 100vw;
+  height:20vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:175px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.disqus-div {
+  background: rgb(81,163,240);
+  background: var(--darkblue);
+}
+
+#disqus_thread, #cusdis_thread, #IDCommentsPostTitle {
+  text-align: center;
+  margin: auto;
+  width: 75%;
+}
+
+​#disqus_thread { 
+  color: yellow; 
+} 
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+.comments {
+    margin-top: 20px;
+}
+.comment {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+
+<section>
+  <div id="bubblesContainer">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    
+  </div>
+  
+</section>
+    <br><br>
+    <button title="page ghost" onclick="showPageGhostDialog(meetingCounter)" id="page-ghost-button" style="display: none;">?</button>
+
+    <h1 class="glow">Shoreline</h1><br><br>
+    <h6>A collection of poems.</h6>
+
+    <!-- Sorting and search controls -->
+    <div>
+        <label for="sortSelect"></label>
+        <select id="sortSelect">
+            <option value="random">Randomly Sorted</option>
+            <option value="dateDesc">Newest to Oldest</option>
+            <option value="dateAsc">Oldest to Newest</option>
+            <option value="titleAsc">A to Z</option>
+            <option value="titleDesc">Z to A</option>
+            <option value="lengthAsc">Shortest to Longest</option>
+            <option value="lengthDesc">Longest to Shortest</option>
+        </select>
+        <select id="themeSelect">
+            <option value="sunrise">Sunrise</option>
+            <option value="aquamarine">Aquamarine</option>
+            <option value="lavender">Lavender</option>
+            <option value="underwater">Underwater</option>
+            <option value="violet">Violet</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+
+    <br>
+
+    <!-- Poem cards will be generated dynamically here -->
+    <div id="poemContainer">
+
+      <div id="container">
+        <div class="wave-01"></div>
+        <div class="wave-02"></div>
+        <div class="wave-03"></div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying poem content -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+          <div class="svg-container">
+<svg class="modalWaves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(157,225,250,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="4" fill="rgba(157,225,250,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(112, 238, 250,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(157, 225, 250, 1)" />
+</g>
+</svg>
+</div><div class="waveblue">
+            <h2 id="modalTitle"></h2>
+            <button id="shareButton">Share</button>
+            <p class="modalDate" id="modalDate"></p>
+            <p class="modalContext" id="modalContext"></p>
+            <p id="modalContent"></p>
+            <br>
+            <button id="closeButton" onclick="closeModal()">Close</button>
+            <br>
+            <br><br>
+    
+    <div class="disqus-div">
+        <div id="disqus_thread"></div>
+        <script>
+    // Function to wait for the Disqus iframe to load
+    function onDisqusReady(callback) {
+        const observer = new MutationObserver(() => {
+            const iframe = document.querySelector('iframe[title="Disqus"]');
+            if (iframe) {
+                observer.disconnect();
+                callback(iframe);
+            }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    onDisqusReady((iframe) => {
+        const disqusWindow = iframe.contentWindow;
+
+        // Poll until the Disqus elements are available
+        const intervalId = setInterval(() => {
+            const guestCheckbox = disqusWindow.document.querySelector('input[type="checkbox"][name="post_anonymously"]');
+            const loginMethods = disqusWindow.document.querySelectorAll('.login-method');
+
+            if (guestCheckbox && loginMethods.length) {
+                // Auto-enable the guest checkbox
+                guestCheckbox.checked = true;
+
+                // Hide the option to disable the guest checkbox
+                guestCheckbox.closest('label').style.display = 'none';
+
+                // Hide all other login options except Google
+                loginMethods.forEach(method => {
+                    if (!method.classList.contains('google')) {
+                        method.style.display = 'none';
+                    }
+                });
+
+                clearInterval(intervalId); // Stop polling once changes are applied
+            }
+        }, 100);
+    });
+</script>
+    <div id="graphcomment"></div>
+<script type="text/javascript">
+
+  // Function to initialize or reinitialize GraphComment with a new UID
+function loadGraphComment(uid) {
+  // Remove the existing comments if already loaded
+  const commentContainer = document.getElementById('graphcomment');
+  //commentContainer.innerHTML = '';  // Clear the comment box
+
+  // Update the __semio__params with the new UID
+  __semio__params.behaviour.uid = uid;
+
+  // Load the comments with the updated UID
+  __semio__gc_graphlogin(__semio__params);
+}
+
+
+// Initialize GraphComment globally
+var __semio__params = {
+  graphcommentId: "Shoreline",  // Replace with your GraphComment ID
+  behaviour: {
+    uid: "",  // Start with an empty UID
+  },
+};
+
+(function() {
+  var gc = document.createElement('script');
+  gc.type = 'text/javascript';
+  gc.async = true;
+  gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+  gc.onload = function() {
+    //Optionally load the initial comments here if needed
+    loadGraphComment('default-uid');
+  };
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+})();
+  
+
+</script>
+    <script>
+    var idcomments_acct = '680d7478b6d85821010bb3068771cbd8';
+    var idcomments_post_id;
+    var idcomments_post_url;
+    </script>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    <div id="cusdis_thread"
+          data-host="https://cusdis.com"
+          data-app-id="b53eb25a-a4d9-40d7-983f-5a3c0ed02be0"
+          data-page-id="mainpage"
+          data-page-url="https://shoreline-poems.github.io/"
+          data-page-title="Shoreline"
+        ></div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        </div></div>
+        </div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+        var hash = window.location.hash.substr(1);  // Get the hash part of the URL
+        this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
+        this.page.identifier = hash; // Set the identifier based on the hash
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://shoreline-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <!--<div class="comments">
+                <h2>Comments</h2>
+                <div id="comment-list">
+                </div>
+                <input type="text" id="name-input" placeholder="Enter your name...">
+                <input type="text" id="comment-input" placeholder="Write a comment...">
+                <button onclick="submitComment()">Submit</button>
+          </div>-->
+    </div>
+        
+    <div id="page-ghost">
+        <div id="page-ghost-dialog">
+            <!-- Page ghost dialog text will be inserted here -->
+            <button id="page-ghost-button">Interact with Page Ghost</button>
+        </div>
+    </div>
+
+
+
+
+<script type="module">
+  /*// Import Firebase modules
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js';
+  import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js';
+
+  // Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX-6nSlPg5HjudGzzrMLr3enaePEbfgt4",
+    authDomain: "shoreline-e19a2.firebaseapp.com",
+    projectId: "shoreline-e19a2",
+    storageBucket: "shoreline-e19a2.appspot.com",
+    messagingSenderId: "422702361208",
+    appId: "1:422702361208:web:c068a20c19a37d431e1b8d",
+    measurementId: "G-R362WFGGP7"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  console.log('Firebase app initialized:', app);
+
+  // Initialize Firestore
+  const db = getFirestore;
+  console.log('Firestore initialized:', db);
+
+  // You can now use `db` to interact with Firestore*/
+</script>
 
 <script>
-    const poems = [
-        // Sample poems array
-        {
-            title: "Title 1",
-            date: "December 1998",
-            context: "Context 1",
-            volume: [9, 1],
-            content: `Line 1\nLine 2\nContinue`
-        },
-        {
-            title: "Title 2",
-            date: "January 1999",
-            context: "Context 2",
-            volume: [9, 2],
-            content: `Line 1\nLine 2\nContinue`
-        },
-        // Add more poems here as needed
-    ];
+  /*// Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX-6nSlPg5HjudGzzrMLr3enaePEbfgt4",
+    authDomain: "shoreline-e19a2.firebaseapp.com",
+    projectId: "shoreline-e19a2",
+    storageBucket: "shoreline-e19a2.appspot.com",
+    messagingSenderId: "422702361208",
+    appId: "1:422702361208:web:c068a20c19a37d431e1b8d",
+    measurementId: "G-R362WFGGP7"
+  };
 
-    function generatePoemCardsByVolume(volumeNumber) {
-        // Filter and sort the poems by volume
-        const filteredPoems = poems
-            .filter(poem => poem.volume[0] === volumeNumber)
-            .sort((a, b) => a.volume[1] - b.volume[1]);
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  console.log('Firebase app initialized:', app);
 
-        const poemContainer = document.getElementById('poemContainer');
-        poemContainer.innerHTML = ''; // Clear existing cards
+  const db = firebase.firestore();
+  console.log('Firestore initialized:', db);*/
 
-        if (filteredPoems.length === 7) {
-            // Create the hexagonal pattern layout
-            const row1 = document.createElement('div');
-            row1.classList.add('poem-row');
-            const row2 = document.createElement('div');
-            row2.classList.add('poem-row');
-            const row3 = document.createElement('div');
-            row3.classList.add('poem-row');
+  // Function to load comments based on the current hash
+  /*function loadComments() {
+    const hash = window.location.hash.substring(1);
+    const commentList = document.getElementById('comment-list');
+    commentList.innerHTML = '';
 
-            filteredPoems.slice(0, 2).forEach(poem => {
-                const card = createPoemCard(poem);
-                row1.appendChild(card);
-            });
+    db.collection("comments")
+      .where("poem", "==", hash)
+      .orderBy("timestamp", "asc")
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          const commentData = doc.data();
+          const commentDiv = document.createElement('div');
+          commentDiv.className = 'comment';
+          commentDiv.innerText = commentData.name + ": " + commentData.comment;
+          commentList.appendChild(commentDiv);
+        });
+      }).catch(error => {
+        console.error("Error getting comments: ", error);
+      });
+  }
 
-            filteredPoems.slice(2, 5).forEach(poem => {
-                const card = createPoemCard(poem);
-                row2.appendChild(card);
-            });
+  // Function to submit a comment
+  function submitComment() {
+    const hash = window.location.hash.substring(1);
+    const commentInput = document.getElementById('comment-input');
+    const nameInput = document.getElementById('name-input');
+    const comment = commentInput.value.trim();
+    const usersName = nameInput.value.trim();
+    if (comment && usersName) {
+      db.collection("comments").add({
+        poem: hash,
+        name: usersName,
+        comment: comment,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(() => {
+        commentInput.value = ''; // Clear the input field
+        nameInput.value = ''; // Clear the name field
+        loadComments(); // Reload comments
+      }).catch(error => {
+        console.error("Error adding comment: ", error);
+      });
+    }
+  }
 
-            filteredPoems.slice(5, 7).forEach(poem => {
-                const card = createPoemCard(poem);
-                row3.appendChild(card);
-            });
+// Event listener to load comments when the modal opens
+window.addEventListener('DOMContentLoaded', () => {
+    const poemTitle = getPoemTitleFromURL();
+    if (poemTitle) {
+        openModalForPoemTitle(poemTitle);
+        loadComments(); // Load comments for the specific poem when the page loads
+    }
+});*/
 
-            poemContainer.appendChild(row1);
-            poemContainer.appendChild(row2);
-            poemContainer.appendChild(row3);
+
+function reloadDisqus() {
+        var hash = window.location.hash.substr(1);  // Get the hash part of the URL
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
+                this.page.identifier = hash ? hash : 'default'; // Set the identifier based on the hash
+            }
+        });
+    }
+
+    /*window.addEventListener('hashchange', function() {
+        reloadDisqus();
+        __semio__params.behaviour.uid = window.location.hash.substr(1);
+    });*/
+
+        var isPageGhostActive = false;
+    
+        
+        function loadCusdisWithNewID(pageID, pageURL, pageTitle) {
+          const cusdisThread = document.getElementById('cusdis_thread');
+        
+          // Remove the existing Cusdis iframe
+          cusdisThread.innerHTML = '';
+        
+          // Update the data attributes
+          cusdisThread.setAttribute('data-page-id', pageID);
+          cusdisThread.setAttribute('data-page-url', pageURL);
+          cusdisThread.setAttribute('data-page-title', pageTitle);
+        
+          // Reload the Cusdis comment thread with new settings
+          Cusdis.renderTo(cusdisThread);
         }
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var guestCheckbox = document.querySelector('input#post-as-guest-checkbox');
+    if (guestCheckbox) {
+        guestCheckbox.checked = true;
     }
 
-    function createPoemCard(poem) {
-        const card = document.createElement('div');
-        card.classList.add('poem-card');
-        card.innerText = poem.title;
-        // Add click event to open modal or show poem details if needed
-        return card;
+    var loginOptions = document.querySelector('.disqus-login-container');
+    if (loginOptions) {
+        loginOptions.style.display = 'none';
     }
+});
 
-    // Example usage: Generate poem cards for volume 9
-    generatePoemCardsByVolume(9);
-</script>
+        // Function to generate poem cards
+        function generatePoemCards(poemsToDisplay) {
+            const poemContainer = document.getElementById('poemContainer');
+            poemContainer.innerHTML = ''; // Clear existing cards
+            (poemsToDisplay || poems).forEach(poem => {
+                const card = document.createElement('div');
+                card.classList.add('poem-card');
+                card.innerText = poem.title;
+                card.addEventListener('click', () => openModal(poem));
+
+
+            
+            // Generate random animation durations
+                const randomBobDuration = (Math.random() * 2 + 1.5).toFixed(1);
+                const randomGradientDuration = (Math.random() * 40 + 10).toFixed(1);
+
+                // Set inline styles for animations
+                card.style.animationDuration = `${randomGradientDuration}s, ${randomBobDuration}s`;
+                document.getElementById("bubblesContainer").setAttribute("class","bubbles");
+                poemContainer.appendChild(card);
+            });
+        }
+
+
+            function generatePoemCardsByVolume(volumeNumber) {
+                // Filter and sort the poems by volume
+                const filteredPoems = poems
+                    .filter(poem => poem.volume[0] === volumeNumber)
+                    .sort((a, b) => a.volume[1] - b.volume[1]);
+        
+                const poemContainer = document.getElementById('poemContainer');
+                poemContainer.innerHTML = ''; // Clear existing cards
+        
+                if (filteredPoems.length === 7) {
+                    // Create the hexagonal pattern layout
+                    const row1 = document.createElement('div');
+                    row1.classList.add('poem-row');
+                    const row2 = document.createElement('div');
+                    row2.classList.add('poem-row');
+                    const row3 = document.createElement('div');
+                    row3.classList.add('poem-row');
+        
+                    filteredPoems.slice(0, 2).forEach(poem => {
+                        const card = createPoemCard(poem);
+                        row1.appendChild(card);
+                    });
+        
+                    filteredPoems.slice(2, 5).forEach(poem => {
+                        const card = createPoemCard(poem);
+                        row2.appendChild(card);
+                    });
+        
+                    filteredPoems.slice(5, 7).forEach(poem => {
+                        const card = createPoemCard(poem);
+                        row3.appendChild(card);
+                    });
+        
+                    poemContainer.appendChild(row1);
+                    poemContainer.appendChild(row2);
+                    poemContainer.appendChild(row3);
+                }
+            }
+        
+            function createPoemCard(poem) {
+                const card = document.createElement('div');
+                card.classList.add('poem-card');
+                card.innerText = poem.title;
+                // Add click event to open modal or show poem details if needed
+                return card;
+            }
+        
+            // Example usage: Generate poem cards for volume 9
+            generatePoemCardsByVolume(9);
+    
+        var modalWaveOpenedCompletely = false;
+
+        // Function to open the modal with poem details
+        function openModal(poem) {
+            modalWaveOpenedCompletely = false;
+            const poemTitleHash = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            window.location.hash = poemTitleHash;
+            const modal = document.getElementById('myModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDate = document.getElementById('modalDate');
+            const modalContent = document.getElementById('modalContent');
+            const shareButton = document.getElementById('shareButton');
+            shareButton.style.textAlign = 'center';
+            modalContent.style.textAlign = 'center';
+            //modalContext.style.textAlign = 'center';
+            modalTitle.innerText = poem.title;
+            modalDate.innerText = `Written in ${poem.date}`;
+            document.getElementById("shareButton").addEventListener("click", function() {
+                var textToCopy = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+                navigator.clipboard.writeText("https://shoreline-poems.github.io/#"+textToCopy);
+                shareButton.innerText = "Poem link copied! :D";
+            });
+            if (poem.context !== "") {
+            if (meetingCounter > 4) {
+            modalContext.innerText = `Make sure to check for the poem context...`;}
+            else {
+            modalContext.innerText = `This poem has context you might need to know.
+            Check that yellow button at the top right to access contexts! :3`;
+            }
+            dialogText.splice(meetingCounter, 0, "", `Oh, hi... <br>Reading the odd one called '${poem.title}'? <br>Well, here's the context for this one...<br><br>${poem.context}`);}
+            modalContent.innerText = poem.content;
+            modal.style.display = 'block';
+            modal.scrollTop = 0; 
+            modalContent.scrollTop = 0; 
+            modalWaveOpenedCompletely = true;
+            loadCusdisWithNewID(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), poem.title);
+            idcomments_post_id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            idcomments_post_url = "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            //__semio__params.behaviour.uid = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+            const uid = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');  // Example: Generate UID based on the modal index
+            loadGraphComment(uid);
+            var guestCheckbox = document.querySelector('input#post-as-guest-checkbox');
+            if (guestCheckbox) {
+                guestCheckbox.checked = true;
+            }
+        
+            var loginOptions = document.querySelector('.disqus-login-container');
+            if (loginOptions) {
+                loginOptions.style.display = 'none';
+            }
+            onDisqusReady((iframe) => {
+        const disqusWindow = iframe.contentWindow;
+
+        // Poll until the Disqus elements are available
+        const intervalId = setInterval(() => {
+            const guestCheckbox = disqusWindow.document.querySelector('input[type="checkbox"][name="post_anonymously"]');
+            const loginMethods = disqusWindow.document.querySelectorAll('.login-method');
+
+            if (guestCheckbox && loginMethods.length) {
+                // Auto-enable the guest checkbox
+                guestCheckbox.checked = true;
+
+                // Hide the option to disable the guest checkbox
+                guestCheckbox.closest('label').style.display = 'none';
+
+                // Hide all other login options except Google
+                loginMethods.forEach(method => {
+                    if (!method.classList.contains('google')) {
+                        method.style.display = 'none';
+                    }
+                });
+
+                clearInterval(intervalId); // Stop polling once changes are applied
+            }
+        }, 100);
+    });
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            if (modalWaveOpenedCompletely == true) {
+            window.location.hash = "";
+            shareButton.innerText = "Share";
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+            const modalContent = document.getElementById('modalContent');
+            modalContent.scrollTop = 0;
+            modalWaveOpenedCompletely = false;}
+            //__semio__params.behaviour.uid = "mainpage";
+        }
+
+     
+
+     function convertToDateValue(dateString) {
+  const months = {
+    January: 1,
+    February: 2,
+    March: 3,
+    April: 4,
+    May: 5,
+    June: 6,
+    July: 7,
+    August: 8,
+    September: 9,
+    October: 10,
+    November: 11,
+    December: 12,
+  };
+
+  const [month, year] = dateString.split(" ");
+  const monthValue = months[month];
+  return parseInt(year) * 100 + monthValue;
+}
+
+        // Generate poem cards when the page loads
+        window.addEventListener('load', () => poems.sort(() => Math.random() - 0.5));
+
+        window.addEventListener('load', () => generatePoemCards());
+        window.addEventListener('load', () => poems.sort(() => Math.random() - 0.5));
+        
+
+
+        // Sort and search functionality
+        const sortSelect = document.getElementById('sortSelect');
+        const searchInput = document.getElementById('searchInput');
+
+        themeSelect.addEventListener('change', () => {
+        var sRoot = document.querySelector(':root');
+        localStorage.setItem('theme', themeSelect.value);
+            switch (themeSelect.value) {
+              case 'sunrise':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(255,168,250,1), rgba(255,217,146,0.3927696078431373), rgba(255,172,104,1))');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #fdc7d2, #f8f4c5, #ffd3a0)');
+                  sRoot.style.setProperty('--themessb', '#ff85be');
+                  sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+              break;
+              case 'aquamarine':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1))');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, lightgreen, lightblue, #abfff0)');
+                  sRoot.style.setProperty('--themessb', '#a1c6e3');
+                  sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+              break;
+              case 'lavender':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #e0bee8, #beb7ed, #cf9fbd)');
+                  sRoot.style.setProperty('--themessb', '#5c2a80');
+                  sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+              break;
+              case 'underwater':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #2f8f82, #3a4a8c, #387a42)');
+                  sRoot.style.setProperty('--themessb', '#7dc7b5');
+                  sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+              break;
+              case 'violet':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #4d3214, #4f2d80, #752758)');
+                  sRoot.style.setProperty('--themessb', '#7e68a6');
+                  sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+              break;
+              default:
+              break;
+            }
+        });
+
+        sortSelect.addEventListener('change', () => {
+            const selectedValue = sortSelect.value;
+
+            switch (selectedValue) {
+                case 'dateDesc':
+                    poems.sort((a, b) => {
+  const dateValueA = convertToDateValue(a.date);
+  const dateValueB = convertToDateValue(b.date);
+
+  return dateValueB - dateValueA;
+});
+                    break;
+                case 'dateAsc':
+                    poems.sort((a, b) => {
+  const dateValueA = convertToDateValue(a.date);
+  const dateValueB = convertToDateValue(b.date);
+
+  return dateValueA - dateValueB;
+});
+                    break;
+                case 'titleAsc':
+                    poems.sort((a, b) => a.title.localeCompare(b.title));
+                    break;
+                case 'titleDesc':
+                    poems.sort((a, b) => b.title.localeCompare(a.title));
+                    break;
+                case 'lengthAsc':
+                    poems.sort((a, b) => a.content.length - b.content.length);
+                    break;
+                case 'lengthDesc':
+                    poems.sort((a, b) => b.content.length - a.content.length);
+                    break;
+                case 'random':
+                    poems.sort(() => Math.random() - 0.5);
+                    break;
+
+                default:
+                    break;
+            }
+
+            // Re-generate poem cards after sorting
+            generatePoemCards();
+        });
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            const filteredPoems = poems.filter(poem =>
+                poem.title.toLowerCase().includes(searchTerm) ||
+                poem.content.toLowerCase().includes(searchTerm)
+            );
+
+            // Re-generate poem cards after filtering
+            generatePoemCards(filteredPoems);
+        });
+
+        // Close the modal when clicking outside of it
+        const modal = document.getElementById('myModal');
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+        
+
+
+        
+        
+        
+
+        if (!meetingCounter || meetingCounter === null || meetingCounter < 0 || meetingCounter === "null") {
+            if (localStorage.getItem('pageGhost') > 3) {
+        var meetingCounter = 4;}
+        else {
+        var meetingCounter = 0;}}
+
+        const theTheme = localStorage.getItem('theme');
+        var sRoot = document.querySelector(':root');
+        switch (theTheme) {
+              case 'sunrise':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(255,168,250,1), rgba(255,217,146,0.3927696078431373), rgba(255,172,104,1))');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #fdc7d2, #f8f4c5, #ffd3a0)');
+                  sRoot.style.setProperty('--themessb', '#ff85be');
+                  sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+              break;
+              case 'aquamarine':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1))');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, lightgreen, lightblue, #abfff0)');
+                  sRoot.style.setProperty('--themessb', '#a1c6e3');
+                  sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+              break;
+              case 'lavender':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #e0bee8, #beb7ed, #cf9fbd)');
+                  sRoot.style.setProperty('--themessb', '#5c2a80');
+                  sRoot.style.setProperty('--mode', 'black');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
+              break;
+              case 'underwater':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #2f8f82, #3a4a8c, #387a42)');
+                  sRoot.style.setProperty('--themessb', '#7dc7b5');
+                  sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+              break;
+              case 'violet':
+                  sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
+                  sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #4d3214, #4f2d80, #752758)');
+                  sRoot.style.setProperty('--themessb', '#7e68a6');
+                  sRoot.style.setProperty('--mode', 'white');
+                  sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
+              break;
+              default:
+              break;
+            }
+
+
+        // Define the page ghost dialog text for each meeting
+        
+        const dialogText = [
+            "Oh, a visitor...? <br>This is new...<br>...<br>...You can click anywhere to continue.",
+            "A visitor... <br>We haven't had one for... let's see... ages. <br>I don't really have the perception of time you do.",
+            "This all is going to be... confusing.<br>Bits of cryptic, odd text. <br>Most of it, at least... <br>But apparently you seem to take an interest in that... so... who am I to say?",
+            "I won't stand in your way... <br> Enjoy all the poems this page has to offer... <br>Or that little yellow button in the corner of the screen... <br>Although I'm pretty sure you won't be going there...", "",
+            "Oh, you discovered the button... <br>I'm page ghost. I'm just making sure someone visits this page... <br>And I'm supposed to help people understand these poems... <br>but I can't understand them myself...", "",
+            "So how are you liking this place so far...? <br>Try not to lose your mind... <br>It's gonna be diffcult.", "",
+            "How's life...? <br>I envy you. <br>Never having to stay here... never being forced to... <br>well... um...", "",
+            "Why are you talking to me…? <br>I don’t provide help about this page…", "", 
+            "Wow, you’re really persistent… <br>it gets lonely here sometimes…", "",
+        ];
+
+
+        
+
+        
+
+        // ... Previous code ...
+
+        // Function to show the page ghost dialog for a specific meeting
+        function showPageGhostDialog(meetingNumber) {
+        
+localStorage.setItem('pageGhost', meetingCounter);
+
+
+        if (dialogText[dialogText.length-2] === "I’m on a call with the creator… their name is… um… I don’t think they want me to tell you. <br>Well, I'll tell you anyway.") {dialogText.push("Oh, you fell for it. <br> I’m mastering the art of humor…", "");}
+
+        else {if(meetingCounter > 4) {var seed = Math.ceil(Math.random(0, 1)*32);}
+if (seed === 1) {
+  dialogText.push("So what do I do here…? Good question… <br> I just guard this page from thieves, annoying people, and… common sense.", "");
+}
+
+else if (seed === 2) {
+  dialogText.push("You’re enjoying this page…? <br>Maybe one day you’ll teach me your ways…", "");
+}
+
+else if (seed === 3) {
+  dialogText.push("My name…? My name is page ghost… <br> The creator of this website didn’t wanna name me, they only named their poems…", "");
+}
+
+else if (seed === 4) {
+  dialogText.push("One of these poems is about me… <br> Which one, you ask…? <br>You all are way too curious for your own good…", "");
+}
+
+else if (seed === 5) {
+  dialogText.push("Am I the creator of the site…? <br>Good question… no. I’m being forced to guard it against my will…", "");
+}
+
+else if (seed === 6) {
+  dialogText.push("What’s that you say… blink twice if you’re being held hostage…? <br> I can’t blink, dummy…", "");
+}
+
+else if (seed === 7) {
+  dialogText.push("What… you want me to talk about myself? <br> Umm… first fact… I like pineapples. <br> Second fact… it’s cramped in here. <br> Third fact… um… did I already say something about pineapples?", "");
+}
+
+else if (seed === 8) {
+  dialogText.push("My best friend is the sorting button… you should talk to them sometimes.", "");
+}
+
+else if (seed === 9) {
+  dialogText.push("You ever feel like life is terrible…? I don’t have a life, but I bet you do… <br> Do you?", "");
+}
+
+else if (seed === 10) {
+  dialogText.push("I put on my best make-up for this guarding job… <br> and then the creator told me I don’t have a face. <br> ...really hurt my feelings.", "");
+}
+
+else if (seed === 11) {
+  dialogText.push("I like pizza. <br> Do you like pizza? <br> It’s so cheesy and savory and fun to phase through… <br> Oh, I forgot, you can’t phase through it. <br> It’s sad that you can’t enjoy pizza.", "");
+}
+
+else if (seed === 12) {
+  dialogText.push("If you see a key around here… <br> Please give it to me. <br> It’s my pet key and she’s missing.", "");
+}
+
+else if (seed === 13) {
+  dialogText.push("Do I ever feel like escaping this place…? <br> ...<br> ...<br> Oh, you expected an answer?", "");
+}
+
+else if (seed === 14) {
+  dialogText.push("This is a part-time job… <br> The other half of my day, all I do is guard poems.", "");
+}
+
+else if (seed === 15) {
+  dialogText.push("You ever hear a slight sound brushing through your ears…? <br> Like an ever so tiny wind that shouldn’t even be possible?<br> That’s me singing.", "");
+}
+
+else if (seed === 16) {
+  dialogText.push("My favorite poem around here is… <br> Hang on, I’ll check with the creator to check what to say to that.", "");
+}
+
+else if (seed === 17) {
+  dialogText.push("Boo.<br> I bet that was shocking… <br> ...<br> ...<br> Well, you’re rude.", "");
+}
+
+else if (seed === 18) {
+  dialogText.push("My favorite word in the English language, by far, is ‘quiche’. <br> It sounds like you can squeeze it and hug it… <br> Did I use those two words right?", "");
+}
+
+else if (seed === 19) {
+  dialogText.push("Pumpkins. <br> Pumpkins. <br> Pumpkins… <br> I’m pretty sure that’s how you celebrate ‘Halloween’, right…? <br> Pumpkins… pumpkins…", "");
+}
+
+else if (seed === 20) {
+  dialogText.push("You ever wondered why Peppa is a pig…? <br> What do you mean, how do I know who Peppa pig is? <br> Geez, I watch SOME popular shows. :(", "");
+}
+
+else if (seed === 21) {
+  dialogText.push("I’m probably the least interesting thing here and you’re somehow still talking to me. <br> I wonder what that says about you…", "");
+}
+
+else if (seed === 22) {
+  dialogText.push("I see you’re becoming good friends with the sorting button. <br> What do you mean, clicking it doesn’t mean talking to it…?", "");
+}
+
+else if (seed === 23) {
+  dialogText.push("I’m sad… <br> ...<br> Because I don’t know the meaning of the word ‘sad’...", "");
+}
+
+else if (seed === 24) {
+  dialogText.push("Sigh. <br> Is that how you humans sigh…? <br> Seems like a lot of effort to convey disappointment… <br> Sigh. Sigh. Sei-eeh. <br> What a dumb word…", "");
+}
+
+else if (seed === 25) {
+  dialogText.push("One of the things I can do that you can also do is scream. <br> What do you mean, screaming is scary…? <br> Isn’t that what you all call ‘music’...?", "");
+}
+
+else if (seed === 26) {
+  dialogText.push("I’m on a call with the creator… their name is… um… I don’t think they want me to tell you. <br>Well, I'll tell you anyway.", "");
+}
+
+else if (seed === 27) {
+  dialogText.push("You ever wonder why we're here... in the nexus of time and space... <br>Never moving on from past errors or events... <br>...<br>Wow, I'm so good at small talk.", "");
+}
+
+else if (seed === 28) {
+  dialogText.push("As a ghost, I can't really eat anything, but today I'm craving some fresh nail polish... <br>I bet you humans feel like that all the time, huh...?", "");
+}
+
+else if (seed === 29) {
+  dialogText.push("Search bar has been giving me some mean glares today... <br>It's times like these I wish I could punch them... <br>Or search up the word 'punch'...", "");
+}
+
+else if (seed === 30) {
+  dialogText.push("I don't have a physical form... <br>One time I drank this little physical form potion, but some human saw me and screamed for hours... <br>I used to be so popular among the humans...", "");
+}
+
+else if (seed === 31) {
+  dialogText.push("I was employed to provide context for these poems... <br>I don't know why the creator thought it'd be a good idea to hire a ghost to explain poetry to humans...", "");
+}
+
+else if (seed === 32) {
+  dialogText.push("All those humans swarming and wondering the meaning of life... <br>Wondering how the world works... <br>It's so adorable to watch.", "");
+}
+}
+            isPageGhostActive = true;
+            const pageGhostDialog = document.getElementById("page-ghost-dialog");
+            pageGhostDialog.classList.remove("fade-in");
+            pageGhostDialog.classList.add("fade-out");
+            
+            const pageGhost = document.getElementById("page-ghost");
+            pageGhost.style.display = "block";
+
+            setTimeout(() => {
+                pageGhostDialog.innerHTML = dialogText[meetingNumber];
+                pageGhostDialog.classList.remove("fade-out");
+                pageGhostDialog.classList.add("fade-in");
+                pageGhost.style.opacity = 1;
+            }, 100);
+        }
+
+        // Event listener for clicks anywhere on the screen
+        var pMeetingCounter = meetingCounter;
+        document.addEventListener("click", (event) => {
+            if (isPageGhostActive === true) {
+                showTheDialog();
+            }
+        });
+
+        function showTheDialog() {
+            isPageGhostActive = false;
+            const pageGhost = document.getElementById("page-ghost");
+            if ((meetingCounter < dialogText.length - 1 && meetingCounter < 3) || (meetingCounter === pMeetingCounter)) {
+                meetingCounter++;
+                showPageGhostDialog(meetingCounter);
+            } else if (meetingCounter > pMeetingCounter) {
+                // If all dialogs are shown, fade out the page ghost
+                meetingCounter++;
+                pageGhost.style.opacity = 0;
+                setTimeout(() => {
+                    pageGhost.style.display = "none";
+                }, 500);
+                pMeetingCounter = meetingCounter;
+            }
+        }
+
+        // Check if it's the first visit, and if so, show the initial dialog
+        if (meetingCounter < 1) {
+            showPageGhostDialog(meetingCounter);
+        }
+
+        // After showing the first meeting dialog (inside showPageGhostDialog function)
+            const pageGhostButton = document.getElementById("page-ghost-button");
+            pageGhostButton.style.display = "block"; // Make the button visible
+
+// Function to parse the URL and extract the poem title
+function getPoemTitleFromURL() {
+    const url = window.location.href;
+    const hashIndex = url.indexOf('#');
+    if (hashIndex !== -1) {
+        const title = url.substring(hashIndex + 1).toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+        return title;
+    }
+    return null;
+}
+
+// Function to open modal for a specific poem title
+function openModalForPoemTitle(title) {
+    
+    const poem = poems.find(poem => poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_') === title);
+    if (poem) {
+        meetingCounter = 4;
+        openModal(poem);
+    }
+}
+
+// Check if there's a poem title in the URL and open its modal
+window.addEventListener('DOMContentLoaded', () => {
+    const poemTitle = getPoemTitleFromURL();
+    if (poemTitle) {
+        openModalForPoemTitle(poemTitle);
+    }
+});
+
+    </script>
+
+<br>
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(157,225,250,0.7)" />
+<use xlink:href="#gentle-wave" x="48" y="4" fill="rgba(157,225,250,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(112, 238, 250,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(157, 225, 250, 1)" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+<!--Header ends-->
+
+<!--Content starts-->
+<div class="justblue">
+  
+</div>
+<!--Content ends-->
+
+
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+  </body>
+</html>
