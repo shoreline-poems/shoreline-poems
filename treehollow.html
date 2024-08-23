@@ -964,7 +964,7 @@ function reloadDisqus() {
 });
 
         // Function to generate poem cards
-        function generatePoemCards(poemsToDisplay) {
+        /*function generatePoemCards(poemsToDisplay) {
             const poemContainer = document.getElementById('poemContainer');
             poemContainer.innerHTML = ''; // Clear existing cards
             (poemsToDisplay || poems).forEach(poem => {
@@ -984,7 +984,7 @@ function reloadDisqus() {
                 document.getElementById("bubblesContainer").setAttribute("class","bubbles");
                 poemContainer.appendChild(card);
             });
-        }
+        }*/
 
 
             function generatePoemCardsByVolume(volumeNumber) {
@@ -1030,6 +1030,17 @@ function reloadDisqus() {
                 const card = document.createElement('div');
                 card.classList.add('poem-card');
                 card.innerText = poem.title;
+                card.addEventListener('click', () => openModal(poem));
+
+
+            
+            // Generate random animation durations
+                const randomBobDuration = (Math.random() * 2 + 1.5).toFixed(1);
+                const randomGradientDuration = (Math.random() * 40 + 10).toFixed(1);
+
+                // Set inline styles for animations
+                card.style.animationDuration = `${randomGradientDuration}s, ${randomBobDuration}s`;
+                document.getElementById("bubblesContainer").setAttribute("class","bubbles");
                 // Add click event to open modal or show poem details if needed
                 return card;
             }
