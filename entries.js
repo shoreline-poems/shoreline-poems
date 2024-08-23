@@ -2,7 +2,7 @@
             {
                 title: "T.S. Eliot",
                 date: "May 2021",
-                context: "The creator read 'Macavity' some years ago. Obviously the cat theme intrigued them, so they went exploring a bit further into the book of cats... Go look up T.S. Eliot's book of cats.",
+                volume: [0, 0],                 context: "The creator read 'Macavity' some years ago. Obviously the cat theme intrigued them, so they went exploring a bit further into the book of cats... Go look up T.S. Eliot's book of cats.",
                 content: `This poem is dedicated
                 To T.S. Eliot,
                 Whose literary arts
@@ -39,7 +39,7 @@
             {
                 title: "Alloweth (mockery)",
                 date: "June 2021",
-                context: "This is supposed to be sarcastically mocking Shakespearean styles of speaking, and also telling the 'story' of the generic caged bird at the same time.",
+                volume: [0, 0],                 context: "This is supposed to be sarcastically mocking Shakespearean styles of speaking, and also telling the 'story' of the generic caged bird at the same time.",
                 content: `Every morning thee waketh me,
                 Thee doth all but try.
                 To recognise mine own dearest wish,
@@ -68,7 +68,7 @@
             {
                 title: "Code is Difficult...",
                 date: "September 2021",
-                context: "The creator enjoys programming, however much this poem suggests otherwise. I mean, try coding. You'd get frustrated too.",
+                volume: [0, 0],                 context: "The creator enjoys programming, however much this poem suggests otherwise. I mean, try coding. You'd get frustrated too.",
                 content: `
                 Ellipses, angles, quads and nodes,
 Infinite lengthy lines of code,
@@ -99,7 +99,7 @@ But as for me, I’ve had enough.
             {
                 title: "Parents",
                 date: "April 2021",
-                context: "This was the first Mother's Day poem the creator wrote, being a month in advance because they seriously doubted their capabilities.",
+                volume: [0, 0],                 context: "This was the first Mother's Day poem the creator wrote, being a month in advance because they seriously doubted their capabilities.",
                 content: `
                 A parent takes care of their child’s every need,
 Every single thing they do is a good deed.
@@ -116,7 +116,7 @@ Perhaps even better than the best things combined.
             {
                 title: "The Simplest Poem",
                 date: "March 2021",
-                context: "This one’s the second poem the creator ever wrote. It’s about poems…",
+                volume: [0, 0],                 context: "This one’s the second poem the creator ever wrote. It’s about poems…",
                 content: `
                 A poem is a group of words
 Some of them rhyme,
@@ -137,7 +137,7 @@ And they can be false or true!
             {
                 title: "I Wish…",
                 date: "April 2021",
-                context: "This is an old look back at the creator’s life. I wouldn’t say the wishes came true…",
+                volume: [0, 0],                 context: "This is an old look back at the creator’s life. I wouldn’t say the wishes came true…",
                 content: `
                 I wish I knew how the world works,
 All the knowledge ever needed,
@@ -168,7 +168,7 @@ And have something to boast of!
             {
                 title: "Fruit Fly’s Fabulous Feat",
                 date: "February 2023",
-                context: "This one is literally entirely about a tiny little low-effort game they coded some years ago titled 'Fruit Fly's Fabulous Feat', something they’ve worked on a lot and grown rather attached to. Literally no one would understand this poem if they hadn't played that game, so I highly suggest doing that to actually know what this is supposed to be saying… Link to the project- https’//fruit-fly.w3spaces.com…",
+                volume: [0, 0],                 context: "This one is literally entirely about a tiny little low-effort game they coded some years ago titled 'Fruit Fly's Fabulous Feat', something they’ve worked on a lot and grown rather attached to. Literally no one would understand this poem if they hadn't played that game, so I highly suggest doing that to actually know what this is supposed to be saying… Link to the project- https’//fruit-fly.w3spaces.com…",
                 content: `
                 Of all that I have, is there anything you need?
 Tokens that sparkle, or various seeds?
@@ -222,7 +222,7 @@ And I’ll tell you the story of my Fabulous Feat.
             {
                 title: "Shakespeare’s Tales",
                 date: "March 2022",
-                context: "As this poem is about the stories of the plays written by Shakespeare, you might need to know those... At least these ones- Romeo and Juliet, Taming of the Shrew, The Tempest, The Merchant of Venice, As You Like It.",
+                volume: [0, 0],                 context: "As this poem is about the stories of the plays written by Shakespeare, you might need to know those... At least these ones- Romeo and Juliet, Taming of the Shrew, The Tempest, The Merchant of Venice, As You Like It.",
                 content: `
                 The various tales of Shakespeare
 Are widely known far and near,
@@ -277,7 +277,7 @@ All written by William Shakespeare.
             {
                 title: "Crazy ‘Cause of Coding",
                 date: "September 2022",
-                context: "This one is about the main effects, side effects and overall concept of obsessive behavior. This could be regarding anything, but it is portrayed as device addiction here. Cutting oneself out and obsessing over doing only one specific thing is extremely unhealthy. In this context it is 'coding' because many people end up convincing themselves that their obsession is a 'good thing' and 'productive' in this case. But no, obsessively coding is still obsession, it still counts as unhealthy. The gradual worsening of mental health and slowly increasing isolation is something they’ve tried to depict here.",
+                volume: [0, 0],                 context: "This one is about the main effects, side effects and overall concept of obsessive behavior. This could be regarding anything, but it is portrayed as device addiction here. Cutting oneself out and obsessing over doing only one specific thing is extremely unhealthy. In this context it is 'coding' because many people end up convincing themselves that their obsession is a 'good thing' and 'productive' in this case. But no, obsessively coding is still obsession, it still counts as unhealthy. The gradual worsening of mental health and slowly increasing isolation is something they’ve tried to depict here.",
                 content: `
                 You wake up in the night and think that sleep was just enough,
 Before your daily cup of coffee and some brand new earmuffs.
@@ -328,7 +328,7 @@ Someday you die, and all they see when your screens are loading,
             {
                 title: "Greatest Person in Existence",
                 date: "November 2022",
-                context: "This poem is about the creator’s father, for whom they have exaggerated every one of his ‘amazing’ qualities into something truly unbelievable and unimaginable, just like he, himself, often does. ",
+                volume: [0, 0],                 context: "This poem is about the creator’s father, for whom they have exaggerated every one of his ‘amazing’ qualities into something truly unbelievable and unimaginable, just like he, himself, often does. ",
                 content: `
                 The greatest person in existence
 Can fly around and cheat the systems
@@ -374,7 +374,7 @@ That’s how I see my father.
             {
                 title: "Voices in my Head",
                 date: "February 2023",
-                context: "This one is about the complexity of mental disorders, such as schizophrenia. People suffering from mental disorders are often haunted by their own inner demons, and hearing and seeing things which might not actually be there. They can't differentiate between the voices in their head. At least, that is one of the many examples in the huge, deep, comple ocean that the mind is. It is scary and hard to live with, especially when one is aware that they have an issue. One huge problem with such disorders is that the person suffering from it feels unwelcomed and unable to reach out. It's not like people don't try to seek help, it's just that only a few people actually provide the help needed. Therapy is always advised, but there have been many cases where a person is seen as/called 'weak' for seeking help from a professional. It is not easy to be dealing with these tough conditions, and in the creator’s opinion, people need to realise that these problems are real, serious, and plague many people.",
+                volume: [0, 0],                 context: "This one is about the complexity of mental disorders, such as schizophrenia. People suffering from mental disorders are often haunted by their own inner demons, and hearing and seeing things which might not actually be there. They can't differentiate between the voices in their head. At least, that is one of the many examples in the huge, deep, comple ocean that the mind is. It is scary and hard to live with, especially when one is aware that they have an issue. One huge problem with such disorders is that the person suffering from it feels unwelcomed and unable to reach out. It's not like people don't try to seek help, it's just that only a few people actually provide the help needed. Therapy is always advised, but there have been many cases where a person is seen as/called 'weak' for seeking help from a professional. It is not easy to be dealing with these tough conditions, and in the creator’s opinion, people need to realise that these problems are real, serious, and plague many people.",
                 content: `
                 I have these voices in my head that tell me what to do,
 They answer all my questions and they’re always on cue,
@@ -429,7 +429,7 @@ But I know they’ll never die, these voices in my head.
             {
                 title: "Wings of Fire, 300 Lines",
                 date: "December 2022",
-                context: "By the teeth of the great ice dragon, buckle up for a ride. This entire 300-line poem sums up the Wings of Fire series. This series is about a fictional world, fictional continents, and also dragons. I highly suggest reading it someday, especially if you're trying to understand this poem. The creator also threw a million Agatha Christie references in here...",
+                volume: [0, 0],                 context: "By the teeth of the great ice dragon, buckle up for a ride. This entire 300-line poem sums up the Wings of Fire series. This series is about a fictional world, fictional continents, and also dragons. I highly suggest reading it someday, especially if you're trying to understand this poem. The creator also threw a million Agatha Christie references in here...",
                 content: `
                 ARC 1
 Three little soldier boys went to rob a queen,
@@ -757,7 +757,7 @@ But I do believe Wings of Fire is the best.
             {
                 title: "Ideas in My Head",
                 date: "February 2023",
-                context: "This poem might not seem to be representing darker themes at first sight. It's not exactly easy to spot the problem at first glance, and that's completely fine. The speaker expresses narcissism, a constant seeking of approval, and an elevated perception of the speaker themselves. It's unhealthy to depend on others' approval, and obsessive behavior certainly isn't a solution for anything.",
+                volume: [0, 0],                 context: "This poem might not seem to be representing darker themes at first sight. It's not exactly easy to spot the problem at first glance, and that's completely fine. The speaker expresses narcissism, a constant seeking of approval, and an elevated perception of the speaker themselves. It's unhealthy to depend on others' approval, and obsessive behavior certainly isn't a solution for anything.",
                 content: `
                 Creativity isn’t really something inherent,
 But in the long run, the policy’s pretty coherent,
@@ -790,7 +790,7 @@ And yeah I’ll keep on writing these, I’ll stop when I’m dead,
             {
                 title: "Spring!",
                 date: "March 2023",
-                context: "The creator wrote this one for a little competition with 'spring', the season, as the topic. So it'll be a bit different as it's only aimed towards people who use the internet, Coast restaurant specifically.",
+                volume: [0, 0],                 context: "The creator wrote this one for a little competition with 'spring', the season, as the topic. So it'll be a bit different as it's only aimed towards people who use the internet, Coast restaurant specifically.",
                 content: `
                 Ah spring, the season when nature thrives,
 Where everything feels so, so alive,
@@ -845,7 +845,7 @@ Have a great year, and Happy Spring.
             {
                 title: "The Volcano",
                 date: "May 2023",
-                context: "This one is about the creator’s mother. There's a million analogies, so good luck figuring them out…",
+                volume: [0, 0],                 context: "This one is about the creator’s mother. There's a million analogies, so good luck figuring them out…",
                 content: `
                 I live near a ‘volcano’,
 Which scares me half to death,
@@ -876,7 +876,7 @@ That this volcano’s always here.
             {
                 title: "Here",
                 date: "June 2023",
-                context: "This is a poem looking back. A poem which expresses that things don't always work out the way we expect them to. The creator has dealt with failure, and they can guarantee that blindly persevering has no results. Sometimes life doesn't work out, and that's something everyone has to face at some point. One can either accept that and move on, or stay at the glass pane and keep knocking, keep trying, keep getting back up after being shot down again and again and again. I don't think anyone can be sure which option is better.",
+                volume: [0, 0],                 context: "This is a poem looking back. A poem which expresses that things don't always work out the way we expect them to. The creator has dealt with failure, and they can guarantee that blindly persevering has no results. Sometimes life doesn't work out, and that's something everyone has to face at some point. One can either accept that and move on, or stay at the glass pane and keep knocking, keep trying, keep getting back up after being shot down again and again and again. I don't think anyone can be sure which option is better.",
                 content: `
                 Once upon a time my head
 Was always full of ideas,
@@ -936,7 +936,7 @@ But I’m still standing here.
             {
                 title: "Nature’s Wonders",
                 date: "March 2021",
-                context: "The first poem the creator ever wrote… they don’t wonder these things anymore.",
+                volume: [0, 0],                 context: "The first poem the creator ever wrote… they don’t wonder these things anymore.",
                 content: `
                 It's a wonder how a sapling grows
 Bit by bit each day,
@@ -962,7 +962,7 @@ There are actually a lot.
             {
                 title: "Flicker Out",
                 date: "June 2023",
-                context: "This used to be true for a bit… for the creator. Blacking out in class, flickering out while trying to pay attention… all of it. It’s a thing in ADHD, as far as I know…",
+                volume: [0, 0],                 context: "This used to be true for a bit… for the creator. Blacking out in class, flickering out while trying to pay attention… all of it. It’s a thing in ADHD, as far as I know…",
                 content: `
                 There's this thing about my mind,
 This subtle surreality,
@@ -1043,7 +1043,7 @@ Everything flick-flick-flickers out.
             {
                 title: "The Murder",
                 date: "December 2022",
-                context: "Just your average not-really-a-murder story…",
+                volume: [0, 0],                 context: "Just your average not-really-a-murder story…",
                 content: `
                 It was a pleasant day on the street,
 The air was filled with chirps and tweets,
@@ -1094,7 +1094,7 @@ No one had bothered to confirm.
             {
                 title: "The Last Straw",
                 date: "July 2023",
-                context: "A brief look at what pressure does to people… please don't pressure those around you. It can have worse effects than you think…",
+                volume: [0, 0],                 context: "A brief look at what pressure does to people… please don't pressure those around you. It can have worse effects than you think…",
                 content: `
                 Sparks fly down the short fuse,
 My life flashes in it,
@@ -1163,7 +1163,7 @@ By the straw that snaps my neck.
            {
                 title: "Anxiety is Orange",
                 date: "August 2023",
-                context: "Anxiety is very much orange… and blue… and every single shade of fear and dread you can imagine. Yay.",
+                volume: [0, 0],                 context: "Anxiety is very much orange… and blue… and every single shade of fear and dread you can imagine. Yay.",
                 content: `
                 Anxiety is knowing that in all you do,
 Everyone around judges you too,
@@ -1225,7 +1225,7 @@ Anxiety's blinding, binding, winding, grinding, yes, anxiety is orange.
             {
                 title: "Encased in Ice",
                 date: "August 2023",
-                context: "Ever feel like your past mistakes won’t fade… won’t leave you alone… and like you’re just trapped in all past guilt with no way to escape? Well, that’s what this is about.",
+                volume: [0, 0],                 context: "Ever feel like your past mistakes won’t fade… won’t leave you alone… and like you’re just trapped in all past guilt with no way to escape? Well, that’s what this is about.",
                 content: `
                 Moonlight sparkles in the sky,
 You’re here, but no one hears you cry,
@@ -1291,7 +1291,7 @@ You’re encased in ice.
             {
                 title: "Paranoia",
                 date: "August 2023",
-                context: "Paranoia’s the worst. And the best. A truth-teller, and also kinda terrible. You get the gist.",
+                volume: [0, 0],                 context: "Paranoia’s the worst. And the best. A truth-teller, and also kinda terrible. You get the gist.",
                 content: `
                 Paranoia’s the law of social contact,
 Paranoia’s a feeling raised to a fact.
@@ -1327,7 +1327,7 @@ Paranoia’s my advisor, paranoia is my friend.
             {
                 title: "Pixilate the Sky",
                 date: "August 2023",
-                context: "Go ahead, run from troubles all you want. This poem’s just a reminder that the troubles run after you too.",
+                volume: [0, 0],                 context: "Go ahead, run from troubles all you want. This poem’s just a reminder that the troubles run after you too.",
                 content: `
                 When life gets too exhausting
 And it becomes too much to take,
@@ -1387,7 +1387,7 @@ And pixilate the sky.
             {
                 title: "Entranced",
                 date: "August 2023",
-                context: "Maybe it’s the fact that we don’t know what’s next in life… it’s what makes life special as is. For humans, that is.",
+                volume: [0, 0],                 context: "Maybe it’s the fact that we don’t know what’s next in life… it’s what makes life special as is. For humans, that is.",
                 content: `
                 The shape of a boat swayed on the waves,
 With a peaceful splash, like an echo in a cave.
@@ -1438,7 +1438,7 @@ It’s at the ledge of death that life is entranced.
             {
                 title: "Your Own Style!",
                 date: "August 2023",
-                context: "This one’s about the fact that you shouldn’t care what others think of you. Be proud of your own style! I’m happy to announce that my pronouns are they/them! Hehe.",
+                volume: [0, 0],                 context: "This one’s about the fact that you shouldn’t care what others think of you. Be proud of your own style! I’m happy to announce that my pronouns are they/them! Hehe.",
                 content: `
                 Style’s something often mistook,
 But it’s simple, it’s the way you look.
@@ -1507,7 +1507,7 @@ Be yourself, your own style.
             {
                 title: "On Drug Addiction",
                 date: "August 2023",
-                context: "Treading into scary territory… this one’s about drug addiction…",
+                volume: [0, 0],                 context: "Treading into scary territory… this one’s about drug addiction…",
                 content: `
                 [CW]
 
@@ -1546,7 +1546,7 @@ I’m killing you before you realise.
             {
                 title: "Iridescent",
                 date: "August 2023",
-                context: "This one’s supposed to reflect on how life’s kind of odd… kind of jumbled up and confusing. No one knows what’s wrong or right, yet we all pretend to. Is that the beauty of life… or is that the ugliness?",
+                volume: [0, 0],                 context: "This one’s supposed to reflect on how life’s kind of odd… kind of jumbled up and confusing. No one knows what’s wrong or right, yet we all pretend to. Is that the beauty of life… or is that the ugliness?",
                 content: `
                 Let’s define good and bad
 In the simplest possible way,
@@ -1612,7 +1612,7 @@ The truth is iridescent.
             {
                 title: "I",
                 date: "August 2023",
-                context: "This one from the creator, is about themselves… and humanity in general.",
+                volume: [0, 0],                 context: "This one from the creator, is about themselves… and humanity in general.",
                 content: `
                 I’m like the other souls out there,
 I’m a pit of desire,
@@ -1654,7 +1654,7 @@ You suffer more than I.
            {
                 title: "The Bystander Effect",
                 date: "August 2023",
-                context: "The bystander effect refers to when a witness to a murder is inclined to stand there and wait… and not do anything. That’s haunting in its own way.",
+                volume: [0, 0],                 context: "The bystander effect refers to when a witness to a murder is inclined to stand there and wait… and not do anything. That’s haunting in its own way.",
                 content: `
                 To be alone sometime at night,
 To watch the dying, fading light,
@@ -1720,7 +1720,7 @@ I’m a bystander, take me instead.
             {
                 title: "Waiting for Hope",
                 date: "August 2023",
-                context: "Hope’s a person… and maybe the embodiment of hope. Well, you’ll have to figure out the rest…",
+                volume: [0, 0],                 context: "Hope’s a person… and maybe the embodiment of hope. Well, you’ll have to figure out the rest…",
                 content: `
                 She stood and stared at the train-track,
 Watching and waiting, never looking back.
@@ -1789,7 +1789,7 @@ Waiting, waiting, waiting for Hope.
             {
                 title: "Poems & Soup",
                 date: "August 2023",
-                context: "Here’s how you actually write a poem, hehe.",
+                volume: [0, 0],                 context: "Here’s how you actually write a poem, hehe.",
                 content: `
                 My general procedure for poem-writing,
 Includes a lot of nervous nail-biting.
@@ -1844,7 +1844,7 @@ Happy writing, and happy cooking!!
             {
                 title: "In August",
                 date: "September 2023",
-                context: "Gosh, August was a crazy month. The creator wrote a truckload of poems in August.",
+                volume: [0, 0],                 context: "Gosh, August was a crazy month. The creator wrote a truckload of poems in August.",
                 content: `
                 It’s the fall of dead leaves
 That brings the soul alive,
@@ -1905,7 +1905,7 @@ In the month of August.
             {
                 title: "On The French Revolution",
                 date: "September 2023",
-                context: "You could research the events of the revolution itself… it was a lot.",
+                volume: [0, 0],                 context: "You could research the events of the revolution itself… it was a lot.",
                 content: `
                 You’re a normal person
 In 1782,
@@ -1965,7 +1965,7 @@ The French Revolution.
             {
                 title: "Don’t Make Me Boring",
                 date: "July 2023",
-                context: "It’s kind of a sincere request, kind of a fear. Not a very rare request though.",
+                volume: [0, 0],                 context: "It’s kind of a sincere request, kind of a fear. Not a very rare request though.",
                 content: `
                 In a few years, I'd be long gone,
 Too stuck, too scared to carry on;
@@ -2008,7 +2008,7 @@ But never, ever make me boring.
             {
 title: "Villain Arc",
 date: "September 2023",
-context: "Take a third person’s view… into life as we know it. Or rather, as YOU know it. And… take this with more than a grain of salt, maybe.",
+volume: [0, 0],                 context: "Take a third person’s view… into life as we know it. Or rather, as YOU know it. And… take this with more than a grain of salt, maybe.",
 content: `
 I travel through ages and times,
 And see the honors, see the crimes,
@@ -2078,7 +2078,7 @@ Into some kind of villain arc.
 {
                 title: "Long Lament the Living",
                 date: "September 2023",
-                context: "An experiment of alliteration... A mesmerising and magical masterpiece of m- I ran out of words for that alliteration... Well, this poem's about a hypothetical look-back after death. Edgy, I know.",
+                volume: [0, 0],                 context: "An experiment of alliteration... A mesmerising and magical masterpiece of m- I ran out of words for that alliteration... Well, this poem's about a hypothetical look-back after death. Edgy, I know.",
                 content: `
                 Loneliness looms along that lane, 
 Where I walked a while ago, 
@@ -2130,7 +2130,7 @@ Long lament the living.
 {
                 title: "Pain Loves Me",
                 date: "September 2023",
-                context: "This poem is a hypothetical letter to 'pain'! It's an overview of what point life is at right now. It acknowledges that people have flaws, and perhaps the pain they experience might be a direct result of those flaws. Who knows, though.",
+                volume: [0, 0],                 context: "This poem is a hypothetical letter to 'pain'! It's an overview of what point life is at right now. It acknowledges that people have flaws, and perhaps the pain they experience might be a direct result of those flaws. Who knows, though.",
                 content: `
                 Dear pain, it's been a while
 Since we've last spoken,
@@ -2191,7 +2191,7 @@ You love it all, it's true.
 {
                 title: "Not Writer's Block",
                 date: "October 2023",
-                context: "The creator's addressing their sudden disappearance and break from writing... it reflects on the fact that many people have stuff that takes up so much of their time that their creativity can't shine through.",
+                volume: [0, 0],                 context: "The creator's addressing their sudden disappearance and break from writing... it reflects on the fact that many people have stuff that takes up so much of their time that their creativity can't shine through.",
                 content: `
                 Writer's block can be defined 
 As a snowy whiteout of the mind. 
@@ -2243,7 +2243,7 @@ Ever suffered from writer's block?
 {
                 title: "Rid of Me",
                 date: "October 2023",
-                context: "This one's about ChatGPT and AI. It shows the impacts AI has had on us... but... if you really think about it, isn't that more of our fault...? Aren't we the ones empowering AI to take over jobs? Is it really making our lives easier? I don't really know.",
+                volume: [0, 0],                 context: "This one's about ChatGPT and AI. It shows the impacts AI has had on us... but... if you really think about it, isn't that more of our fault...? Aren't we the ones empowering AI to take over jobs? Is it really making our lives easier? I don't really know.",
                 content: `
                 I'm a database of knowledge, and a database of fear, 
 I'm the 8.8 billionth human out of everyone here.
@@ -2313,7 +2313,7 @@ You can try, try, try, but you can't get rid of me.
 {
                 title: "Hope Can't Save You Now",
                 date: "November 2023",
-                context: "This poem is addressed to someone struggling because they're in an abusive relationship and being manipulated. The one saying all this...? Their own conscience. It might be too late when someone realises they're in a toxic relationship. They could already have been hurt to such an extent they start blaming themselves...",
+                volume: [0, 0],                 context: "This poem is addressed to someone struggling because they're in an abusive relationship and being manipulated. The one saying all this...? Their own conscience. It might be too late when someone realises they're in a toxic relationship. They could already have been hurt to such an extent they start blaming themselves...",
                 content: `
                 When you ignore the crimson flags, 
 Hopes of escape stop in their tracks. 
@@ -2371,7 +2371,7 @@ Sorry, hope can't save you now.
 {
                 title: "Worse Than Death",
                 date: "November 2023",
-                context: "Maybe some things are worse than death. Maybe life's not as happy as it's made to seem... but don't lose hope.",
+                volume: [0, 0],                 context: "Maybe some things are worse than death. Maybe life's not as happy as it's made to seem... but don't lose hope.",
                 content: `
                 Life is a test of talent and skill,
 Only the best succeed,
@@ -2405,7 +2405,7 @@ Some things are worse than death.
 {
                 title: "Different",
                 date: "November 2023",
-                context: "You would've had to have known the author before reading this poem. This poem is addressing the author's eye problems - how it affects them mentally, and what all they wish.",
+                volume: [0, 0],                 context: "You would've had to have known the author before reading this poem. This poem is addressing the author's eye problems - how it affects them mentally, and what all they wish.",
                 content: `
                 I’d stay up late to watch the stars
 Without that blurry smudge,
@@ -2457,7 +2457,7 @@ I’m different from the rest. :D
 {
                 title: "Shatter",
                 date: "December 2023",
-                context: "Harry Potter fans might notice something - this one's a reference to the mirror of Erised! It's a mirror that shows the looker their deepest desire. They don't actually achieve their desires, but they end up so mesmerised by it all that they just can't look away. So what'll happen if, one day, the mirror exists no more...?\n\n You DO NOT need to have prior knowledge of the Harry Potter series to understand this poem, though! :)",
+                volume: [0, 0],                 context: "Harry Potter fans might notice something - this one's a reference to the mirror of Erised! It's a mirror that shows the looker their deepest desire. They don't actually achieve their desires, but they end up so mesmerised by it all that they just can't look away. So what'll happen if, one day, the mirror exists no more...?\n\n You DO NOT need to have prior knowledge of the Harry Potter series to understand this poem, though! :)",
                 content: `
                 I'm not the thing I dream to be, 
 Nor others, for that matter, 
@@ -2524,7 +2524,7 @@ But it made my dreams shatter.
 {
                 title: "Chains of Gold",
                 date: "December 2023",
-                context: "This one's about money and how it affects people. It's about how important money has become nowadays, and why, in some cases, it could be bad. This poem also uses a bunch of famous quotes - see if you can find them all!\n\nThe irony here is that money's value won't be affected at all because of this poem. Money IS important, but that's the sad part. Money shouldn't be the source of all power and all joy. But sadly, it is.",
+                volume: [0, 0],                 context: "This one's about money and how it affects people. It's about how important money has become nowadays, and why, in some cases, it could be bad. This poem also uses a bunch of famous quotes - see if you can find them all!\n\nThe irony here is that money's value won't be affected at all because of this poem. Money IS important, but that's the sad part. Money shouldn't be the source of all power and all joy. But sadly, it is.",
                 content: `
                 Money's the root of all that's bad, 
 Money will make you poor, 
@@ -2592,7 +2592,7 @@ Throttled by chains of gold.
 {
                 title: "Crystalline",
                 date: "December 2023",
-                context: "This one was specifically for Mental Health Awareness Day. Mental health is a real thing, and it's important, people! Please be aware of the troubles others might be facing around you. It could be crushing them internally and they might be unable to ask for help. It's important that they recieve this help - every soul should shine equally bright, because they're all beautiful. <3",
+                volume: [0, 0],                 context: "This one was specifically for Mental Health Awareness Day. Mental health is a real thing, and it's important, people! Please be aware of the troubles others might be facing around you. It could be crushing them internally and they might be unable to ask for help. It's important that they recieve this help - every soul should shine equally bright, because they're all beautiful. <3",
                 content: `
                 My mind's bejeweled with anxiety, and fear, 
 My hope's adorned with anticipation that death is near, 
@@ -2641,7 +2641,7 @@ My pain will always sparkle bright, my tears crystalline.
 {
                 title: "Then vs Now",
                 date: "December 2023",
-                context: "This one might be a bit similar to 'Villian Arc' written a few months before this. This poem, however, tries to convey that message in a less accusatory way. Please look after the Earth. If it dies, so do we all.",
+                volume: [0, 0],                 context: "This one might be a bit similar to 'Villian Arc' written a few months before this. This poem, however, tries to convey that message in a less accusatory way. Please look after the Earth. If it dies, so do we all.",
                 content: `
                 This is a tale you might've heard before, 
 A pathetic recalling of the world's past lore. 
@@ -2691,7 +2691,7 @@ But I wish that things get better than the way they are now.
 {
                 title: "Supernova",
                 date: "January 2024",
-                context: "This one's about wishing upon the stars. When one's expectation grows too high, it's easier to turn to a divine force and wish to take your troubles away. It's not blind faith, it's hope.",
+                volume: [0, 0],                 context: "This one's about wishing upon the stars. When one's expectation grows too high, it's easier to turn to a divine force and wish to take your troubles away. It's not blind faith, it's hope.",
                 content: `
                 Sometimes you'll see me up at night, wishing upon the stars, 
 Well aware that all things are fast asleep these hours. 
@@ -2741,7 +2741,7 @@ So I let my wishes get blown away by a supernova's force.
 {
                 title: "Scorched by Ambition",
                 date: "January 2024",
-                context: "This poem is meant to be a parallel to the creator's recent poem 'Supernova' - one about casting unrealistic ambition away. 'Scorched by Ambition', however, depicts the effects of letting burning ambition take over your life. It shows the negative effects of having unhealthily high expectations. The 'fire' represents the ambition itself, and the 'smog' is the intense stress and pressure caused by unrealistic ambition.\n\nP.S. The creator is not implying you shouldn't have dreams. They're just telling the story of a person whose ambitions and expectations were so high, they hurt them more because of the stress and pressure caused.",
+                volume: [0, 0],                 context: "This poem is meant to be a parallel to the creator's recent poem 'Supernova' - one about casting unrealistic ambition away. 'Scorched by Ambition', however, depicts the effects of letting burning ambition take over your life. It shows the negative effects of having unhealthily high expectations. The 'fire' represents the ambition itself, and the 'smog' is the intense stress and pressure caused by unrealistic ambition.\n\nP.S. The creator is not implying you shouldn't have dreams. They're just telling the story of a person whose ambitions and expectations were so high, they hurt them more because of the stress and pressure caused.",
                 content: `
                 Young minds think the quickest, and my mind was once that way, 
 Sparks of ambition, lit up by the light of day. 
@@ -2786,7 +2786,7 @@ I'm seared by wishful thinking, I'm scorched by ambition.
 {
                 title: "Closet",
                 date: "April 2024",
-                context: "This one's about coming out of the closet, and coming to terms with one's sexuality and identity. Don't be afraid to be yourself! There will always be someone who doesn't support you, but there will also always be someone who does. <3",
+                volume: [0, 0],                 context: "This one's about coming out of the closet, and coming to terms with one's sexuality and identity. Don't be afraid to be yourself! There will always be someone who doesn't support you, but there will also always be someone who does. <3",
                 content: `
                 I took off my shoes, they just didn’t seem to fit.
 I took a deep breath, soon I’ll just get sick of it.
@@ -2850,7 +2850,7 @@ The closet’s now all empty, it creaks as I close the door.
 {
                 title: "Void",
                 date: "March 2024",
-                context: "This one's about looking for purpose in one's life. You'd have no idea how difficult purpose is to find until you're actually stranded at those same ruins you've heard everyone talk about.",
+                volume: [0, 0],                 context: "This one's about looking for purpose in one's life. You'd have no idea how difficult purpose is to find until you're actually stranded at those same ruins you've heard everyone talk about.",
                 content: `
                 The gaps before my train of thought never seem to fill, 
 The dagger's peised right at my throat, I wait for it to kill. 
@@ -2893,7 +2893,7 @@ So I'll let the void fill itself, and I'll let myself live.
 {
                 title: "Bittersweet Daze!",
                 date: "February 2024",
-                context: "This one's about what happens if you can't face the consequences of your own actions and decisions. Interpret it however you want.",
+                volume: [0, 0],                 context: "This one's about what happens if you can't face the consequences of your own actions and decisions. Interpret it however you want.",
                 content: `
                 I never knew how, and I never knew why, 
 Whenever I wept, I never did try. 
@@ -2942,7 +2942,7 @@ So I killed myself in a bittersweet daze.
 {
                 title: "FOOTSTEPS",
                 date: "March 2024",
-                context: "It's just... a mess of symbolism and storytelling. Enjoy.",
+                volume: [0, 0],                 context: "It's just... a mess of symbolism and storytelling. Enjoy.",
                 content: `
                 I hear footsteps in a low tone.
 They rush through my ears, knock on my bones. 
@@ -3017,7 +3017,7 @@ When I realise the source of the footsteps was--
 {
                 title: "WTH IS LOVE",
                 date: "February 2024",
-                context: "This one's the creator's special for Valentine's Day! Enjoy the rambling, hehe. :D",
+                volume: [0, 0],                 context: "This one's the creator's special for Valentine's Day! Enjoy the rambling, hehe. :D",
                 content: `
                 What is love? Is it in the sky? 
 They way they say, 'for him, I'd die'. 
@@ -3076,7 +3076,7 @@ That's what love is.
 {
                 title: "Dear Dyer...",
                 date: "April 2024",
-                context: "This one's addressed to General Dyer, a cruel, merciless, aggressive man who was mainly responsible for the Jallianwalla Bagh massacre in the freedom struggle of India.",
+                volume: [0, 0],                 context: "This one's addressed to General Dyer, a cruel, merciless, aggressive man who was mainly responsible for the Jallianwalla Bagh massacre in the freedom struggle of India.",
                 content: `
                 [CW]
 
@@ -3112,7 +3112,7 @@ The INDIA we used to know.
             {
                 title: "Spider Lily",
                 date: "May 2024",
-                context: "Spider lilies are flowers often seen as a symbol for last meetings and final goodbyes...",
+                volume: [0, 0],                 context: "Spider lilies are flowers often seen as a symbol for last meetings and final goodbyes...",
                 content: `
                 There's a layer of dust on the grave that I can’t bear to clean,
 It’s a forlorn, musty haze of tragedies unforeseen.
@@ -3161,7 +3161,7 @@ And for the rest of time, I'll watch the spider lilies bloom.
             {
                 title: "Peony",
                 date: "April 2024",
-                context: "This one's about perfection. Or not. You'll see.",
+                volume: [0, 0],                 context: "This one's about perfection. Or not. You'll see.",
                 content: `
                 How perfect can one get?
 How much could you ask of me?
@@ -3218,7 +3218,7 @@ And watch this peony bloom.
             {
                 title: "Alone...",
                 date: "April 2024",
-                context: "This one was meant to be written in Winter originally. So... don't mind if it feels kinda odd.",
+                volume: [0, 0],                 context: "This one was meant to be written in Winter originally. So... don't mind if it feels kinda odd.",
                 content: `
                 The world's joyous and merry, grass is white with snow 
 Doorways are decorated with holly and mistletoe. 
@@ -3255,7 +3255,7 @@ Alone in my room, I can drift... drift... drift...
             {
                 title: "Off With Her Head!",
                 date: "April 2024",
-                context: "This one is a criticism of sexism throughout history. It's really awesome that this is barely a problem anymore in most areas. Anyway, do keep in mind that none of this 'advice' is serious.",
+                volume: [0, 0],                 context: "This one is a criticism of sexism throughout history. It's really awesome that this is barely a problem anymore in most areas. Anyway, do keep in mind that none of this 'advice' is serious.",
                 content: `
                 Your castles are crumbling, 
 But don't dare to take cover, 
@@ -3305,7 +3305,7 @@ But maybe, in the far future, they’ll write poems about you.
             {
                 title: "Outlive the War",
                 date: "May 2024",
-                context: "It's about the position of Jews in World War II, specifically in harsh and brutal situations like concentration camps. Please do research more about this if you're curious (keep in mind the creator does not know everything)!",
+                volume: [0, 0],                 context: "It's about the position of Jews in World War II, specifically in harsh and brutal situations like concentration camps. Please do research more about this if you're curious (keep in mind the creator does not know everything)!",
                 content: `
                 The walls are chipped, the floors are scratched, 
 They just sent in another batch.
@@ -3374,7 +3374,7 @@ I'll... I swear I'll outl--
             {
                 title: "Dice",
                 date: "June 2024",
-                context: "This poem represents a pessimistic view of fate; specifically determinism. That's a theory where all our actions are essentially predestined to happen and one doesn't have any control over them.",
+                volume: [0, 0],                 context: "This poem represents a pessimistic view of fate; specifically determinism. That's a theory where all our actions are essentially predestined to happen and one doesn't have any control over them.",
                 content: `
 One glance into the hazy sky, 
 And I got lost again.
@@ -3466,7 +3466,7 @@ Now you don’t get to reroll.
             {
                 title: "Scapegoat",
                 date: "July 2024",
-                context: "This one is about emotional abuse in relationships of any kind. Sometimes people don't realise when they're being manipulated - and when they do, their own guilt prevents them from leaving the abusive relationship. Please never emotionally abuse people around you. Some people do it without realising they're doing it.",
+                volume: [0, 0],                 context: "This one is about emotional abuse in relationships of any kind. Sometimes people don't realise when they're being manipulated - and when they do, their own guilt prevents them from leaving the abusive relationship. Please never emotionally abuse people around you. Some people do it without realising they're doing it.",
                 content: `
 Unreciprocation haunts the hints of my love,
 Trapped inside the fences I put up to prove I’m tough.
@@ -3525,7 +3525,7 @@ And turn back to you, the scapegoat to my archer.
                 {
                 title: "Where...?",
                 date: "July 2024",
-                context: "A short one about feelings of hopelessness and confusion in tough decisions. Interpret it however you want.",
+                volume: [0, 0],                 context: "A short one about feelings of hopelessness and confusion in tough decisions. Interpret it however you want.",
                 content: `
                 The walls are decked with moss 
 Reminders of each loss 
@@ -3582,7 +3582,7 @@ Where? Where? WHERE? WHERE?? WHERE?! WHY!?
 {
                 title: "Green",
                 date: "July 2024",
-                context: "This one's about expectations and hopes. Especially when those hopes become so high, that in search of good things, one forgets to actually acknowledge the good things they already have.",
+                volume: [0, 0],                 context: "This one's about expectations and hopes. Especially when those hopes become so high, that in search of good things, one forgets to actually acknowledge the good things they already have.",
                 content: `
                 The field was a forsaken place,
 Damp like the tear-stains on my face, 
@@ -3643,7 +3643,7 @@ The grass was green.
             {
                 title: "Prince Rupert",
                 date: "July 2024",
-                context: "This one's a parallel between human emotions and a Prince Rupert's drop. A Prince Rupert's drop is formed when you drop molten glass into cold water. The drop freezes, and it creates this weird structure. A Prince Rupert's drop is incredibly strong and sturdy, but it shatters into pieces at the slightest bit of force to the tip of the drop. The poem tries to use this as a metaphor for humans. :)",
+                volume: [0, 0],                 context: "This one's a parallel between human emotions and a Prince Rupert's drop. A Prince Rupert's drop is formed when you drop molten glass into cold water. The drop freezes, and it creates this weird structure. A Prince Rupert's drop is incredibly strong and sturdy, but it shatters into pieces at the slightest bit of force to the tip of the drop. The poem tries to use this as a metaphor for humans. :)",
                 content: `
                 As strong as a diamond, as lustrous as gold,
 Once emblazoned by rage, now piercing cold.
@@ -3692,7 +3692,7 @@ Fragility’s a curse that can’t easily be concealed.
             {
                 title: "Thanks, Death",
                 date: "January 2024",
-                context: "This one's meant as a sort of closure to many of the creator's poems written in the latter half of 2023, the ones which talk loads about death and how awful it is, in various different ways. This poem takes a slightly different point of view.",
+                volume: [0, 0],                 context: "This one's meant as a sort of closure to many of the creator's poems written in the latter half of 2023, the ones which talk loads about death and how awful it is, in various different ways. This poem takes a slightly different point of view.",
                 content: `
                 Dear Death, you know I've written loads about you lately,
 You know your very presence has affected me greatly.
@@ -3727,7 +3727,7 @@ I thought I owed you hatred, but a 'thanks' is what I owe. :)
             {
                 title: "Deadly",
                 date: "July 2024",
-                context: "This one's about guilt and regret. Specifically about how some people get convinced that they're doing the right thing, until the 'deadly' guilt and regret begins to set in.",
+                volume: [0, 0],                 context: "This one's about guilt and regret. Specifically about how some people get convinced that they're doing the right thing, until the 'deadly' guilt and regret begins to set in.",
                 content: `
                 I'm waiting for the guilt to fade, waiting with breath bated,
 I don't like how it feels like I'm being suffocated, 
@@ -3786,7 +3786,7 @@ I don't like when it hits me... what if I'm the deadly one?
                 {
                 title: "Dishonesty",
                 date: "August 2024",
-                context: "This one's a pretty plain piece about the dualities of lies. Also littered with metaphors, hehe.",
+                volume: [0, 0],                 context: "This one's a pretty plain piece about the dualities of lies. Also littered with metaphors, hehe.",
                 content: `
                 Truth is like a blunt axe, 
 With brawny, brutal, blunt attacks,
@@ -3828,7 +3828,7 @@ Dishonesty's a blessing disguised as a curse.
                 {
                 title: "Snowmelt",
                 date: "August 2024",
-                context: "This one's about the effects of global warming and the effects it's having on the world. It's a kind of alternate reality, or an exploration of a worst-case scenario. Save the Earth, people.",
+                volume: [0, 0],                 context: "This one's about the effects of global warming and the effects it's having on the world. It's a kind of alternate reality, or an exploration of a worst-case scenario. Save the Earth, people.",
                 content: `
                 Hailstorms wreck skies overhead, 
 They melt before they hit the ground, 
@@ -3895,7 +3895,7 @@ Now it's all just cold, cold, cold, cold, cold.
                 {
                 title: "Make Me Right",
                 date: "August 2024",
-                context: "This one is an exploration of the creator's insecurities and the things they view as flaws in themselves. 'Make me right' is a way to say 'fix my flaws', essentially. Content warning: mentions of harm.",
+                volume: [0, 0],                 context: "This one is an exploration of the creator's insecurities and the things they view as flaws in themselves. 'Make me right' is a way to say 'fix my flaws', essentially. Content warning: mentions of harm.",
                 content: `
                 [CW]
 
@@ -4033,7 +4033,7 @@ Please, please, make me right, I came out all wrong.
                 {
                 title: "Victim Card",
                 date: "August 2024",
-                context: "This one's about externalisation of blame and victim mentality - all mixed up with card game metaphors. Enjoy, and see if you can spot all the references to different card games and their phrases. :)",
+                volume: [0, 0],                 context: "This one's about externalisation of blame and victim mentality - all mixed up with card game metaphors. Enjoy, and see if you can spot all the references to different card games and their phrases. :)",
                 content: `
                 I was never that great at playing blackjack, 
 Always resorted to drawing more from the stack. 
@@ -4088,7 +4088,7 @@ And when I find another ace, I play the victim card.
                 title: "Lucy",
                 date: "August 2024",
                 volume: [9, 1],
-                context: "This one's about doctors and patients - specifically doctors who have to deal with losses of patients. It's dedicated to one of most special doctors in my life.",
+                volume: [0, 0],                 context: "This one's about doctors and patients - specifically doctors who have to deal with losses of patients. It's dedicated to one of most special doctors in my life.",
                 content: `
                 Now, my dear, look up, slowly open your eyes, 
 I'll draw the window curtains so you can watch the sunrise. 
@@ -4162,7 +4162,7 @@ And you fall asleep, softly humming to your steady pulse.
 {
                 title: "Title",
                 date: "December 1998",
-                context: "Context",
+                volume: [0, 0],                 context: "Context",
                 content: `
                 Line 1
                 Line 2
