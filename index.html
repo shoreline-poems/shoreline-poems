@@ -64,8 +64,8 @@
       
         .poem-card {
         	
-            width: 90px; /* Adjust button width */
-            height: 70px; /* Adjust button height */
+            width: 110px; /* Adjust button width */
+            height: 90px; /* Adjust button height */
             background: #b9edd4;
             background: var(--themecard);
             background-size: 400% 400%;
@@ -986,6 +986,29 @@ function reloadDisqus() {
             });
         }*/
 
+            function getVolumeFromURL() {
+                const params = new URLSearchParams(window.location.search);
+                return params.get('v');
+            }
+        
+            function setVolumeInURL(volumeNumber) {
+                const params = new URLSearchParams(window.location.search);
+                params.set('v', volumeNumber);
+                window.location.search = params.toString();
+            }
+        
+            function generateVolumeButtons() {
+                const volumes = Array.from(new Set(poems.map(poem => poem.volume[0])));
+                const volumeButtons = document.getElementById('volumeButtons');
+        
+                volumes.forEach(volume => {
+                    const button = document.createElement('button');
+                    button.innerText = `Volume ${volume}`;
+                    button.addEventListener('click', () => setVolumeInURL(volume));
+                    volumeButtons.appendChild(button);
+                });
+            }
+
 
             function generatePoemCardsByVolume(volumeNumber) {
                 // Filter and sort the poems by volume
@@ -1043,8 +1066,13 @@ function reloadDisqus() {
                 return card;
             }
         
-            // Example usage: Generate poem cards for volume 9
-            generatePoemCardsByVolume(9);
+        const volumeNumber = getVolumeFromURL();
+        if (volumeNumber) {
+            generatePoemCardsByVolume(volumeNumber);
+        } else {
+            generateVolumeButtons();
+        }
+
     
         var modalWaveOpenedCompletely = false;
 
