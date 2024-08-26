@@ -713,7 +713,7 @@ button {
 
     <br>
     
-    <div id="vselector" class="hidden">
+    <div id="vselector">
         <h4>Shoreline's main poems are all stored in volumes of 7 poems each!<br>Take your pick to read. :)</h4>
         <br><br>
         <div id="volumeselect">
@@ -1500,14 +1500,17 @@ function reloadDisqus() {
         // Initialize with the default theme
         updateTheme();
 
+        const vselector = document.getElementById('vselector');
+        if (v) {vselector.classList.add('hidden');}
+
         function handleURLParams() {
             const urlParams = new URLSearchParams(window.location.search);
             const v = urlParams.get('v');
-
+            
             if (v) {
                 // Hide the main theme selector
                 mainThemeSelect.classList.add('hidden');
-
+                
                 // Map v values to themes
                 const themeMap = {
                     '1': 'sunrise',
