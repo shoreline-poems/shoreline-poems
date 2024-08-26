@@ -629,26 +629,28 @@ button {
             <option value="lengthAsc">Shortest to Longest</option>
             <option value="lengthDesc">Longest to Shortest</option>
         </select>
-        <select id="themeSelect">
-            <option value="sunrise-light">Sunrise Light</option>>
-            <option value="sunrise-dark">Sunrise Dark</option>
-            <option value="prismatic-light">Prismatic Light</option>
-            <option value="prismatic-dark">Prismatic Dark</option>
-            <option value="wintergale-light">Wintergale Light</option>
-            <option value="wintergale-dark">Wintergale Dark</option>
-            <option value="parchment-light">Parchment Light</option>
-            <option value="parchment-dark">Parchment Dark</option>
-            <option value="overcast-light">Overcast Light</option>
-            <option value="overcast-dark">Overcast Dark</option>
-            <option value="crystalball-light">Crystal Ball Light</option>
-            <option value="crystalball-dark">Crystal Ball Dark</option>
-            <option value="crashedandburning-light">Crashed and Burning Light</option>
-            <option value="crashedandburning-dark">Crashed and Burning Dark</option>
-            <option value="estuary-light">Estuary Light</option>
-            <option value="estuary-dark">Estuary Dark</option>
-            <option value="treehollow-light">Treehollow Light</option>
-            <option value="treehollow-dark">Treehollow Dark</option>
-        </select>
+        <select id="mainThemeSelect">
+        <option value="sunrise">Sunrise</option>
+        <option value="prismatic">Prismatic</option>
+        <option value="wintergale">Wintergale</option>
+        <option value="parchment">Parchment</option>
+        <option value="overcast">Overcast</option>
+        <option value="crystalball">Crystal Ball</option>
+        <option value="crashedandburning">Crashed and Burning</option>
+        <option value="miasma">Miasma</option>
+        <option value="letter">Letter</option>
+    </select>
+
+    <!-- Button to Toggle Light/Dark Mode -->
+    <button id="toggleLightDark">Light Mode</button>
+
+    <!-- Hidden Dropdown for Light/Dark Mode -->
+    <select id="lightDarkSelect" style="display: none;">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+
+    <!-- Script to handle the theme change -->
         <input type="text" id="searchInput" placeholder="Search...">
     </div>
 
@@ -1201,10 +1203,20 @@ function reloadDisqus() {
         const sortSelect = document.getElementById('sortSelect');
         const searchInput = document.getElementById('searchInput');
 
-        themeSelect.addEventListener('change', () => {
-        var sRoot = document.querySelector(':root');
-        localStorage.setItem('theme', themeSelect.value);
-            switch (themeSelect.value) {
+
+    
+        const mainThemeSelect = document.getElementById('mainThemeSelect');
+        const lightDarkSelect = document.getElementById('lightDarkSelect');
+        const toggleButton = document.getElementById('toggleLightDark');
+
+        let currentTheme = 'light'; // Default to light mode
+
+        function updateTheme() {
+            const mainTheme = mainThemeSelect.value;
+            const fullTheme = `${mainTheme}-${currentTheme}`;
+                    var sRoot = document.querySelector(':root');
+            localStorage.setItem('theme', fullTheme);
+            switch (fullTheme) {
               case 'sunrise-light':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(255,168,250,1), rgba(255,217,146,0.3927696078431373), rgba(255,172,104,1))');
                   sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #fdc7d2, #f8f4c5, #ffd3a0)');
@@ -1229,7 +1241,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
-              case 'estuary-dark':
+              case 'miasma-dark':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
                   sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #2f8f82, #3a4a8c, #387a42)');
                   sRoot.style.setProperty('--themessb', '#7dc7b5');
@@ -1315,21 +1327,21 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
-                case 'estuary-light':
+                case 'miasma-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,0,255,1), rgba(255,255,255,1), rgba(224,255,255,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
-                case 'treehollow-light':
+                case 'letter-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #9dcc5f, #8edd7e, #65c452)');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(245,235,192,1), rgba(210,180,140,1), rgba(222,180,110,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
-                case 'treehollow-dark':
+                case 'letter-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(0,100,0,1), #425e1d, #386326)');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #594f31, rgba(139,69,19,1), #56481c)');
                 sRoot.style.setProperty('--mode', 'white');
@@ -1339,6 +1351,21 @@ function reloadDisqus() {
               default:
               break;
             }
+        }
+
+        mainThemeSelect.addEventListener('change', updateTheme);
+
+        toggleButton.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            toggleButton.textContent = currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1) + ' Mode';
+            updateTheme();
+        });
+
+        // Initialize with the default theme
+        updateTheme();
+    
+        themeSelect.addEventListener('change', () => {
+        
         });
 
         sortSelect.addEventListener('change', () => {
