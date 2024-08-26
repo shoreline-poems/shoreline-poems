@@ -64,15 +64,15 @@
           --themessb: #ff85be;
           --blue: linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%);
           --darkblue: linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%);
-        --sunrise-bg: linear-gradient(rgba(255,168,250,1), rgba(255,217,146,0.392), rgba(255,172,104,1));
-        --prismatic-bg: linear-gradient(rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1));
-        --wintergale-bg: linear-gradient(rgba(255,255,255,1), rgba(173,216,230,1), rgba(240,248,255,1));
-        --parchment-bg: linear-gradient(rgba(245,245,220,1), #999072, rgba(255,248,220,1));
-        --overcast-bg: linear-gradient(rgba(119,136,153,1), rgba(169,169,169,1), rgba(176,196,222,1));
-        --crystalball-bg: linear-gradient(#ead4ff, #ffd3c6, #efc8ff);
-        --crashedandburning-bg: linear-gradient(rgba(169,169,169,1), #5b3c3c, rgba(192,192,192,1));
-        --miasma-bg: linear-gradient(rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1));
-        --letter-bg: linear-gradient(#9dcc5f, #8edd7e, #65c452);
+        --sunrise-bg: linear-gradient(0deg, rgba(255,168,250,1), rgba(255,217,146,0.392), rgba(255,172,104,1));
+        --prismatic-bg: linear-gradient(0deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1));
+        --wintergale-bg: linear-gradient(0deg, rgba(255,255,255,1), rgba(173,216,230,1), rgba(240,248,255,1));
+        --parchment-bg: linear-gradient(0deg, rgba(245,245,220,1), #999072, rgba(255,248,220,1));
+        --overcast-bg: linear-gradient(0deg, rgba(119,136,153,1), rgba(169,169,169,1), rgba(176,196,222,1));
+        --crystalball-bg: linear-gradient(0deg, #ead4ff, #ffd3c6, #efc8ff);
+        --crashedandburning-bg: linear-gradient(0deg, rgba(169,169,169,1), #5b3c3c, rgba(192,192,192,1));
+        --miasma-bg: linear-gradient(0deg, rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1));
+        --letter-bg: linear-gradient(0deg, #9dcc5f, #8edd7e, #65c452);
         }
       
         .poem-card {
@@ -623,26 +623,36 @@ button {
     background: linear-gradient(rgba(255,172,104,1), rgba(230, 252, 247,1));
 }
 #prismatic-d {
-    background: linear-gradient(rgba(255,172,104,1), rgba(212, 239, 255,1));
+    background: linear-gradient(rgba(212, 255, 218,1), rgba(255,255,255,1));
 }
 #wintergale-d {
-    background: linear-gradient(rgba(212, 239, 255,1), rgba(245,245,220,1));
+    background: linear-gradient(rgba(240,248,255,1), rgba(245,245,220,1));
 }
 #parchment-d {
-    background: linear-gradient(rgba(245,245,220,1), rgba(119,136,153,1));
+    background: linear-gradient(rgba(255,248,220,1), rgba(119,136,153,1));
 }
 #overcast-d {
-    background: linear-gradient(rgba(119,136,153,1), rgba(255,255,255,1));
+    background: linear-gradient(rgba(176,196,222,1), #ead4ff);
 }
 #crystal-ball-d {
-    background: linear-gradient(rgba(255,255,255,1), rgba(169,169,169,1));
+    background: linear-gradient(#efc8ff, rgba(169,169,169,1));
 }
 #crashed-and-burning-d {
-    background: linear-gradient(rgba(169,169,169,1), rgba(173,216,230,1));
+    background: linear-gradient(rgba(192,192,192,1), rgba(173,216,230,1));
 }
 #miasma-d {
-    background: linear-gradient(rgba(173,216,230,1), rgba(0,100,0,1));
+    background: linear-gradient(rgba(240,248,255,1), #9dcc5f);
 }
+
+      --sunrise-bg: linear-gradient(0deg, rgba(255,168,250,1), rgba(255,217,146,0.392), rgba(255,172,104,1));
+        --prismatic-bg: linear-gradient(0deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1));
+        --wintergale-bg: linear-gradient(0deg, rgba(255,255,255,1), rgba(173,216,230,1), rgba(240,248,255,1));
+        --parchment-bg: linear-gradient(0deg, rgba(245,245,220,1), #999072, rgba(255,248,220,1));
+        --overcast-bg: linear-gradient(0deg, rgba(119,136,153,1), rgba(169,169,169,1), rgba(176,196,222,1));
+        --crystalball-bg: linear-gradient(0deg, #ead4ff, #ffd3c6, #efc8ff);
+        --crashedandburning-bg: linear-gradient(0deg, rgba(169,169,169,1), #5b3c3c, rgba(192,192,192,1));
+        --miasma-bg: linear-gradient(0deg, rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1));
+        --letter-bg: linear-gradient(0deg, #9dcc5f, #8edd7e, #65c452);
     </style>
 </head>
 <body>
@@ -714,59 +724,77 @@ button {
         <br><br>
         <div id="volumeselect">
             <section id="sunrise">
+            <h2>Sunrise</h2>
+            <h3>Theme: Innocence</h3>
             <a href="/?v=1">
               <img src="cover/sunrise.png" alt="Sunrise" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="sunrise-d"><br></section>
+            <section id="sunrise-d"><br><br><br></section>
             <section id="prismatic">
+            <h2>Prismatic</h2>
+            <h3>Theme: Diversity</h3>
             <a href="/?v=2">
               <img src="cover/prismatic.png" alt="Prismatic" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="prismatic-d"><br></section>
+            <section id="prismatic-d"><br><br><br></section>
             <section id="wintergale">
+            <h2>Wintergale</h2>
+            <h3>Theme: Loneliness</h3>
             <a href="/?v=3">
               <img src="cover/wintergale.png" alt="Wintergale" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="wintergale-d"><br></section>
+            <section id="wintergale-d"><br><br><br></section>
             <section id="parchment">
+            <h2>Parchment</h2>
+            <h3>Theme: History</h3>
             <a href="/?v=4">
               <img src="cover/parchment.png" alt="Parchment" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="parchment-d"><br></section>
+            <section id="parchment-d"><br><br><br></section>
             <section id="overcast">
+            <h2>Overcast</h2>
+            <h3>Theme: Melancholy</h3>
             <a href="/?v=5">
               <img src="cover/overcast.png" alt="Overcast" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="overcast-d"><br></section>
+            <section id="overcast-d"><br><br><br></section>
             <section id="crystal-ball">
+            <h2>Crystal Ball</h2>
+            <h3>Theme: Mental Health</h3>
             <a href="/?v=6">
               <img src="cover/crystal-ball.png" alt="Crystal Ball" style="width:200px;height:200px;">
             </a>
                 </section>
-            <section id="crystal-ball-d"><br></section>
+            <section id="crystal-ball-d"><br><br><br></section>
             <section id="crashed-and-burning">
+            <h2>Crashed and Burning</h2>
+            <h3>Theme: Failure</h3>
             <a href="/?v=7">
               <img src="cover/crashed-and-burning.png" alt="Crashed and Burning" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="crashed-and-burning-d"><br></section>
+            <section id="crashed-and-burning-d"><br><br><br></section>
             <section id="miasma">
+            <h2>Miasma</h2>
+            <h3>Theme: Self-Reflection</h3>
             <a href="/?v=8">
               <img src="cover/miasma.png" alt="Miasma" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="miasma-d"><br></section>
+            <section id="miasma-d"><br><br><br></section>
             <section id="letter">
+            <h2>Letter To...</h2>
+            <h3>Theme: People</h3>
             <a href="/?v=9">
               <img src="cover/letter-to.png" alt="Letter To..." style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="letter-d"><br></section>
+            <section id="letter-d"><br><br><br></section>
         </div>
     </div>
     
