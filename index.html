@@ -64,6 +64,15 @@
           --themessb: #ff85be;
           --blue: linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%);
           --darkblue: linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%);
+        --sunrise-bg: linear-gradient(rgba(255,168,250,1), rgba(255,217,146,0.392), rgba(255,172,104,1));
+        --prismatic-bg: linear-gradient(rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1));
+        --wintergale-bg: linear-gradient(rgba(255,255,255,1), rgba(173,216,230,1), rgba(240,248,255,1));
+        --parchment-bg: linear-gradient(rgba(245,245,220,1), #999072, rgba(255,248,220,1));
+        --overcast-bg: linear-gradient(rgba(119,136,153,1), rgba(169,169,169,1), rgba(176,196,222,1));
+        --crystalball-bg: linear-gradient(#ead4ff, #ffd3c6, #efc8ff);
+        --crashedandburning-bg: linear-gradient(rgba(169,169,169,1), #5b3c3c, rgba(192,192,192,1));
+        --miasma-bg: linear-gradient(rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1));
+        --letter-bg: linear-gradient(#9dcc5f, #8edd7e, #65c452);
         }
       
         .poem-card {
@@ -594,6 +603,46 @@ button {
     padding: 10px;
     cursor: pointer;
 }
+
+/* Define theme backgrounds using custom properties */
+
+
+/* Apply theme backgrounds to elements with matching IDs */
+#sunrise { background: var(--sunrise-bg); }
+#prismatic { background: var(--prismatic-bg); }
+#wintergale { background: var(--wintergale-bg); }
+#parchment { background: var(--parchment-bg); }
+#overcast { background: var(--overcast-bg); }
+#crystal-ball { background: var(--crystalball-bg); }
+#crashed-and-burning { background: var(--crashedandburning-bg); }
+#miasma { background: var(--miasma-bg); }
+#letter { background: var(--letter-bg); }
+
+/* Apply divider gradients based on adjacent themes */
+#sunrise-d {
+    background: linear-gradient(rgba(255,172,104,1), rgba(230, 252, 247,1));
+}
+#prismatic-d {
+    background: linear-gradient(rgba(255,172,104,1), rgba(212, 239, 255,1));
+}
+#wintergale-d {
+    background: linear-gradient(rgba(212, 239, 255,1), rgba(245,245,220,1));
+}
+#parchment-d {
+    background: linear-gradient(rgba(245,245,220,1), rgba(119,136,153,1));
+}
+#overcast-d {
+    background: linear-gradient(rgba(119,136,153,1), rgba(255,255,255,1));
+}
+#crystal-ball-d {
+    background: linear-gradient(rgba(255,255,255,1), rgba(169,169,169,1));
+}
+#crashed-and-burning-d {
+    background: linear-gradient(rgba(169,169,169,1), rgba(173,216,230,1));
+}
+#miasma-d {
+    background: linear-gradient(rgba(173,216,230,1), rgba(0,100,0,1));
+}
     </style>
 </head>
 <body>
@@ -659,38 +708,65 @@ button {
     </div>
 
     <br>
-
+    
     <div id="vselector" class="hidden">
         <h3>Shoreline's main poems are all stored in volumes of 7 poems each!<br>Take your pick to read. :)</h3>
         <br><br>
         <div id="volumeselect">
+            <section id="sunrise">
             <a href="/?v=1">
               <img src="cover/sunrise.png" alt="Sunrise" style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="sunrise-d"><br></section>
+            <section id="prismatic">
             <a href="/?v=2">
               <img src="cover/prismatic.png" alt="Prismatic" style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="prismatic-d"><br></section>
+            <section id="wintergale">
             <a href="/?v=3">
               <img src="cover/wintergale.png" alt="Wintergale" style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="wintergale-d"><br></section>
+            <section id="parchment">
             <a href="/?v=4">
               <img src="cover/parchment.png" alt="Parchment" style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="parchment-d"><br></section>
+            <section id="overcast">
             <a href="/?v=5">
               <img src="cover/overcast.png" alt="Overcast" style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="overcast-d"><br></section>
+            <section id="crystal-ball">
             <a href="/?v=6">
               <img src="cover/crystal-ball.png" alt="Crystal Ball" style="width:200px;height:200px;">
             </a>
+                </section>
+            <section id="crystal-ball-d"><br></section>
+            <section id="crashed-and-burning">
             <a href="/?v=7">
               <img src="cover/crashed-and-burning.png" alt="Crashed and Burning" style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="crashed-and-burning-d"><br></section>
+            <section id="miasma">
             <a href="/?v=8">
               <img src="cover/miasma.png" alt="Miasma" style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="miasma-d"><br></section>
+            <section id="letter">
             <a href="/?v=9">
               <img src="cover/letter-to.png" alt="Letter To..." style="width:200px;height:200px;">
             </a>
+            </section>
+            <section id="letter-d"><br></section>
         </div>
     </div>
     
