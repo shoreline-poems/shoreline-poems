@@ -1363,10 +1363,37 @@ function reloadDisqus() {
 
         // Initialize with the default theme
         updateTheme();
-    
-        themeSelect.addEventListener('change', () => {
-        
-        });
+
+        function handleURLParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const v = urlParams.get('v');
+
+            if (v) {
+                // Hide the main theme selector
+                mainThemeSelect.classList.add('hidden');
+
+                // Map v values to themes
+                const themeMap = {
+                    '1': 'sunrise',
+                    '2': 'prismatic',
+                    '3': 'wintergale',
+                    '4': 'parchment',
+                    '5': 'overcast',
+                    '6': 'crystalball',
+                    '7': 'crashedandburning',
+                    '8': 'miasma',
+                    '9': 'letter'
+                };
+
+                const selectedTheme = themeMap[v];
+                if (selectedTheme) {
+                    mainThemeSelect.value = selectedTheme;
+                    updateTheme();
+                } else {
+                    console.error('Invalid value for v:', v);
+                }
+            }
+        }
 
         sortSelect.addEventListener('change', () => {
             const selectedValue = sortSelect.value;
