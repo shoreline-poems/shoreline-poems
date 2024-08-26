@@ -1500,8 +1500,10 @@ function reloadDisqus() {
         // Initialize with the default theme
         updateTheme();
 
+        const theUrlParams = new URLSearchParams(window.location.search);
         const vselector = document.getElementById('vselector');
-        if (v) {vselector.classList.add('hidden');}
+        const theVolume = theUrlParams.get('v');
+        if (theVolume) {vselector.classList.add('hidden');}
 
         function handleURLParams() {
             const urlParams = new URLSearchParams(window.location.search);
