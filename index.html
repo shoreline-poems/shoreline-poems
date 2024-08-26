@@ -14,6 +14,10 @@
     <title>Shoreline</title>
     <style>
         /* Add your CSS styles here */
+        .hidden {
+            display: none;
+        }
+        
         body {
             background: rgb(255,168,250);
             background: var(--themebg);
@@ -656,6 +660,40 @@ button {
 
     <br>
 
+    <div id="vselector" class="hidden">
+        <h3>Shoreline's main poems are all stored in volumes of 7 poems each!<br>Take your pick to read. :)</h3>
+        <br><br>
+        <div id="volumeselect">
+            <a href="/?v=1">
+              <img src="cover/sunrise.png" alt="Sunrise" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=2">
+              <img src="cover/prismatic.png" alt="Prismatic" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=3">
+              <img src="cover/wintergale.png" alt="Wintergale" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=4">
+              <img src="cover/parchment.png" alt="Parchment" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=5">
+              <img src="cover/overcast.png" alt="Overcast" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=6">
+              <img src="cover/crystal-ball.png" alt="Crystal Ball" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=7">
+              <img src="cover/crashed-and-burning.png" alt="Crashed and Burning" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=8">
+              <img src="cover/miasma.png" alt="Miasma" style="width:200px;height:200px;">
+            </a>
+            <a href="/?v=9">
+              <img src="cover/letter-to.png" alt="Letter To..." style="width:200px;height:200px;">
+            </a>
+        </div>
+    </div>
+    
     <!-- Poem cards will be generated dynamically here -->
     <div id="poemContainer">
 
