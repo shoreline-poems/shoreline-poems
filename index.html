@@ -1378,6 +1378,7 @@ function reloadDisqus() {
         let currentTheme = 'light'; // Default to light mode
 
         function updateTheme() {
+            const mainThemeSelect = document.getElementById('mainThemeSelect');
             const mainTheme = mainThemeSelect.value;
             const fullTheme = `${mainTheme}-${currentTheme}`;
                     var sRoot = document.querySelector(':root');
