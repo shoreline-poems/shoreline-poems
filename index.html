@@ -1530,7 +1530,8 @@ function reloadDisqus() {
 
         // Initialize with the default theme
         updateTheme();
-
+        handleURLParams();
+    
         const theUrlParams = new URLSearchParams(window.location.search);
         const vselector = document.getElementById('vselector');
         const theVolume = theUrlParams.get('v');
@@ -1549,7 +1550,8 @@ function reloadDisqus() {
 
                 const selectedTheme = themeMap[v];
                 if (selectedTheme) {
-                    updateTheme(selectedTheme);
+                    mainThemeSelect.value = selectedTheme;
+                    updateTheme();
                 } else {
                     alert('Invalid value for v:', v);
                 }
