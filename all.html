@@ -204,7 +204,7 @@
             animation: bob 3s infinite alternate; /* Add bobbing animation */
         }
         
-        #toggleLightDark, #mainThemeSelect, #sortSelect, #searchInput, #shareButton {
+        #backButton, #toggleLightDark, #mainThemeSelect, #sortSelect, #searchInput, #shareButton {
             background-color: var(--themessb);
             border: none;
             font-family: Pangolin, display;
@@ -215,7 +215,7 @@
 
         }
         
-        #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+        #backButton:hover, #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
             background-color: #a1c6e3; 
             color: white;
         }
@@ -619,7 +619,7 @@ button {
 
     <!-- Sorting and search controls -->
     <div>
-        <button onclick="document.location='index.html'" id="closeButton">Back</button>
+        <button onclick="document.location='index.html'" id="backButton">Back</button>
         <label for="sortSelect"></label>
         <select id="sortSelect">
             <option value="random">Randomly Sorted</option>
