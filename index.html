@@ -15,11 +15,15 @@
         .hidden {
             display: none;
         }
+
+        .volcontainer {
+            width: 100vw;
+        }
         
         body {
             background: rgb(255,168,250);
             background: var(--themebg);
-            background-size: 400% 400%;
+            background-size: 400vw 400vh;
             color: var(--mode);
             animation: gradient 70s ease infinite;
             font-family: Pangolin, display;
@@ -645,7 +649,7 @@ button {
     background: linear-gradient(#9dcc5f, rgba(255,255,255,0));
 }
         
-#beforevselect {
+.beforevselect {
     linear-gradient(rgba(255,172,104,0), rgba(255,172,104,1));
 }
 
@@ -742,7 +746,7 @@ button {
     
     <div id="vselector">
         <div id="volumeselect">
-            <div id="beforevselect">
+            <div class="beforevselect">
             <h4>Shoreline's main poems are all stored in volumes of 7 poems each!<br>Take your pick to read. :)</h4>
             <br><br></div>
             <section class="volcontainer" id="sunrise">
