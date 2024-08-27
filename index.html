@@ -219,7 +219,7 @@
             animation: bob 3s infinite alternate; /* Add bobbing animation */
         }
         
-        #mainThemeSelect, #toggleLightDark, #sortSelect, #searchInput, #shareButton {
+        #backButton, #mainThemeSelect, #toggleLightDark, #sortSelect, #searchInput, #shareButton {
             background-color: var(--themessb);
             border: none;
             font-family: Pangolin, display;
@@ -230,7 +230,7 @@
 
         }
         
-        #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+        #backButton:hover, #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
             background-color: #a1c6e3; 
             color: white;
         }
@@ -706,8 +706,8 @@ button {
 
     <!-- Sorting and search controls -->
     <div>
-        <button onclick="document.location='index.html'" id="closeButton">Back</button>
-        <label for="sortSelect"></label>
+        <button onclick="document.location='index.html'" id="backButton">Back</button>
+        <!--<label for="sortSelect"></label>
         <select id="sortSelect">
             <option value="random">Randomly Sorted</option>
             <option value="dateDesc">Newest to Oldest</option>
@@ -716,7 +716,7 @@ button {
             <option value="titleDesc">Z to A</option>
             <option value="lengthAsc">Shortest to Longest</option>
             <option value="lengthDesc">Longest to Shortest</option>
-        </select>
+        </select>-->
         <select id="mainThemeSelect">
         <option value="sunrise">Sunrise</option>
         <option value="prismatic">Prismatic</option>
@@ -739,7 +739,7 @@ button {
     </select>
 
     <!-- Script to handle the theme change -->
-        <input type="text" id="searchInput" placeholder="Search...">
+        <!---<input type="text" id="searchInput" placeholder="Search...">-->
     </div>
 
     <br>
