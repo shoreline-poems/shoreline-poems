@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
     <title>Shoreline</title>
     <style>
         /* Add your CSS styles here */
@@ -1379,9 +1377,10 @@ function reloadDisqus() {
 
         let currentTheme = 'light'; // Default to light mode
 
-        function updateTheme() {
-            const mainTheme = mainThemeSelect.value;
-            const fullTheme = `${mainTheme}-${currentTheme}`;
+        function updateTheme(mainTheme) {
+        if (mainTheme) {
+            const fullTheme = `${mainTheme}-${currentTheme}`;}
+        else {const mainTheme = mainThemeSelect.value;}
                     var sRoot = document.querySelector(':root');
             localStorage.setItem('theme', fullTheme);
             switch (fullTheme) {
@@ -1521,8 +1520,8 @@ function reloadDisqus() {
             }
         }
 
-        mainThemeSelect.addEventListener('change', updateTheme);
-
+        mainThemeSelect.addEventListener('change', updateTheme(mainThemeSelect.value));
+        
         toggleButton.addEventListener('click', () => {
             currentTheme = currentTheme === 'light' ? 'dark' : 'light';
             toggleButton.textContent = currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1) + ' Mode';
@@ -1560,8 +1559,7 @@ function reloadDisqus() {
 
                 const selectedTheme = themeMap[v];
                 if (selectedTheme) {
-                    mainThemeSelect.value = selectedTheme;
-                    updateTheme();
+                    updateTheme(selectedTheme);
                 } else {
                     console.error('Invalid value for v:', v);
                 }
