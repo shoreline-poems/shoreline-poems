@@ -219,7 +219,7 @@
             animation: bob 3s infinite alternate; /* Add bobbing animation */
         }
         
-        #backButton, #mainThemeSelect, #toggleLightDark, #sortSelect, #searchInput, #shareButton {
+        #allPoemsButton, #backButton, #mainThemeSelect, #toggleLightDark, #sortSelect, #searchInput, #shareButton {
             background-color: var(--themessb);
             border: none;
             font-family: Pangolin, display;
@@ -230,7 +230,7 @@
 
         }
         
-        #backButton:hover, #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
+        #allPoemsButton:hover, #backButton:hover, #closeButton:hover, #themeSelect:hover, #sortSelect:hover, #searchInput:hover, #shareButton:hover {
             background-color: #a1c6e3; 
             color: white;
         }
@@ -707,6 +707,7 @@ button {
     <!-- Sorting and search controls -->
     <div>
         <button onclick="document.location='index.html'" id="backButton">Back</button>
+        <button onclick="document.location='all.html'" id="allPoemsButton">All Poems</button>
         <!--<label for="sortSelect"></label>
         <select id="sortSelect">
             <option value="random">Randomly Sorted</option>
@@ -1539,8 +1540,14 @@ function reloadDisqus() {
     
         const theUrlParams = new URLSearchParams(window.location.search);
         const vselector = document.getElementById('vselector');
+        const allPoemsButton = document.getElementById('allPoemsButton');
+        const backButton = document.getElementById('backButton');
         const theVolume = theUrlParams.get('v');
-        if (theVolume) {vselector.classList.add('hidden');}
+        if (theVolume) {
+            vselector.classList.add('hidden');
+            allPoemsButton.classList.add('hidden');
+        }
+        else {backButton.classList.add('hidden');}
 
         function handleURLParams() {
             const urlParams = new URLSearchParams(window.location.search);
