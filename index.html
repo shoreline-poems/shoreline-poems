@@ -1377,10 +1377,9 @@ function reloadDisqus() {
 
         let currentTheme = 'light'; // Default to light mode
 
-        function updateTheme(mainTheme) {
-        if (mainTheme) {
-            const fullTheme = `${mainTheme}-${currentTheme}`;}
-        else {const mainTheme = mainThemeSelect.value;}
+        function updateTheme() {
+            const mainTheme = mainThemeSelect.value;
+            const fullTheme = `${mainTheme}-${currentTheme}`;
                     var sRoot = document.querySelector(':root');
             localStorage.setItem('theme', fullTheme);
             switch (fullTheme) {
@@ -1520,7 +1519,7 @@ function reloadDisqus() {
             }
         }
 
-        mainThemeSelect.addEventListener('change', updateTheme(mainThemeSelect.value));
+        mainThemeSelect.addEventListener('change', updateTheme);
         
         toggleButton.addEventListener('click', () => {
             currentTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -1545,23 +1544,13 @@ function reloadDisqus() {
                 mainThemeSelect.classList.add('hidden');
                 
                 // Map v values to themes
-                const themeMap = {
-                    '1': 'sunrise',
-                    '2': 'prismatic',
-                    '3': 'wintergale',
-                    '4': 'parchment',
-                    '5': 'overcast',
-                    '6': 'crystalball',
-                    '7': 'crashedandburning',
-                    '8': 'miasma',
-                    '9': 'letter'
-                };
+                const themeMap = ['sunrise','sunrise','prismatic','wintergale','parchment','overcast','crystalball','crashedandburning','miasma','letter'];
 
                 const selectedTheme = themeMap[v];
                 if (selectedTheme) {
                     updateTheme(selectedTheme);
                 } else {
-                    console.error('Invalid value for v:', v);
+                    alert('Invalid value for v:', v);
                 }
             }
         }
