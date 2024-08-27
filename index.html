@@ -632,23 +632,25 @@ button {
     background: linear-gradient(rgba(255,248,220,1), rgba(119,136,153,1));
 }
 #overcast-d {
-    background: linear-gradient(rgba(176,196,222,1), #ead4ff);
+    background: linear-gradient(rgba(119,136,153,1), #ead4ff);
 }
 #crystal-ball-d {
     background: linear-gradient(#efc8ff, rgba(169,169,169,1));
 }
 #crashed-and-burning-d {
-    background: linear-gradient(rgba(192,192,192,1), rgba(173,216,230,1));
+    background: linear-gradient(rgba(169,169,169,1), rgba(173,216,230,1));
 }
 #miasma-d {
-    background: linear-gradient(rgba(240,248,255,1), #9dcc5f);
+    background: linear-gradient(rgba(173,216,230,1), #9dcc5f);
 }
 
     #volumeselect {
       display: grid;
+    }
+
+    .volcontainer {
       animation: moveSideToSide 12s ease-in-out infinite;
       transform-origin: center;
-      border-radius: 10px; /* Optional: for rounded corners */
     }
     
     @keyframes moveSideToSide {
@@ -732,78 +734,78 @@ button {
         <h4>Shoreline's main poems are all stored in volumes of 7 poems each!<br>Take your pick to read. :)</h4>
         <br><br>
         <div id="volumeselect">
-            <section id="sunrise">
+            <section class="volcontainer" id="sunrise">
             <h2>Sunrise</h2>
             <h3>Theme: Innocence</h3>
             <a href="/?v=1">
               <img src="cover/sunrise.png" alt="Sunrise" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="sunrise-d"><br><br><br></section>
-            <section id="prismatic">
+            <section class="volcontainer" id="sunrise-d"><br><br><br></section>
+            <section class="volcontainer" id="prismatic">
             <h2>Prismatic</h2>
             <h3>Theme: Diversity</h3>
             <a href="/?v=2">
               <img src="cover/prismatic.png" alt="Prismatic" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="prismatic-d"><br><br><br></section>
-            <section id="wintergale">
+            <section class="volcontainer" id="prismatic-d"><br><br><br></section>
+            <section class="volcontainer" id="wintergale">
             <h2>Wintergale</h2>
             <h3>Theme: Loneliness</h3>
             <a href="/?v=3">
               <img src="cover/wintergale.png" alt="Wintergale" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="wintergale-d"><br><br><br></section>
-            <section id="parchment">
+            <section class="volcontainer" id="wintergale-d"><br><br><br></section>
+            <section class="volcontainer" id="parchment">
             <h2>Parchment</h2>
             <h3>Theme: History</h3>
             <a href="/?v=4">
               <img src="cover/parchment.png" alt="Parchment" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="parchment-d"><br><br><br></section>
-            <section id="overcast">
+            <section class="volcontainer" id="parchment-d"><br><br><br></section>
+            <section class="volcontainer" id="overcast">
             <h2>Overcast</h2>
             <h3>Theme: Melancholy</h3>
             <a href="/?v=5">
               <img src="cover/overcast.png" alt="Overcast" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="overcast-d"><br><br><br></section>
-            <section id="crystal-ball">
+            <section class="volcontainer" id="overcast-d"><br><br><br></section>
+            <section class="volcontainer" id="crystal-ball">
             <h2>Crystal Ball</h2>
             <h3>Theme: Mental Health</h3>
             <a href="/?v=6">
               <img src="cover/crystal-ball.png" alt="Crystal Ball" style="width:200px;height:200px;">
             </a>
                 </section>
-            <section id="crystal-ball-d"><br><br><br></section>
-            <section id="crashed-and-burning">
+            <section class="volcontainer" id="crystal-ball-d"><br><br><br></section>
+            <section class="volcontainer" id="crashed-and-burning">
             <h2>Crashed and Burning</h2>
             <h3>Theme: Failure</h3>
             <a href="/?v=7">
               <img src="cover/crashed-and-burning.png" alt="Crashed and Burning" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="crashed-and-burning-d"><br><br><br></section>
-            <section id="miasma">
+            <section class="volcontainer" id="crashed-and-burning-d"><br><br><br></section>
+            <section class="volcontainer" id="miasma">
             <h2>Miasma</h2>
             <h3>Theme: Self-Reflection</h3>
             <a href="/?v=8">
               <img src="cover/miasma.png" alt="Miasma" style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="miasma-d"><br><br><br></section>
-            <section id="letter">
+            <section class="volcontainer" id="miasma-d"><br><br><br></section>
+            <section class="volcontainer" id="letter">
             <h2>Letter To...</h2>
             <h3>Theme: People</h3>
             <a href="/?v=9">
               <img src="cover/letter-to.png" alt="Letter To..." style="width:200px;height:200px;">
             </a>
             </section>
-            <section id="letter-d"><br><br><br></section>
+            <section class="volcontainer" id="letter-d"><br><br><br></section>
         </div>
     </div>
     
