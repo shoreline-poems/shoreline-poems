@@ -1278,7 +1278,7 @@ function reloadDisqus() {
             modalContext.innerText = `This poem has context you might need to know.
             Check that yellow button at the top right to access contexts! :3`;
             }
-            dialogText.splice(meetingCounter, 0, "", `Oh, hi... <br>Reading the odd one called '${poem.title}'? <br>Well, here's the context for this one...<br><br>${poem.context}`);}
+            //dialogText.splice(meetingCounter, 0, "", `Oh, hi... <br>Reading the odd one called '${poem.title}'? <br>Well, here's the context for this one...<br><br>${poem.context}`);}
             modalContent.innerText = poem.content;
             modal.style.display = 'block';
             modal.scrollTop = 0; 
@@ -1612,7 +1612,7 @@ function reloadDisqus() {
 
             // Re-generate poem cards after sorting
             generatePoemCards();
-        });
+        });    
 
         searchInput.addEventListener('input', () => {
             const searchTerm = searchInput.value.toLowerCase();
