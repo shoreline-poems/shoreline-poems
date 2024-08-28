@@ -535,7 +535,7 @@
 #disqus_thread, #cusdis_thread, #IDCommentsPostTitle {
   text-align: center;
   margin: auto;
-  width: 100vw;
+  width: 75%;
 }
 
 ​#disqus_thread { 
@@ -691,7 +691,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <br>
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
-            <br><br></div>
+            <br><br>
     
     <div class="disqus-div">
         <div id="disqus_thread"></div>
@@ -1206,7 +1206,7 @@ function reloadDisqus() {
             modalContext.innerText = `This poem has context you might need to know.
             Check that yellow button at the top right to access contexts! :3`;
             }
-            //dialogText.splice(meetingCounter, 0, "", `Oh, hi... <br>Reading the odd one called '${poem.title}'? <br>Well, here's the context for this one...<br><br>${poem.context}`);}
+            dialogText.splice(meetingCounter, 0, "", `Oh, hi... <br>Reading the odd one called '${poem.title}'? <br>Well, here's the context for this one...<br><br>${poem.context}`);}
             modalContent.innerText = poem.content;
             modal.style.display = 'block';
             modal.scrollTop = 0; 
