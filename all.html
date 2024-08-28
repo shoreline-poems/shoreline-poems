@@ -1191,6 +1191,7 @@ function reloadDisqus() {
             "Wow, you’re really persistent… <br>it gets lonely here sometimes…", "",
         ];
 
+
     
         // Function to open the modal with poem details
         function openModal(poem) {
@@ -1314,7 +1315,63 @@ function reloadDisqus() {
 
         // Sort and search functionality
         const sortSelect = document.getElementById('sortSelect');
+        sortSelect.addEventListener('change', () => {
+            const selectedValue = sortSelect.value;
+
+            switch (selectedValue) {
+                case 'dateDesc':
+                    poems.sort((a, b) => {
+  const dateValueA = convertToDateValue(a.date);
+  const dateValueB = convertToDateValue(b.date);
+
+  return dateValueB - dateValueA;
+});
+                    break;
+                case 'dateAsc':
+                    poems.sort((a, b) => {
+  const dateValueA = convertToDateValue(a.date);
+  const dateValueB = convertToDateValue(b.date);
+
+  return dateValueA - dateValueB;
+});
+                    break;
+                case 'titleAsc':
+                    poems.sort((a, b) => a.title.localeCompare(b.title));
+                    break;
+                case 'titleDesc':
+                    poems.sort((a, b) => b.title.localeCompare(a.title));
+                    break;
+                case 'lengthAsc':
+                    poems.sort((a, b) => a.content.length - b.content.length);
+                    break;
+                case 'lengthDesc':
+                    poems.sort((a, b) => b.content.length - a.content.length);
+                    break;
+                case 'random':
+                    poems.sort(() => Math.random() - 0.5);
+                    break;
+
+                default:
+                    break;
+            }
+
+            // Re-generate poem cards after sorting
+            generatePoemCards();
+        });
+
+    
         const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            const filteredPoems = poems.filter(poem =>
+                poem.title.toLowerCase().includes(searchTerm) ||
+                poem.content.toLowerCase().includes(searchTerm)
+            );
+
+            // Re-generate poem cards after filtering
+            generatePoemCards(filteredPoems);
+        });
 
         themeSelect.addEventListener('change', () => {
         var sRoot = document.querySelector(':root');
@@ -1365,61 +1422,9 @@ function reloadDisqus() {
             }
         });
 
-        sortSelect.addEventListener('change', () => {
-            const selectedValue = sortSelect.value;
+        
 
-            switch (selectedValue) {
-                case 'dateDesc':
-                    poems.sort((a, b) => {
-  const dateValueA = convertToDateValue(a.date);
-  const dateValueB = convertToDateValue(b.date);
-
-  return dateValueB - dateValueA;
-});
-                    break;
-                case 'dateAsc':
-                    poems.sort((a, b) => {
-  const dateValueA = convertToDateValue(a.date);
-  const dateValueB = convertToDateValue(b.date);
-
-  return dateValueA - dateValueB;
-});
-                    break;
-                case 'titleAsc':
-                    poems.sort((a, b) => a.title.localeCompare(b.title));
-                    break;
-                case 'titleDesc':
-                    poems.sort((a, b) => b.title.localeCompare(a.title));
-                    break;
-                case 'lengthAsc':
-                    poems.sort((a, b) => a.content.length - b.content.length);
-                    break;
-                case 'lengthDesc':
-                    poems.sort((a, b) => b.content.length - a.content.length);
-                    break;
-                case 'random':
-                    poems.sort(() => Math.random() - 0.5);
-                    break;
-
-                default:
-                    break;
-            }
-
-            // Re-generate poem cards after sorting
-            generatePoemCards();
-        });
-
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-
-            const filteredPoems = poems.filter(poem =>
-                poem.title.toLowerCase().includes(searchTerm) ||
-                poem.content.toLowerCase().includes(searchTerm)
-            );
-
-            // Re-generate poem cards after filtering
-            generatePoemCards(filteredPoems);
-        });
+        
 
         // Close the modal when clicking outside of it
         const modal = document.getElementById('myModal');
