@@ -1315,7 +1315,9 @@ function reloadDisqus() {
 
         // Sort and search functionality
         const sortSelect = document.getElementById('sortSelect');
-        sortSelect.addEventListener('change', () => {
+        sortSelect.addEventListener('change', sortItUp);
+
+        function sortItUp() {
             const selectedValue = sortSelect.value;
 
             switch (selectedValue) {
@@ -1357,11 +1359,11 @@ function reloadDisqus() {
 
             // Re-generate poem cards after sorting
             generatePoemCards();
-        });
-
+        }
     
         const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', () => {
+        searchInput.addEventListener('input', searchItUp);
+        function searchItUp() {
             const searchTerm = searchInput.value.toLowerCase();
 
             const filteredPoems = poems.filter(poem =>
@@ -1371,7 +1373,7 @@ function reloadDisqus() {
 
             // Re-generate poem cards after filtering
             generatePoemCards(filteredPoems);
-        });
+        }
 
         themeSelect.addEventListener('change', () => {
         var sRoot = document.querySelector(':root');
