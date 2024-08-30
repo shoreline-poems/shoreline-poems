@@ -1191,6 +1191,28 @@ function reloadDisqus() {
         ];
 
 
+        function loadCommentsThread(titleOfPoem) {
+            var iframe = document.createElement('iframe');
+            const lowercaseTOP = titleOfPoem.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+
+            // Construct the URL for the iframe source
+            var aPageUrl = 'https://shoreline-poems.github.io' + lowercaseTOP;
+            var iframeSrc = 'https://shoreline-poems.github.io/comments.html?page_id=' + encodeURIComponent(lowercaseTOP) + '&page_url=' + encodeURIComponent(aPageUrl) + '&page_title=' + encodeURIComponent(titleOfPoem);
+        
+            // Set attributes for the iframe
+            iframe.setAttribute('src', iframeSrc);
+            iframe.setAttribute('width', '100%'); // You can adjust the width as needed
+            //iframe.setAttribute('height', '500px'); // You can adjust the height as needed
+            iframe.setAttribute('frameborder', '0');
+            //iframe.setAttribute('scrolling', 'no');
+        
+            // Find the div where you want to add the iframe
+            var targetDiv = document.getElementById('thecommentsthread'); 
+        
+            // Append the iframe to the target div
+            targetDiv.appendChild(iframe);
+        }
+    
     
         // Function to open the modal with poem details
         function openModal(poem) {
@@ -1226,24 +1248,7 @@ function reloadDisqus() {
             modalContent.scrollTop = 0; 
             modalWaveOpenedCompletely = true;
             // Create the iframe element
-    var iframe = document.createElement('iframe');
-
-    // Construct the URL for the iframe source
-    var aPageUrl = 'https://shoreline-poems.github.io' + textToCopy;
-    var iframeSrc = 'https://shoreline-poems.github.io/comments.html?page_id=' + encodeURIComponent(textToCopy) + '&page_url=' + encodeURIComponent(aPageUrl) + '&page_title=' + encodeURIComponent(poem.title);
-
-    // Set attributes for the iframe
-    iframe.setAttribute('src', iframeSrc);
-    iframe.setAttribute('width', '100%'); // You can adjust the width as needed
-    //iframe.setAttribute('height', '500px'); // You can adjust the height as needed
-    iframe.setAttribute('frameborder', '0');
-    //iframe.setAttribute('scrolling', 'no');
-
-    // Find the div where you want to add the iframe
-    var targetDiv = document.getElementById('thecommentsthread'); 
-
-    // Append the iframe to the target div
-    targetDiv.appendChild(iframe);
+            loadCommentsThread(poem.title);
             
 
             
