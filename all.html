@@ -693,102 +693,8 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <br>
             <br><br></div>
     <div id="thecommentsthread" class="disqus-div">
-        <div id="disqus_thread"></div>
-        <script>
-    // Function to wait for the Disqus iframe to load
-    function onDisqusReady(callback) {
-        const observer = new MutationObserver(() => {
-            const iframe = document.querySelector('iframe[title="Disqus"]');
-            if (iframe) {
-                observer.disconnect();
-                callback(iframe);
-            }
-        });
-        observer.observe(document.body, { childList: true, subtree: true });
-    }
-
-    onDisqusReady((iframe) => {
-        const disqusWindow = iframe.contentWindow;
-
-        // Poll until the Disqus elements are available
-        const intervalId = setInterval(() => {
-            const guestCheckbox = disqusWindow.document.querySelector('input[type="checkbox"][name="post_anonymously"]');
-            const loginMethods = disqusWindow.document.querySelectorAll('.login-method');
-
-            if (guestCheckbox && loginMethods.length) {
-                // Auto-enable the guest checkbox
-                guestCheckbox.checked = true;
-
-                // Hide the option to disable the guest checkbox
-                guestCheckbox.closest('label').style.display = 'none';
-
-                // Hide all other login options except Google
-                loginMethods.forEach(method => {
-                    if (!method.classList.contains('google')) {
-                        method.style.display = 'none';
-                    }
-                });
-
-                clearInterval(intervalId); // Stop polling once changes are applied
-            }
-        }, 100);
-    });
-</script>
-    <div id="graphcomment"></div>
-<script type="text/javascript">
-
-  // Function to initialize or reinitialize GraphComment with a new UID
-function loadGraphComment(uid) {
-  // Remove the existing comments if already loaded
-  const commentContainer = document.getElementById('graphcomment');
-  //commentContainer.innerHTML = '';  // Clear the comment box
-
-  // Update the __semio__params with the new UID
-  __semio__params.behaviour.uid = uid;
-
-  // Load the comments with the updated UID
-  __semio__gc_graphlogin(__semio__params);
-}
-
-
-// Initialize GraphComment globally
-var __semio__params = {
-  graphcommentId: "Shoreline",  // Replace with your GraphComment ID
-  behaviour: {
-    uid: "",  // Start with an empty UID
-  },
-};
-
-(function() {
-  var gc = document.createElement('script');
-  gc.type = 'text/javascript';
-  gc.async = true;
-  gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-  gc.onload = function() {
-    //Optionally load the initial comments here if needed
-    loadGraphComment('default-uid');
-  };
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
-})();
-  
-
-</script>
-    <script>
-    var idcomments_acct = '680d7478b6d85821010bb3068771cbd8';
-    var idcomments_post_id;
-    var idcomments_post_url;
-    </script>
-    <span id="IDCommentsPostTitle" style="display:none"></span>
-    <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
-    <div id="cusdis_thread"
-          data-host="https://cusdis.com"
-          data-app-id="b53eb25a-a4d9-40d7-983f-5a3c0ed02be0"
-          data-page-id="mainpage"
-          data-page-url="https://shoreline-poems.github.io/"
-          data-page-title="Shoreline"
-        ></div>
-        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-        </div></div>
+        
+        </div><br><br></div>
         </div>
 <script>
     /**
@@ -1746,6 +1652,13 @@ function openModalForPoemTitle(title) {
 
 // Check if there's a poem title in the URL and open its modal
 window.addEventListener('DOMContentLoaded', () => {
+    const poemTitle = getPoemTitleFromURL();
+    if (poemTitle) {
+        openModalForPoemTitle(poemTitle);
+    }
+});
+
+window.addEventListener('load', () => {
     const poemTitle = getPoemTitleFromURL();
     if (poemTitle) {
         openModalForPoemTitle(poemTitle);
