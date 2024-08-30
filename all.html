@@ -530,6 +530,7 @@
 .disqus-div {
   background: rgb(81,163,240);
   background: var(--darkblue);
+  width: 100vw;
 }
 
 #disqus_thread, #cusdis_thread, #IDCommentsPostTitle {
@@ -1107,13 +1108,23 @@ function reloadDisqus() {
         
             // Set attributes for the iframe
             iframe.setAttribute('src', iframeSrc);
-            iframe.setAttribute('width', '80%'); // You can adjust the width as needed
-            iframe.setAttribute('height', '100%'); // You can adjust the height as needed
+            iframe.setAttribute('width', '90%'); // You can adjust the width as needed
+            //iframe.setAttribute('height', '100%'); // You can adjust the height as needed
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('scrolling', 'no');
+
+            iframe.onload = function() {
+                // Adjust height based on iframe content
+                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            };
         
             // Find the div where you want to add the iframe
             var targetDiv = document.getElementById('thecommentsthread'); 
+
+            var existingIframe = targetDiv.querySelector('iframe');
+            if (existingIframe) {
+                targetDiv.removeChild(existingIframe);
+            }
         
             // Append the iframe to the target div
             targetDiv.appendChild(iframe);
