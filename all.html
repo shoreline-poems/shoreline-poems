@@ -692,34 +692,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br></div>
-    <div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="b53eb25a-a4d9-40d7-983f-5a3c0ed02be0"
-  data-page-id="{{ PAGE_ID }}"
-  data-page-url="{{ PAGE_URL }}"
-  data-page-title="{{ PAGE_TITLE }}"
-></div>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-
-<script>
-  function loadCusdis() {
-    const hash = window.location.hash.substring(1);
-    const thread = document.getElementById('cusdis_thread');
-    
-    thread.setAttribute('data-page-id', hash);
-    thread.setAttribute('data-page-url', window.location.href);
-    
-    Cusdis.reset({
-      appId: 'b53eb25a-a4d9-40d7-983f-5a3c0ed02be0',
-      pageId: hash,
-      pageUrl: window.location.href
-    });
-  }
-
-  window.addEventListener('hashchange', loadCusdis);
-  window.addEventListener('DOMContentLoaded', loadCusdis);
-</script>
-    <div class="disqus-div">
+    <div id="thecommentsthread" class="disqus-div">
         <div id="disqus_thread"></div>
         <script>
     // Function to wait for the Disqus iframe to load
@@ -1252,6 +1225,28 @@ function reloadDisqus() {
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
             modalWaveOpenedCompletely = true;
+            // Create the iframe element
+    var iframe = document.createElement('iframe');
+
+    // Construct the URL for the iframe source
+    var aPageUrl = 'https://shoreline-poems.github.io' + textToCopy;
+    var iframeSrc = 'https://shoreline-poems.github.io/comments.html?page_id=' + encodeURIComponent(textToCopy) + '&page_url=' + encodeURIComponent(aPageUrl) + '&page_title=' + encodeURIComponent(poem.title);
+
+    // Set attributes for the iframe
+    iframe.setAttribute('src', iframeSrc);
+    iframe.setAttribute('width', '100%'); // You can adjust the width as needed
+    //iframe.setAttribute('height', '500px'); // You can adjust the height as needed
+    iframe.setAttribute('frameborder', '0');
+    //iframe.setAttribute('scrolling', 'no');
+
+    // Find the div where you want to add the iframe
+    var targetDiv = document.getElementById('thecommentsthread'); 
+
+    // Append the iframe to the target div
+    targetDiv.appendChild(iframe);
+            
+
+            
             loadCusdisWithNewID(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), poem.title);
             idcomments_post_id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
             idcomments_post_url = "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
@@ -1293,6 +1288,10 @@ function reloadDisqus() {
             }
         }, 100);
     });
+
+
+            
+    
         }
 
         // Function to close the modal
