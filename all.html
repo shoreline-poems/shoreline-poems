@@ -797,9 +797,9 @@ var __semio__params = {
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     
     var disqus_config = function () {
-        var hash = window.location.hash.substr(1);  // Get the hash part of the URL
-        this.page.url = "https://shoreline-poems.github.io/"+hash       // Set the page URL
-        this.page.identifier = hash; // Set the identifier based on the hash
+        var disqHash = window.location.hash.substr(1);  // Get the hash part of the URL
+        this.page.url = "https://shoreline-poems.github.io/"+disqHash       // Set the page URL
+        this.page.identifier = disqHash; // Set the identifier based on the hash
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE
