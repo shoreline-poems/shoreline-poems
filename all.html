@@ -692,7 +692,33 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br></div>
+    <div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="b53eb25a-a4d9-40d7-983f-5a3c0ed02be0"
+  data-page-id="{{ PAGE_ID }}"
+  data-page-url="{{ PAGE_URL }}"
+  data-page-title="{{ PAGE_TITLE }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<script>
+  function loadCusdis() {
+    const hash = window.location.hash.substring(1);
+    const thread = document.getElementById('cusdis_thread');
     
+    thread.setAttribute('data-page-id', hash);
+    thread.setAttribute('data-page-url', window.location.href);
+    
+    Cusdis.reset({
+      appId: 'b53eb25a-a4d9-40d7-983f-5a3c0ed02be0',
+      pageId: hash,
+      pageUrl: window.location.href
+    });
+  }
+
+  window.addEventListener('hashchange', loadCusdis);
+  window.addEventListener('DOMContentLoaded', loadCusdis);
+</script>
     <div class="disqus-div">
         <div id="disqus_thread"></div>
         <script>
@@ -933,7 +959,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 function reloadDisqus() {
-        var hash = window.location.hash.substr(1);  // Get the hash part of the URL
+        const hash = window.location.hash.substr(1);  // Get the hash part of the URL
         DISQUS.reset({
             reload: true,
             config: function () {
