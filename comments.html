@@ -27,6 +27,8 @@
          data-page-url=""
          data-page-title="">
     </div>
+
+    
     
     <!-- Cusdis Script -->
     <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
@@ -49,6 +51,38 @@
             if (pageUrl) document.getElementById('cusdis_thread').setAttribute('data-page-url', pageUrl);
             if (pageTitle) document.getElementById('cusdis_thread').setAttribute('data-page-title', pageTitle);
         });
+
+        
     </script>
+
+    <script>
+// Function to change Cusdis theme based on the parent window's currentTheme variable
+function setCusdisTheme() {
+    // Check if the parent window has a currentTheme variable
+    if (window.parent && window.parent.currentTheme) {
+        // Get the theme from the parent window
+        const theme = window.parent.currentTheme;
+
+        // Get the Cusdis thread element
+        const cusdisThread = document.getElementById("cusdis_thread");
+
+        if (cusdisThread) {
+            // Set the data-theme attribute of the Cusdis thread element
+            cusdisThread.setAttribute("data-theme", theme);
+        }
+    }
+}
+
+// Listen for messages from the parent window
+window.addEventListener("message", function(event) {
+    if (event.data && event.data.type === "themeChange") {
+        // Update the Cusdis theme if the themeChange message is received
+        setCusdisTheme();
+    }
+});
+
+// Initialize the Cusdis theme when the page loads
+window.onload = setCusdisTheme;
+</script>
 </body>
 </html>
