@@ -864,9 +864,11 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br></div>
-    
-    <div class="disqus-div">
-        <div id="disqus_thread"></div>
+            <h2>Comments!!</h2>
+    <div id="thecommentsthread" class="disqus-div">
+        
+        </div><br><br></div>
+        </div>
         <script>
     // Function to wait for the Disqus iframe to load
     function onDisqusReady(callback) {
@@ -1262,6 +1264,42 @@ function reloadDisqus() {
     
         var modalWaveOpenedCompletely = false;
 
+        
+        
+
+        function loadCommentsThread(titleOfPoem) {
+            var iframe = document.createElement('iframe');
+            const lowercaseTOP = titleOfPoem.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
+
+            // Construct the URL for the iframe source
+            var aPageUrl = 'https://shoreline-poems.github.io' + lowercaseTOP;
+            var iframeSrc = 'https://shoreline-poems.github.io/comments.html?page_id=' + encodeURIComponent(lowercaseTOP) + '&page_url=' + encodeURIComponent(aPageUrl) + '&page_title=' + encodeURIComponent(titleOfPoem) + '&page_theme=' + encodeURIComponent(currentTheme);
+        
+            // Set attributes for the iframe
+            iframe.setAttribute('src', iframeSrc);
+            iframe.setAttribute('width', '90%'); // You can adjust the width as needed
+            iframe.setAttribute('height', '120vh'); // You can adjust the height as needed
+            iframe.setAttribute('frameborder', '0');
+            //iframe.setAttribute('scrolling', 'no');
+
+            iframe.onload = function() {
+                // Adjust height based on iframe content
+                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            };
+        
+            // Find the div where you want to add the iframe
+            var targetDiv = document.getElementById('thecommentsthread'); 
+
+            var existingIframe = targetDiv.querySelector('iframe');
+            if (existingIframe) {
+                targetDiv.removeChild(existingIframe);
+            }
+        
+            // Append the iframe to the target div
+            targetDiv.appendChild(iframe);
+        }
+    
+    
         // Function to open the modal with poem details
         function openModal(poem) {
             modalWaveOpenedCompletely = false;
@@ -1295,6 +1333,10 @@ function reloadDisqus() {
             modal.scrollTop = 0; 
             modalContent.scrollTop = 0; 
             modalWaveOpenedCompletely = true;
+            loadCommentsThread(poem.title);
+
+
+            
             loadCusdisWithNewID(poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_'), poem.title);
             idcomments_post_id = poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
             idcomments_post_url = "https://shoreline-poems.github.io/"+poem.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '_');
@@ -1443,15 +1485,15 @@ function reloadDisqus() {
               break;
             case 'sunrise-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(195,165,0,1), #723c6c, rgba(175,109,0,1))');
-                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(255,200,100,1), rgba(255,182,193,1), rgba(255,228,196,1))');
-                sRoot.style.setProperty('--mode', 'black');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(185,135,40,1), rgba(185,122,130,1), rgba(185,170,130,1))');
+                sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
                 case 'prismatic-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(148,0,211,1), rgba(0,100,0,1), rgba(128,0,128,1))');
-                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(173,216,230,1), rgba(144,238,144,1), rgba(224,255,255,1))');
-                sRoot.style.setProperty('--mode', 'black');
+                sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(113,156,170,1), rgba(84,178,84,1), rgba(154,175,175,1))');
+                sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
@@ -1924,14 +1966,20 @@ function openModalForPoemTitle(title) {
     }
 }
 
-// Check if there's a poem title in the URL and open its modal
-window.addEventListener('DOMContentLoaded', () => {
+function actuallyOpenThePoemByTitle() {
     const poemTitle = getPoemTitleFromURL();
     if (poemTitle) {
         openModalForPoemTitle(poemTitle);
     }
-});
+}
 
+// Check if there's a poem title in the URL and open its modal
+window.addEventListener('DOMContentLoaded', actuallyOpenThePoemByTitle);
+window.addEventListener('load', actuallyOpenThePoemByTitle);
+window.onload = function() {
+    console.log('Page fully loaded');
+    actuallyOpenThePoemByTitle();
+};
     </script>
 
 <br>
