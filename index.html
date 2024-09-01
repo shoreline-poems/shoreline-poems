@@ -1231,14 +1231,14 @@ function reloadDisqus() {
             // Set attributes for the iframe
             iframe.setAttribute('src', iframeSrc);
             iframe.setAttribute('width', '90%'); // You can adjust the width as needed
-            iframe.setAttribute('height', '120vh'); // You can adjust the height as needed
+            iframe.setAttribute('height', '1000px'); // You can adjust the height as needed
             iframe.setAttribute('frameborder', '0');
             //iframe.setAttribute('scrolling', 'no');
 
-            iframe.onload = function() {
+            /*iframe.onload = function() {
                 // Adjust height based on iframe content
                 iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-            };
+            };*/
         
             // Find the div where you want to add the iframe
             var targetDiv = document.getElementById('thecommentsthread'); 
