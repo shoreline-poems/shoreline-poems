@@ -59,8 +59,7 @@
           --themecard: linear-gradient(-45deg, #fdc7d2, #f8f4c5, #ffd3a0);
           --themessb: #ff85be;
           --blue: linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%);
-          --darkblue: linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%);
-          --commentsblue: #eeffff;
+          --darkblue: linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%);
         }
       
         .poem-card {
@@ -529,17 +528,9 @@
 }
 
 .disqus-div {
+  background: rgb(81,163,240);
+  background: var(--darkblue);
   width: 100vw;
-}
-
-#thecommentsthread {
-  background: rgb(81,163,240);
-  background: var(--darkblue);
-}
-
-#commentstitlething {
-  background: rgb(81,163,240);
-  background: var(--darkblue);
 }
 
 #disqus_thread, #cusdis_thread, #IDCommentsPostTitle {
@@ -702,7 +693,6 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br></div>
-            <div id="commentstitlething" class="disqus-div"><h2>Comments!!</h2></div>
     <div id="thecommentsthread" class="disqus-div">
         
         </div><br><br></div>
@@ -913,7 +903,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#ff85be');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'prismatic-light':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1))');
@@ -921,7 +911,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#a1c6e3');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'crystalball-light':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
@@ -929,7 +919,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#5c2a80');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'miasma-dark':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
@@ -937,8 +927,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#7dc7b5');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
-                  sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               case 'crystalball-dark':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
@@ -946,98 +935,98 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#7e68a6');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
             case 'sunrise-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(195,165,0,1), #723c6c, rgba(175,109,0,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(255,200,100,1), rgba(255,182,193,1), rgba(255,228,196,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
                 case 'prismatic-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(148,0,211,1), rgba(0,100,0,1), rgba(128,0,128,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(173,216,230,1), rgba(144,238,144,1), rgba(224,255,255,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
                 case 'wintergale-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(255,255,255,1), rgba(173,216,230,1), rgba(240,248,255,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,71,171,1), rgba(192,192,192,1), rgba(173,216,230,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
                 case 'wintergale-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(91,121,171,1), rgba(139,139,139,1), rgba(25,115,112,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(192,192,192,1), rgba(0,0,255,1), rgba(70,130,180,1))');
                 sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
                 case 'parchment-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(245,245,220,1), #999072, rgba(255,248,220,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(111,78,55,1), rgba(245,245,220,1), rgba(222,184,135,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
                 case 'parchment-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4c4737, #382926, #82743f)');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #3a3831, #4c4b36, 51421a)');
                 sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
                 case 'overcast-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(119,136,153,1), rgba(169,169,169,1), rgba(176,196,222,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,71,171,1), rgba(169,169,169,1), rgba(211,211,211,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
                 case 'overcast-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(105,90,130,1), rgba(100,95,105,1), rgba(69,69,79,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,71,171,1), rgba(32,32,42,1), rgba(51,41,51,1))');
                 sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
                 case 'crashedandburning-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(169,169,169,1), #5b3c3c, rgba(192,192,192,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(125,70,0,1), rgba(125,0,0,1), rgba(125,125,0,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
                 case 'crashedandburning-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(67,30,12,1), rgba(65,45,40,1), rgba(35,0,0,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(155,23,0,1), rgba(120,40,0,1), rgba(175,70,65,1))');
                 sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
                 case 'miasma-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1))');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(0,0,255,1), rgba(255,255,255,1), rgba(224,255,255,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
                 case 'letter-light':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #9dcc5f, #8edd7e, #65c452)');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, rgba(245,235,192,1), rgba(210,180,140,1), rgba(222,180,110,1))');
                 sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
                 break;
                 case 'letter-dark':
                 sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(0,100,0,1), #425e1d, #386326)');
                 sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #594f31, rgba(139,69,19,1), #56481c)');
                 sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
                 break;
               default:
               break;
@@ -1343,7 +1332,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#ff85be');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'aquamarine':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1))');
@@ -1351,7 +1340,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#a1c6e3');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'lavender':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
@@ -1359,7 +1348,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#5c2a80');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'underwater':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
@@ -1367,7 +1356,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#7dc7b5');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               case 'violet':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
@@ -1375,7 +1364,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#7e68a6');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               default:
               break;
@@ -1415,7 +1404,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#ff85be');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'aquamarine':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, rgba(230, 252, 247,1), rgba(212, 239, 255,1), rgba(212, 255, 218,1))');
@@ -1423,7 +1412,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#a1c6e3');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'lavender':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
@@ -1431,7 +1420,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#5c2a80');
                   sRoot.style.setProperty('--mode', 'black');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(81, 163, 240,1) 0%, rgba(157,225,250,1) 58%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #eeffff 0%, rgba(81,163,240,1) 100%)');                   sRoot.style.setProperty('--commentsblue', '#eeffff');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(8,36,168,1) 0%, rgba(81,163,240,1) 100%)');
               break;
               case 'underwater':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #11360c, #071842, #0c453d)');
@@ -1439,7 +1428,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#7dc7b5');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               case 'violet':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
@@ -1447,7 +1436,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--themessb', '#7e68a6');
                   sRoot.style.setProperty('--mode', 'white');
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
-                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');                   sRoot.style.setProperty('--commentsblue', 'black');
+                  sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
               default:
               break;
