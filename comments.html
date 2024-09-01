@@ -57,6 +57,7 @@
         
             // Function to inject custom styles into the iframe
         function customizeCusdisIframe() {
+        if (pageTheme == 'dark') {
           // Select the iframe by its ID or another selector
           var iframe = document.querySelector('iframe');
         
@@ -100,12 +101,11 @@
               };
             }
           }
+         }
         }
         
         // Call the function to apply styles
-        if (pageTheme == 'dark') {
-            customizeCusdisIframe();
-        }
+        window.addEventListener('DOMContentLoaded', customizeCusdisIframe);
     </script>
 </body>
 </html>
