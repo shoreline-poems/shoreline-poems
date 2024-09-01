@@ -3468,7 +3468,7 @@ Now you don’t get to reroll.
             {
                 title: "Scapegoat",
                 date: "July 2024",
-                volume: [9, 6],                 context: "This one is about emotional abuse in relationships of any kind. Sometimes people don't realise when they're being manipulated - and when they do, their own guilt prevents them from leaving the abusive relationship. Please never emotionally abuse people around you. Some people do it without realising they're doing it.",
+                volume: [9, 7],                 context: "This one is about emotional abuse in relationships of any kind. Sometimes people don't realise when they're being manipulated - and when they do, their own guilt prevents them from leaving the abusive relationship. Please never emotionally abuse people around you. Some people do it without realising they're doing it.",
                 content: `
 Unreciprocation haunts the hints of my love,
 Trapped inside the fences I put up to prove I’m tough.
@@ -3694,7 +3694,7 @@ Fragility’s a curse that can’t easily be concealed.
             {
                 title: "Thanks, Death",
                 date: "January 2024",
-                volume: [9, 2],                 context: "This one's meant as a sort of closure to many of the creator's poems written in the latter half of 2023, the ones which talk loads about death and how awful it is, in various different ways. This poem takes a slightly different point of view.",
+                volume: [9, 3],                 context: "This one's meant as a sort of closure to many of the creator's poems written in the latter half of 2023, the ones which talk loads about death and how awful it is, in various different ways. This poem takes a slightly different point of view.",
                 content: `
                 Dear Death, you know I've written loads about you lately,
 You know your very presence has affected me greatly.
@@ -4089,7 +4089,7 @@ And when I find another ace, I play the victim card.
                 {
                 title: "Lucy",
                 date: "August 2024",
-                volume: [9, 4],                 context: "This one's about doctors and patients - specifically doctors who have to deal with losses of patients. It's dedicated to one of most special doctors in my life.",
+                volume: [9, 5],                 context: "This one's about doctors and patients - specifically doctors who have to deal with losses of patients. It's dedicated to one of most special doctors in my life.",
                 content: `
                 Now, my dear, look up, slowly open your eyes, 
 I'll draw the window curtains so you can watch the sunrise. 
@@ -4204,7 +4204,7 @@ I swing and switch and swap and swirl.
                 {
                 title: "Ashlea",
                 date: "August 2024",
-                volume: [9, 3],                 context: "This one's dedicated to Ashlea aka Peppa (NOT THE PIG!!) She is the most awesome friend the creator could ever have asked for... I think. I'm her biggest fan...!!!",
+                volume: [9, 4],                 context: "This one's dedicated to Ashlea aka Peppa (NOT THE PIG!!) She is the most awesome friend the creator could ever have asked for... I think. I'm her biggest fan...!!!",
                 content: `
                 By skyfall, I stop sweeping the sorrows of my stress,
 I mourn my missing joy, marooned in my every mess.
@@ -4265,7 +4265,7 @@ This one's dedicated to you, the best listener I know.
                 {
                 title: "Sherry",
                 date: "August 2024",
-                volume: [9, 5],                 context: "This one's about a daughter watching her alcoholic mother ruin her life bit by bit. It's inspired from Pam and Penny from Stardew Valley, if you've ever heard of that...",
+                volume: [9, 6],                 context: "This one's about a daughter watching her alcoholic mother ruin her life bit by bit. It's inspired from Pam and Penny from Stardew Valley, if you've ever heard of that...",
                 content: `
                 Every night you stumble inside the musty trailer, 
 As unsteady as one can be, as tipsy as a sailor. 
@@ -4323,6 +4323,110 @@ Everyone's sure you're going to drink yourself to death,
 And that's just how the cycle goes, I can smell it on your breath. 
 It reeks of alcohol... just like it always has, 
 Please, please, just put down that god-forsaken glass.
+                `
+            },
+
+                {
+                title: "Miss Miller",
+                date: "September 2024",
+                volume: [9, 2],                 context: "This poem is a continuation to 'Waiting for Hope'! It's a letter from the waiting watcher. Might wanna read WfH before this one. :)",
+                content: `
+                Dear Hope, I'm not too good at writing long letters, 
+My thoughts fly by so fast, it's hard to get them untethered. 
+I wait by the train-tracks every day, for your return, 
+But every time you're not there, it's like time seems to turn. 
+Back before I lost all hope, back before the sorrow, 
+Back when I believed your train would come back 'tomorrow’.
+
+I'm losing track of all these days, for they're all the same, 
+I wait for you, then realise that my waiting is in vain. 
+And then time brings back my Hope, before the grief could kill her, 
+I put up posters ‘round the town, saying "Missing: Hope Miller". 
+They say that grief passes through many different stages,
+Denial is the first, and I've been stuck in it for ages.
+
+But no, no, no, you'll come back, you promised me you would, 
+In search of Hope, I've gathered all the hope that I could. 
+But time's a loop, that day keeps repeating, repeating, repeating, 
+When they told me your train crashed, my heart stopped beating, 
+And then... it just didn't happen, there's no need for sorrow, 
+You're not dead, not dead, not dead, not dead, you'll be back tomorrow.
+
+But every night they come to me, the time's 10:44, 
+“I'm sorry, ma'am, the train crashed, Hope Miller's no more.” 
+And then it kills me, I'm haunted by all the hope I've lost, 
+My tears freeze ice-solid, enveloped in stuck frost. 
+My mind rushes backward through grief's five stages, 
+Back to denial, for I've been stuck in it for ages.
+
+...
+
+Dear Hope, I'm not too good at writing long letters, 
+So this is just a short one, though that might be better. 
+I've been through so much since you left, many joys and sorrows,
+I'll tell you all about it when your train comes back tomorrow.
+                `
+            },
+
+                {
+                title: "Warstruck Ivy's Tale",
+                date: "September 2024",
+                volume: [0, 0],                 context: "This one's about the degradation of the environment... caused by humans. Except this one's from an inside perspetive. Picture ivy, climbing up ruins as everything around it is destroyed...",
+                content: `
+                Up my post and up a pillar,
+I creep up with new life, 
+I hear tales of cold-blooded killers, 
+Devils holding knives.
+
+The winds shriek with warnings of danger 
+Through the forest where I loom, 
+They tell that tales of murderous strangers 
+Bringing death and doom.
+
+Up the shoots, the world is stunning, 
+The forest seems so vast, 
+Yet they tell me danger's coming, 
+And this forest won't last. 
+
+They call these creatures “humans" 
+That bring death and deforestation, 
+The stories they tell are gruesome,
+They shake with anticipation. 
+
+Up the walls and up the ruins, 
+The humans are invading, 
+I hate to think of what they’re doing, 
+The forest is swiftly fading. 
+
+The flora wilts, the petals droop, 
+But they keep killing more, 
+The forest-dwellers gather in troops 
+As we prepare for war. 
+
+Up the falls and up the streams,
+The fishes choke on plastic,
+The fauna seethes, and now it seems 
+That this war will be drastic. 
+
+They kill the cheetahs, kill the birds, 
+Smothering us with smoke,
+Circumstances are getting worse, 
+As more of us are choked.
+
+Up the stairs to gruesome death, 
+They struck my tree with an axe, 
+Many of oυr troops took their last breath, 
+And succumbed to humans’ attacks. 
+
+We're all bleeding, we're all dying, 
+I bid my home goodbye, 
+But I know they'll fight, they'll keep trying, 
+For we won't let nature die.
+
+Up the forest, vines unfurled, 
+We WILL reclaim our glory, 
+A million specks will paint the world, 
+And the world will remember this story.
                 `
             },
 
