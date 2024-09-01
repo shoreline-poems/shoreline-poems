@@ -41,6 +41,8 @@
             return urlParams.get(param);
         }
 
+            var pageTheme = getQueryParameter('page_theme');
+
         // Set Cusdis data attributes based on URL parameters
         document.addEventListener('DOMContentLoaded', function() {
             const pageId = getQueryParameter('page_id');
@@ -53,36 +55,31 @@
         });
 
         
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.addedNodes.length == 0) return;
+            const iframe = mutation.addedNodes[0];
+            if (iframe.tagName !== 'IFRAME') return;
+
+            if (pageTheme == 'dark') {
+            const additionalStyles = `
+            body {
+                color: white;
+            }
+            `;
+            }
+            else { 
+            const additionalStyles = `
+            body {
+                color: black;
+            }
+            `;
+            }
+            
+            iframe.srcdoc = iframe.srcdoc.replace('</style>', additionalStyles + '</style>');
+        });
+    });
+    observer.observe(document.getElementById("cusdis_thread"), { childList: true, subtree: true });
     </script>
-
-    <script>
-// Function to change Cusdis theme based on the parent window's currentTheme variable
-function setCusdisTheme() {
-    // Check if the parent window has a currentTheme variable
-    if (window.parent && window.parent.currentTheme) {
-        // Get the theme from the parent window
-        const theme = window.parent.currentTheme;
-
-        // Get the Cusdis thread element
-        const cusdisThread = document.getElementById("cusdis_thread");
-
-        if (cusdisThread) {
-            // Set the data-theme attribute of the Cusdis thread element
-            cusdisThread.setAttribute("data-theme", theme);
-        }
-    }
-}
-
-// Listen for messages from the parent window
-window.addEventListener("message", function(event) {
-    if (event.data && event.data.type === "themeChange") {
-        // Update the Cusdis theme if the themeChange message is received
-        setCusdisTheme();
-    }
-});
-
-// Initialize the Cusdis theme when the page loads
-window.onload = setCusdisTheme;
-</script>
 </body>
 </html>
