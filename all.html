@@ -693,6 +693,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <button id="closeButton" onclick="closeModal()">Close</button>
             <br>
             <br><br></div>
+            <h2>Comments!!</h2>
     <div id="thecommentsthread" class="disqus-div">
         
         </div><br><br></div>
@@ -1670,9 +1671,11 @@ function actuallyOpenThePoemByTitle() {
 
 // Check if there's a poem title in the URL and open its modal
 window.addEventListener('DOMContentLoaded', actuallyOpenThePoemByTitle);
-
 window.addEventListener('load', actuallyOpenThePoemByTitle);
-
+window.onload = function() {
+    console.log('Page fully loaded');
+    actuallyOpenThePoemByTitle();
+};
     </script>
 
 <br>
