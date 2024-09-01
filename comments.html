@@ -55,31 +55,57 @@
         });
 
         
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.addedNodes.length == 0) return;
-            const iframe = mutation.addedNodes[0];
-            if (iframe.tagName !== 'IFRAME') return;
-
-            if (pageTheme == 'dark') {
-            const additionalStyles = `
-            body {
-                color: white;
+            // Function to inject custom styles into the iframe
+        function customizeCusdisIframe() {
+          // Select the iframe by its ID or another selector
+          var iframe = document.querySelector('iframe');
+        
+          // Ensure the iframe exists and is accessible
+          if (iframe) {
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        
+            // Check if the iframe document is loaded
+            if (iframeDocument.readyState === 'complete') {
+              // Create a new style element
+              var style = iframeDocument.createElement('style');
+              style.type = 'text/css';
+        
+              // Define your custom CSS
+              var css = `
+                :root {
+                  color-scheme: dark;
+                }
+        
+                body {
+                  background-color: #000 !important;
+                  color: #fff !important;
+                }
+        
+                a {
+                  color: #1e90ff !important;
+                }
+        
+                /* Customize more styles as needed */
+              `;
+        
+              // Insert the CSS into the style element
+              style.appendChild(iframeDocument.createTextNode(css));
+        
+              // Append the style element to the iframe's head
+              iframeDocument.head.appendChild(style);
+            } else {
+              // Wait for the iframe to load before applying styles
+              iframe.onload = function() {
+                customizeCusdisIframe();
+              };
             }
-            `;
-            }
-            else { 
-            const additionalStyles = `
-            body {
-                color: black;
-            }
-            `;
-            }
-            
-            iframe.srcdoc = iframe.srcdoc.replace('</style>', additionalStyles + '</style>');
-        });
-    });
-    observer.observe(document.getElementById("cusdis_thread"), { childList: true, subtree: true });
+          }
+        }
+        
+        // Call the function to apply styles
+        if (pageTheme == 'dark') {
+            customizeCusdisIframe();
+        }
     </script>
 </body>
 </html>
