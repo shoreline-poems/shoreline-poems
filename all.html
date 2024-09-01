@@ -1104,7 +1104,7 @@ function reloadDisqus() {
 
             // Construct the URL for the iframe source
             var aPageUrl = 'https://shoreline-poems.github.io' + lowercaseTOP;
-            var iframeSrc = 'https://shoreline-poems.github.io/comments.html?page_id=' + encodeURIComponent(lowercaseTOP) + '&page_url=' + encodeURIComponent(aPageUrl) + '&page_title=' + encodeURIComponent(titleOfPoem);
+            var iframeSrc = 'https://shoreline-poems.github.io/comments.html?page_id=' + encodeURIComponent(lowercaseTOP) + '&page_url=' + encodeURIComponent(aPageUrl) + '&page_title=' + encodeURIComponent(titleOfPoem) + '&page_theme=' + encodeURIComponent(currentTheme);
         
             // Set attributes for the iframe
             iframe.setAttribute('src', iframeSrc);
@@ -1661,20 +1661,17 @@ function openModalForPoemTitle(title) {
     }
 }
 
-// Check if there's a poem title in the URL and open its modal
-window.addEventListener('DOMContentLoaded', () => {
+function actuallyOpenThePoemByTitle() {
     const poemTitle = getPoemTitleFromURL();
     if (poemTitle) {
         openModalForPoemTitle(poemTitle);
     }
-});
+}
 
-window.addEventListener('load', () => {
-    const poemTitle = getPoemTitleFromURL();
-    if (poemTitle) {
-        openModalForPoemTitle(poemTitle);
-    }
-});
+// Check if there's a poem title in the URL and open its modal
+window.addEventListener('DOMContentLoaded', actuallyOpenThePoemByTitle);
+
+window.addEventListener('load', actuallyOpenThePoemByTitle);
 
     </script>
 
