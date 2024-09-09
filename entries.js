@@ -1507,7 +1507,7 @@ Be yourself, your own style.
             {
                 title: "On Drug Addiction",
                 date: "August 2023",
-                volume: [6, 5],                 context: "Treading into scary territory… this one’s about drug addiction…",
+                volume: [0, 0],                 context: "Treading into scary territory… this one’s about drug addiction…",
                 content: `
                 [CW]
 
@@ -3140,7 +3140,7 @@ I water flowers, step back and watch the spider lilies bloom.
 Whose shoulder will I cry on now? Whose hand will I hold? 
 Your warmth was ripped away from me, you left me in the cold.
 Now all the laughter to my jokes is drenched with masked pity, 
-All the things I used to love now make me feel more shitty.
+You used to be the centerfold of this now-dull city.
 Who will I share my joy with, when there's no more joy to share?
 Please just come back down and say it's all just a nightmare.
 
@@ -4427,6 +4427,55 @@ Up the forest, vines unfurled,
 We WILL reclaim our glory, 
 A million specks will paint the world, 
 And the world will remember this story.
+                `
+            },
+
+                {
+                title: "I HAVE TO",
+                date: "September 2024",
+                volume: [6, 5],                 context: "This one's about OCD, compulsions specifically, with intrusive thoughts... Like with all the other poems in this volume, it's always better to research it yourself... But, if you're up for it, notice the to-a-point structure in this poem's making too, just as a side detail and to add to the effect.",
+                content: `
+                I kind of want to jab this needle in my eye,
+I kind of want to laugh when I know I should cry. 
+I kind of hate when my desk's not perfectly dry,
+I kind of want to randomly scream at the sky, 
+I kind of want to just keep on shaking my thigh, 
+I kind of want to do all this, I'm not sure why.
+
+I hate how anything's different from the rest, 
+I hate how anything’s not at its best.
+I hate how the previous line has two syllables less,
+I hate how that's the one thing making me this stressed. 
+I hate how something's more aligned to the west,
+I hate how every thought is an unwelcome guest. 
+
+I have to redo all I do improperly, 
+I have to clear every sign of asymmetry.
+I have to recount all items each shopping spree,
+I have to spend morning walks counting every tree. 
+I have to rhyme every line in six, for, you see,
+I have to, got to, need to do it perfectly.
+
+I kind of want to steal this pen with no ink inside, 
+I kind of want to hoard everything that I find.
+I kind of hate lines 9 and 19, they're badly rhymed, 
+I kind of have to start this verse’s lines with ‘I kind’.
+I kind of want to change how everything's aligned,
+I kind of want to do it without losing my mind.
+
+I'm in my class, with a sudden urge to shout and swear,
+I'm in my bed, writing down yesterday's nightmare.
+I'm in my backyard, trying to breathe perfect air,
+I'm in my bathroom, pulling out strands of my hair.
+I'm in my comfort zone... suddenly I'm not there,
+I'm in my spiral, signs of relief are rare.
+
+I have to remember each random thing I see,
+I have to knock on any wood that crosses me.
+I have to round up everything to a degree,
+I have to start each verse's lines' words in sets of three.
+I have to do it, though it fuels the OCD,
+I have to, got to, need to do it perfectly.
                 `
             },
 
