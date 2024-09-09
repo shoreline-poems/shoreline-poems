@@ -71,7 +71,7 @@
         --wintergale-bg: linear-gradient(180deg, rgba(255,255,255,1), rgba(173,216,230,1), rgba(240,248,255,1), rgba(255,255,255,1));
         --parchment-bg: linear-gradient(180deg, rgba(245,245,220,1), #999072, rgba(255,248,220,1), rgba(245,245,220,1));
         --overcast-bg: linear-gradient(180deg, rgba(119,136,153,1), rgba(169,169,169,1), rgba(176,196,222,1), rgba(119,136,153,1));
-        --crystalball-bg: linear-gradient(180deg, #ead4ff, #ffd3c6, #efc8ff, #ead4ff);
+        --mindseye-bg: linear-gradient(180deg, #ead4ff, #ffd3c6, #efc8ff, #ead4ff);
         --crashedandburning-bg: linear-gradient(180deg, rgba(169,169,169,1), #5b3c3c, rgba(192,192,192,1), rgba(169,169,169,1));
         --miasma-bg: linear-gradient(180deg, rgba(173,216,230,1), rgba(192,192,192,1), rgba(240,248,255,1), rgba(173,216,230,1));
         --letter-bg: linear-gradient(180deg, #9dcc5f, #8edd7e, #65c452, #9dcc5f);
@@ -616,7 +616,7 @@ button {
 #wintergale { background: var(--wintergale-bg); }
 #parchment { background: var(--parchment-bg); }
 #overcast { background: var(--overcast-bg); }
-#crystal-ball { background: var(--crystalball-bg); }
+#minds-eye { background: var(--mindseye-bg); }
 #crashed-and-burning { background: var(--crashedandburning-bg); }
 #miasma { background: var(--miasma-bg); }
 #letter { background: var(--letter-bg); }
@@ -637,7 +637,7 @@ button {
 #overcast-d {
     background: linear-gradient(rgba(119,136,153,1), #ead4ff);
 }
-#crystal-ball-d {
+#minds-eye-d {
     background: linear-gradient(#efc8ff, rgba(169,169,169,1));
 }
 #crashed-and-burning-d {
@@ -725,7 +725,7 @@ button {
         <option value="wintergale">Wintergale</option>
         <option value="parchment">Parchment</option>
         <option value="overcast">Overcast</option>
-        <option value="crystalball">Crystal Ball</option>
+        <option value="mindseye">Mind's Eye</option>
         <option value="crashedandburning">Crashed and Burning</option>
         <option value="miasma">Miasma</option>
         <option value="letter">Letter</option>
@@ -792,14 +792,14 @@ button {
             </a>
             </section>
             <section class="volcontainer" id="overcast-d"><br><br><br></section>
-            <section class="volcontainer" id="crystal-ball">
-            <h2>Crystal Ball</h2>
+            <section class="volcontainer" id="minds-eye">
+            <h2>Mind's Eye</h2>
             <h3>Theme: Mental Health</h3>
             <a href="/?v=6">
-              <img src="cover/crystal-ball.png" alt="Crystal Ball" style="width:200px;height:200px;">
+              <img src="cover/minds-eye.png" alt="Mind's Eye" style="width:200px;height:200px;">
             </a>
                 </section>
-            <section class="volcontainer" id="crystal-ball-d"><br><br><br></section>
+            <section class="volcontainer" id="minds-eye-d"><br><br><br></section>
             <section class="volcontainer" id="crashed-and-burning">
             <h2>Crashed and Burning</h2>
             <h3>Theme: Failure</h3>
@@ -1402,7 +1402,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, #eeffff 0%, rgba(157,225,250,1) 58%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, #f4ffff 0%, #eeffff 100%)');
               break;
-              case 'crystalball-light':
+              case 'mindseye-light':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #ead4ff, #ffd3c6, #efc8ff)');
                   sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #e0bee8, #beb7ed, #cf9fbd)');
                   sRoot.style.setProperty('--themessb', '#5c2a80');
@@ -1418,7 +1418,7 @@ function reloadDisqus() {
                   sRoot.style.setProperty('--blue', 'linear-gradient(0deg, rgba(3,0,24,1) 0%, rgba(0,29,142,1) 78%, rgba(157,225,250,1) 98%)');
                   sRoot.style.setProperty('--darkblue', 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(3,0,24,1) 100%)');
               break;
-              case 'crystalball-dark':
+              case 'mindseye-dark':
                   sRoot.style.setProperty('--themebg', 'linear-gradient(-45deg, #4a1119, #31114a, #3b0937)');
                   sRoot.style.setProperty('--themecard', 'linear-gradient(-45deg, #4d3214, #4f2d80, #752758)');
                   sRoot.style.setProperty('--themessb', '#7e68a6');
@@ -1554,7 +1554,7 @@ function reloadDisqus() {
                 mainThemeSelect.classList.add('hidden');
                 
                 // Map v values to themes
-                const themeMap = ['sunrise','sunrise','prismatic','wintergale','parchment','overcast','crystalball','crashedandburning','miasma','letter'];
+                const themeMap = ['sunrise','sunrise','prismatic','wintergale','parchment','overcast','mindseye','crashedandburning','miasma','letter'];
 
                 const selectedTheme = themeMap[v];
                 if (selectedTheme) {
