@@ -1206,6 +1206,9 @@ else if (seed === 32) {
   dialogText.push("All those humans swarming and wondering the meaning of life... <br>Wondering how the world works... <br>It's so adorable to watch.", "");
 }
 }
+
+    if (dialogText[meetingNumber] == "") {}
+    else {
             isPageGhostActive = true;
             const pageGhostDialog = document.getElementById("page-ghost-dialog");
             pageGhostDialog.classList.remove("fade-in");
@@ -1220,7 +1223,7 @@ else if (seed === 32) {
                 pageGhostDialog.classList.add("fade-in");
                 pageGhost.style.opacity = 1;
             }, 100);
-        }
+        }}
 
         // Event listener for clicks anywhere on the screen
         var pMeetingCounter = meetingCounter;
@@ -1830,7 +1833,7 @@ function reloadDisqus() {
 
         
         
-        
+        var meetingCounter = 0;
 
         if (!meetingCounter || meetingCounter === null || meetingCounter < 0 || meetingCounter === "null") {
             if (localStorage.getItem('pageGhost') > 3) {
