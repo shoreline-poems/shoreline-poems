@@ -1878,7 +1878,7 @@ function reloadDisqus() {
 
         
         
-        var meetingCounter = 0;
+
 
         if (!meetingCounter || meetingCounter === null || meetingCounter < 0 || meetingCounter === "null") {
             if (localStorage.getItem('pageGhost') > 3) {
@@ -1982,6 +1982,9 @@ window.onload = function() {
     console.log('Page fully loaded');
     actuallyOpenThePoemByTitle();
 };
+
+
+            meetingCounter = -1; pMeetingCounter = -2;
     </script>
 
 <br>
