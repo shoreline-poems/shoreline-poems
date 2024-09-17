@@ -277,7 +277,7 @@ All written by William Shakespeare.
             {
                 title: "Crazy ‘Cause of Coding",
                 date: "September 2022",
-                volume: [6, 2],                 context: "This one is about the main effects, side effects and overall concept of obsessive behavior. This could be regarding anything, but it is portrayed as device addiction here. Cutting oneself out and obsessing over doing only one specific thing is extremely unhealthy. In this context it is 'coding' because many people end up convincing themselves that their obsession is a 'good thing' and 'productive' in this case. But no, obsessively coding is still obsession, it still counts as unhealthy. The gradual worsening of mental health and slowly increasing isolation is something they’ve tried to depict here.",
+                volume: [7, 2],                 context: "This one is about the main effects, side effects and overall concept of obsessive behavior. This could be regarding anything, but it is portrayed as device addiction here. Cutting oneself out and obsessing over doing only one specific thing is extremely unhealthy. In this context it is 'coding' because many people end up convincing themselves that their obsession is a 'good thing' and 'productive' in this case. But no, obsessively coding is still obsession, it still counts as unhealthy. The gradual worsening of mental health and slowly increasing isolation is something they’ve tried to depict here.",
                 content: `
                 You wake up in the night and think that sleep was just enough,
 Before your daily cup of coffee and some brand new earmuffs.
@@ -374,7 +374,7 @@ That’s how I see my father.
             {
                 title: "Voices in my Head",
                 date: "February 2023",
-                volume: [6, 6],                 context: "This one is about the complexity of mental disorders, such as schizophrenia. People suffering from mental disorders are often haunted by their own inner demons, and hearing and seeing things which might not actually be there. They can't differentiate between the voices in their head. At least, that is one of the many examples in the huge, deep, comple ocean that the mind is. It is scary and hard to live with, especially when one is aware that they have an issue. One huge problem with such disorders is that the person suffering from it feels unwelcomed and unable to reach out. It's not like people don't try to seek help, it's just that only a few people actually provide the help needed. Therapy is always advised, but there have been many cases where a person is seen as/called 'weak' for seeking help from a professional. It is not easy to be dealing with these tough conditions, and in the creator’s opinion, people need to realise that these problems are real, serious, and plague many people.",
+                volume: [7, 6],                 context: "This one is about the complexity of mental disorders, such as schizophrenia. People suffering from mental disorders are often haunted by their own inner demons, and hearing and seeing things which might not actually be there. They can't differentiate between the voices in their head. At least, that is one of the many examples in the huge, deep, comple ocean that the mind is. It is scary and hard to live with, especially when one is aware that they have an issue. One huge problem with such disorders is that the person suffering from it feels unwelcomed and unable to reach out. It's not like people don't try to seek help, it's just that only a few people actually provide the help needed. Therapy is always advised, but there have been many cases where a person is seen as/called 'weak' for seeking help from a professional. It is not easy to be dealing with these tough conditions, and in the creator’s opinion, people need to realise that these problems are real, serious, and plague many people.",
                 content: `
                 I have these voices in my head that tell me what to do,
 They answer all my questions and they’re always on cue,
@@ -962,7 +962,7 @@ There are actually a lot.
             {
                 title: "Flicker Out",
                 date: "June 2023",
-                volume: [6, 4],                 context: "This used to be true for a bit… for the creator. Blacking out in class, flickering out while trying to pay attention… all of it. It’s a thing in ADHD, as far as I know…",
+                volume: [7, 4],                 context: "This used to be true for a bit… for the creator. Blacking out in class, flickering out while trying to pay attention… all of it. It’s a thing in ADHD, as far as I know…",
                 content: `
                 There's this thing about my mind,
 This subtle surreality,
@@ -1094,7 +1094,7 @@ No one had bothered to confirm.
             {
                 title: "The Last Straw",
                 date: "July 2023",
-                volume: [5, 3],                 context: "A brief look at what pressure does to people… please don't pressure those around you. It can have worse effects than you think…",
+                volume: [6, 6],                 context: "A brief look at what pressure does to people… please don't pressure those around you. It can have worse effects than you think…",
                 content: `
                 Sparks fly down the short fuse,
 My life flashes in it,
@@ -1163,7 +1163,7 @@ By the straw that snaps my neck.
            {
                 title: "Anxiety!!!!",
                 date: "August 2023",
-                volume: [6, 1],                 context: "Anxiety is very much orange… and blue… and every single shade of fear and dread you can imagine. Yay.",
+                volume: [7, 1],                 context: "Anxiety is very much orange… and blue… and every single shade of fear and dread you can imagine. Yay.",
                 content: `
                 Anxiety is knowing that in all you do,
 Everyone around judges you too,
@@ -1507,7 +1507,7 @@ Be yourself, your own style.
             {
                 title: "On Drug Addiction",
                 date: "August 2023",
-                volume: [0, 0],                 context: "Treading into scary territory… this one’s about drug addiction…",
+                volume: [7, 5],                 context: "Treading into scary territory… this one’s about drug addiction…",
                 content: `
                 [CW]
 
@@ -1612,7 +1612,7 @@ The truth is iridescent.
             {
                 title: "I",
                 date: "August 2023",
-                volume: [8, 7],                 context: "This one from the creator, is about themselves… and humanity in general.",
+                volume: [9, 6],                 context: "This one from the creator, is about themselves… and humanity in general.",
                 content: `
                 I’m like the other souls out there,
 I’m a pit of desire,
@@ -1654,7 +1654,7 @@ You suffer more than I.
            {
                 title: "The Bystander Effect",
                 date: "August 2023",
-                volume: [6, 3],                 context: "The bystander effect refers to when a witness to a murder is inclined to stand there and wait… and not do anything. That’s haunting in its own way.",
+                volume: [6, 2],                 context: "The bystander effect refers to when a witness to a murder is inclined to stand there and wait… and not do anything. That’s haunting in its own way.",
                 content: `
                 To be alone sometime at night,
 To watch the dying, fading light,
@@ -2008,7 +2008,7 @@ But never, ever make me boring.
             {
 title: "Villain Arc",
 date: "September 2023",
-volume: [7, 4],                 context: "Take a third person’s view… into life as we know it. Or rather, as YOU know it. And… take this with more than a grain of salt, maybe.",
+volume: [8, 4],                 context: "Take a third person’s view… into life as we know it. Or rather, as YOU know it. And… take this with more than a grain of salt, maybe.",
 content: `
 I travel through ages and times,
 And see the honors, see the crimes,
@@ -2313,7 +2313,7 @@ You can try, try, try, but you can't get rid of me.
 {
                 title: "Hope Can't Save You Now",
                 date: "November 2023",
-                volume: [7, 2],                 context: "This poem is addressed to someone struggling because they're in an abusive relationship and being manipulated. The one saying all this...? Their own conscience. It might be too late when someone realises they're in a toxic relationship. They could already have been hurt to such an extent they start blaming themselves...",
+                volume: [8, 2],                 context: "This poem is addressed to someone struggling because they're in an abusive relationship and being manipulated. The one saying all this...? Their own conscience. It might be too late when someone realises they're in a toxic relationship. They could already have been hurt to such an extent they start blaming themselves...",
                 content: `
                 When you ignore the crimson flags, 
 Hopes of escape stop in their tracks. 
@@ -2457,7 +2457,7 @@ I’m different from the rest. :D
 {
                 title: "Shatter",
                 date: "December 2023",
-                volume: [5, 4],                 context: "Harry Potter fans might notice something - this one's a reference to the mirror of Erised! It's a mirror that shows the looker their deepest desire. They don't actually achieve their desires, but they end up so mesmerised by it all that they just can't look away. So what'll happen if, one day, the mirror exists no more...?\n\n You DO NOT need to have prior knowledge of the Harry Potter series to understand this poem, though! :)",
+                volume: [5, 3],                 context: "Harry Potter fans might notice something - this one's a reference to the mirror of Erised! It's a mirror that shows the looker their deepest desire. They don't actually achieve their desires, but they end up so mesmerised by it all that they just can't look away. So what'll happen if, one day, the mirror exists no more...?\n\n You DO NOT need to have prior knowledge of the Harry Potter series to understand this poem, though! :)",
                 content: `
                 I'm not the thing I dream to be, 
 Nor others, for that matter, 
@@ -2592,7 +2592,7 @@ Throttled by chains of gold.
 {
                 title: "Crystalline",
                 date: "December 2023",
-                volume: [6, 7],                 context: "This one was specifically for Mental Health Awareness Day. Mental health is a real thing, and it's important, people! Please be aware of the troubles others might be facing around you. It could be crushing them internally and they might be unable to ask for help. It's important that they recieve this help - every soul should shine equally bright, because they're all beautiful. <3",
+                volume: [7, 7],                 context: "This one was specifically for Mental Health Awareness Day. Mental health is a real thing, and it's important, people! Please be aware of the troubles others might be facing around you. It could be crushing them internally and they might be unable to ask for help. It's important that they recieve this help - every soul should shine equally bright, because they're all beautiful. <3",
                 content: `
                 My mind's bejeweled with anxiety, and fear, 
 My hope's adorned with anticipation that death is near, 
@@ -2741,7 +2741,7 @@ So I let my wishes get blown away by a supernova's force.
 {
                 title: "Scorched by Ambition",
                 date: "January 2024",
-                volume: [7, 1],                 context: "This poem is meant to be a parallel to the creator's recent poem 'Supernova' - one about casting unrealistic ambition away. 'Scorched by Ambition', however, depicts the effects of letting burning ambition take over your life. It shows the negative effects of having unhealthily high expectations. The 'fire' represents the ambition itself, and the 'smog' is the intense stress and pressure caused by unrealistic ambition.\n\nP.S. The creator is not implying you shouldn't have dreams. They're just telling the story of a person whose ambitions and expectations were so high, they hurt them more because of the stress and pressure caused.",
+                volume: [8, 1],                 context: "This poem is meant to be a parallel to the creator's recent poem 'Supernova' - one about casting unrealistic ambition away. 'Scorched by Ambition', however, depicts the effects of letting burning ambition take over your life. It shows the negative effects of having unhealthily high expectations. The 'fire' represents the ambition itself, and the 'smog' is the intense stress and pressure caused by unrealistic ambition.\n\nP.S. The creator is not implying you shouldn't have dreams. They're just telling the story of a person whose ambitions and expectations were so high, they hurt them more because of the stress and pressure caused.",
                 content: `
                 Young minds think the quickest, and my mind was once that way, 
 Sparks of ambition, lit up by the light of day. 
@@ -2850,7 +2850,7 @@ The closet’s now all empty, it creaks as I close the door.
 {
                 title: "Void",
                 date: "March 2024",
-                volume: [7, 7],                 context: "This one's about looking for purpose in one's life. You'd have no idea how difficult purpose is to find until you're actually stranded at those same ruins you've heard everyone talk about.",
+                volume: [8, 7],                 context: "This one's about looking for purpose in one's life. You'd have no idea how difficult purpose is to find until you're actually stranded at those same ruins you've heard everyone talk about.",
                 content: `
                 The gaps before my train of thought never seem to fill, 
 The dagger's peised right at my throat, I wait for it to kill. 
@@ -2944,7 +2944,7 @@ So I killed myself in a bittersweet daze.
 {
                 title: "FOOTSTEPS",
                 date: "March 2024",
-                volume: [7, 5],                 context: "It's just... a mess of symbolism and storytelling. Enjoy.",
+                volume: [6, 5],                 context: "It's just... a mess of symbolism and storytelling. Enjoy.",
                 content: `
                 I hear footsteps in a low tone.
 They rush through my ears, knock on my bones. 
@@ -3163,7 +3163,7 @@ And for the rest of time, I'll watch the spider lilies bloom.
             {
                 title: "Peony",
                 date: "April 2024",
-                volume: [7, 6],                 context: "This one's about perfection. Or not. You'll see.",
+                volume: [8, 6],                 context: "This one's about perfection. Or not. You'll see.",
                 content: `
                 How perfect can one get?
 How much could you ask of me?
@@ -3376,7 +3376,7 @@ I'll... I swear I'll outl--
             {
                 title: "Dice",
                 date: "June 2024",
-                volume: [7, 3],                 context: "This poem represents a pessimistic view of fate; specifically determinism. That's a theory where all our actions are essentially predestined to happen and one doesn't have any control over them.",
+                volume: [8, 3],                 context: "This poem represents a pessimistic view of fate; specifically determinism. That's a theory where all our actions are essentially predestined to happen and one doesn't have any control over them.",
                 content: `
 One glance into the hazy sky, 
 And I got lost again.
@@ -3468,7 +3468,7 @@ Now you don’t get to reroll.
             {
                 title: "Scapegoat",
                 date: "July 2024",
-                volume: [9, 7],                 context: "This one is about emotional abuse in relationships of any kind. Sometimes people don't realise when they're being manipulated - and when they do, their own guilt prevents them from leaving the abusive relationship. Please never emotionally abuse people around you. Some people do it without realising they're doing it.",
+                volume: [10, 7],                 context: "This one is about emotional abuse in relationships of any kind. Sometimes people don't realise when they're being manipulated - and when they do, their own guilt prevents them from leaving the abusive relationship. Please never emotionally abuse people around you. Some people do it without realising they're doing it.",
                 content: `
 Unreciprocation haunts the hints of my love,
 Trapped inside the fences I put up to prove I’m tough.
@@ -3527,7 +3527,7 @@ And turn back to you, the scapegoat to my archer.
                 {
                 title: "Where...?",
                 date: "July 2024",
-                volume: [8, 6],                 context: "A short one about feelings of hopelessness and confusion in tough decisions. Interpret it however you want.",
+                volume: [6, 3],                 context: "A short one about feelings of hopelessness and confusion in tough decisions. Interpret it however you want.",
                 content: `
                 The walls are decked with moss 
 Reminders of each loss 
@@ -3584,7 +3584,7 @@ Where? Where? WHERE? WHERE?? WHERE?! WHY!?
 {
                 title: "Green",
                 date: "July 2024",
-                volume: [9, 1],                 context: "This one's about expectations and hopes. Especially when those hopes become so high, that in search of good things, one forgets to actually acknowledge the good things they already have.",
+                volume: [10, 1],                 context: "This one's about expectations and hopes. Especially when those hopes become so high, that in search of good things, one forgets to actually acknowledge the good things they already have.",
                 content: `
                 The field was a forsaken place,
 Damp like the tear-stains on my face, 
@@ -3645,7 +3645,7 @@ The grass was green.
             {
                 title: "Prince Rupert",
                 date: "July 2024",
-                volume: [8, 2],                 context: "This one's a parallel between human emotions and a Prince Rupert's drop. A Prince Rupert's drop is formed when you drop molten glass into cold water. The drop freezes, and it creates this weird structure. A Prince Rupert's drop is incredibly strong and sturdy, but it shatters into pieces at the slightest bit of force to the tip of the drop. The poem tries to use this as a metaphor for humans. :)",
+                volume: [9, 2],                 context: "This one's a parallel between human emotions and a Prince Rupert's drop. A Prince Rupert's drop is formed when you drop molten glass into cold water. The drop freezes, and it creates this weird structure. A Prince Rupert's drop is incredibly strong and sturdy, but it shatters into pieces at the slightest bit of force to the tip of the drop. The poem tries to use this as a metaphor for humans. :)",
                 content: `
                 As strong as a diamond, as lustrous as gold,
 Once emblazoned by rage, now piercing cold.
@@ -3694,7 +3694,7 @@ Fragility’s a curse that can’t easily be concealed.
             {
                 title: "Thanks, Death",
                 date: "January 2024",
-                volume: [9, 3],                 context: "This one's meant as a sort of closure to many of the creator's poems written in the latter half of 2023, the ones which talk loads about death and how awful it is, in various different ways. This poem takes a slightly different point of view.",
+                volume: [10, 3],                 context: "This one's meant as a sort of closure to many of the creator's poems written in the latter half of 2023, the ones which talk loads about death and how awful it is, in various different ways. This poem takes a slightly different point of view.",
                 content: `
                 Dear Death, you know I've written loads about you lately,
 You know your very presence has affected me greatly.
@@ -3729,7 +3729,7 @@ I thought I owed you hatred, but a 'thanks' is what I owe. :)
             {
                 title: "Deadly",
                 date: "July 2024",
-                volume: [8, 3],                 context: "This one's about guilt and regret. Specifically about how some people get convinced that they're doing the right thing, until the 'deadly' guilt and regret begins to set in.",
+                volume: [9, 3],                 context: "This one's about guilt and regret. Specifically about how some people get convinced that they're doing the right thing, until the 'deadly' guilt and regret begins to set in.",
                 content: `
                 I'm waiting for the guilt to fade, waiting with breath bated,
 I don't like how it feels like I'm being suffocated, 
@@ -3897,7 +3897,7 @@ Now it's all just cold, cold, cold, cold, cold.
                 {
                 title: "Make Me Right",
                 date: "August 2024",
-                volume: [8, 5],                 context: "This one is an exploration of the creator's insecurities and the things they view as flaws in themselves. 'Make me right' is a way to say 'fix my flaws', essentially. Content warning: mentions of harm.",
+                volume: [9, 5],                 context: "This one is an exploration of the creator's insecurities and the things they view as flaws in themselves. 'Make me right' is a way to say 'fix my flaws', essentially. Content warning: mentions of harm.",
                 content: `
                 [CW]
 
@@ -4035,7 +4035,7 @@ Please, please, make me right, I came out all wrong.
                 {
                 title: "Victim Card",
                 date: "August 2024",
-                volume: [8, 4],                 context: "This one's about externalisation of blame and victim mentality - all mixed up with card game metaphors. Enjoy, and see if you can spot all the references to different card games and their phrases. :)",
+                volume: [9, 4],                 context: "This one's about externalisation of blame and victim mentality - all mixed up with card game metaphors. Enjoy, and see if you can spot all the references to different card games and their phrases. :)",
                 content: `
                 I was never that great at playing blackjack, 
 Always resorted to drawing more from the stack. 
@@ -4089,7 +4089,7 @@ And when I find another ace, I play the victim card.
                 {
                 title: "Lucy",
                 date: "August 2024",
-                volume: [9, 5],                 context: "This one's about doctors and patients - specifically doctors who have to deal with losses of patients. It's dedicated to one of most special doctors in my life.",
+                volume: [10, 5],                 context: "This one's about doctors and patients - specifically doctors who have to deal with losses of patients. It's dedicated to one of most special doctors in my life.",
                 content: `
                 Now, my dear, look up, slowly open your eyes, 
 I'll draw the window curtains so you can watch the sunrise. 
@@ -4159,7 +4159,7 @@ And you fall asleep, softly humming to your steady pulse.
         {
                 title: "Swing and Switch and Swap and Swirl",
                 date: "August 2024",
-                volume: [8, 1],                 context: "This one's about defining oneself. Do you really know who you are? Or do you change your personalities and/or pretend? Hmm. I don't know who I am...",
+                volume: [9, 1],                 context: "This one's about defining oneself. Do you really know who you are? Or do you change your personalities and/or pretend? Hmm. I don't know who I am...",
                 content: `
                 I'm so multifaceted, my mind keeps spinning, 
 I’m so much of a sinner and the one who hates sinning. 
@@ -4204,7 +4204,7 @@ I swing and switch and swap and swirl.
                 {
                 title: "Ashlea",
                 date: "August 2024",
-                volume: [9, 4],                 context: "This one's dedicated to Ashlea aka Peppa (NOT THE PIG!!) She is the most awesome friend the creator could ever have asked for... I think. I'm her biggest fan...!!!",
+                volume: [10, 4],                 context: "This one's dedicated to Ashlea aka Peppa (NOT THE PIG!!) She is the most awesome friend the creator could ever have asked for... I think. I'm her biggest fan...!!!",
                 content: `
                 By skyfall, I stop sweeping the sorrows of my stress,
 I mourn my missing joy, marooned in my every mess.
@@ -4265,7 +4265,7 @@ This one's dedicated to you, the best listener I know.
                 {
                 title: "Sherry",
                 date: "August 2024",
-                volume: [9, 6],                 context: "This one's about a daughter watching her alcoholic mother ruin her life bit by bit. It's inspired from Pam and Penny from Stardew Valley, if you've ever heard of that...",
+                volume: [10, 6],                 context: "This one's about a daughter watching her alcoholic mother ruin her life bit by bit. It's inspired from Pam and Penny from Stardew Valley, if you've ever heard of that...",
                 content: `
                 Every night you stumble inside the musty trailer, 
 As unsteady as one can be, as tipsy as a sailor. 
@@ -4329,7 +4329,7 @@ Please, please, just put down that god-forsaken glass.
                 {
                 title: "Miss Miller",
                 date: "September 2024",
-                volume: [9, 2],                 context: "This poem is a continuation to 'Waiting for Hope'! It's a letter from the waiting watcher. Might wanna read WfH before this one. :)",
+                volume: [10, 2],                 context: "This poem is a continuation to 'Waiting for Hope'! It's a letter from the waiting watcher. Might wanna read WfH before this one. :)",
                 content: `
                 Dear Hope, I'm not too good at writing long letters, 
 My thoughts fly by so fast, it's hard to get them untethered. 
@@ -4371,7 +4371,7 @@ I'll tell you all about it when your train comes back tomorrow.
                 {
                 title: "Warstruck Ivy's Tale",
                 date: "September 2024",
-                volume: [0, 0],                 context: "This one's about the degradation of the environment... caused by humans. Except this one's from an inside perspetive. Picture ivy, climbing up ruins as everything around it is destroyed...",
+                volume: [8, 5],                 context: "This one's about the degradation of the environment... caused by humans. Except this one's from an inside perspetive. Picture ivy, climbing up ruins as everything around it is destroyed...",
                 content: `
                 Up my post and up a pillar,
 I creep up with new life, 
@@ -4433,7 +4433,7 @@ And the world will remember this story.
                 {
                 title: "I HAVE TO",
                 date: "September 2024",
-                volume: [6, 5],                 context: "This one's about OCD, compulsions specifically, with intrusive thoughts... Like with all the other poems in this volume, it's always better to research it yourself... But, if you're up for it, notice the to-a-point structure in this poem's making too, just as a side detail and to add to the effect.",
+                volume: [6, 4],                 context: "This one's about OCD, compulsions specifically, with intrusive thoughts... Like with all the other poems in this volume, it's always better to research it yourself... But, if you're up for it, notice the to-a-point structure in this poem's making too, just as a side detail and to add to the effect.",
                 content: `
                 I kind of want to jab this needle in my eye,
 I kind of want to laugh when I know I should cry. 
@@ -4476,6 +4476,162 @@ I have to round up everything to a degree,
 I have to start each verse's lines' words in sets of three.
 I have to do it, though it fuels the OCD,
 I have to, got to, need to do it perfectly.
+                `
+            },
+{
+                title: "NOT ME",
+                date: "September 2024",
+                volume: [9, 7],                 context: "People say that looking into the mirror for too long can cause hallucinations where your face morphs and contorts... maybe that's also the case for self-reflection, huh...?",
+                content: `
+                One night, I couldn’t find any way to sleep,
+The pain was killing me, I was in too deep.
+I took a look at the mirror’s foggy glass,
+“Where did it all go wrong?” I asked.
+
+It was almost like someone was hearing,
+I felt my surroundings disappearing.
+Almost as if they answered my question,
+I was left staring at my reflection.
+
+Medium-length black hair, all tousled,
+Brown eyes, fear-struck and bamboozled.
+Pale skin, I never went out in the sun,
+And there, the nightmare begun.
+
+The first few minutes were regular, plain.
+The next few, a trip down memory lane.
+All the scars that streaked my face,
+The messes down various ways.
+
+I was oblivious to the light’s off-switch,
+I caught every time my eyes twitched.
+I saw every imperfection there,
+The silence left me hyper-aware.
+
+Spiraling darkness down my gaze,
+Tears rolling down my face–
+Because I’d just forgotten to blink,
+That’s where I snapped, I think.
+
+My eye color changed to blood-red,
+Weird things started happening to my head.
+Mouth open, I couldn’t feel my tongue,
+Limbs in pins and needles, stung.
+
+I couldn’t move, I couldn’t breathe.
+My face’s features twisted and seethed.
+The whites of my eyes changed to black,
+I thought I saw the mirror crack.
+
+My hair fell out, in the thinnest strands,
+Blood dripped on the spot where I’d stand.
+My teeth bit my tongue in two,
+My face slowly turned moonlit blue.
+
+The monsters were escaping, quick-
+I started to feel weird and sick.
+My face grinned in a wicked fashion,
+Haunted by all I could imagine.
+
+Behind me, another reflection appeared,
+The past me, face stricken with fear.
+Bleeding out on that very spot,
+I tried to help, but I could not.
+
+I tried to scream, my jaw was stuck,
+The monsters were free, I was out of luck.
+My hands turned into claws, sharp.
+My reflection started to warp.
+
+All my teeth fell out, one by one,
+I couldn’t leave, I couldn’t run.
+My hand reached through the bloody coat,
+Through the mirror, and slit my throat.
+
+..
+
+I woke up in a cold sweat,
+Passed out while running to my bed.
+I’d hit my head on the mirror,
+Now the sight of blood was clearer.
+
+I’m done trying to self-reflect.
+I’m too damaged now to protect.
+I’m not risking it, I have to hide,
+I have to shut my demons inside.
+
+Because... the reflection I now see,
+Now I know... that’s NOT ME.
+                `
+            },
+                {
+                title: "The Lake of Blood",
+                date: "September 2024",
+                volume: [5, 4],                 context: "Treading into scarier territory... This one's about the act of taking one's own life. It's really important to note that if you feel like hurting yourself in such ways, helplines are available. (https://findahelpline.com/)",
+                content: `
+                [CW]
+                [Help is available: https://findahelpline.com/]
+                -----
+
+                There’s an old legend, so it goes-
+There’s a lake of blood buried far below.
+Below the depths, where the waters flow,
+The prettiest sight one can ever know.
+
+Under seas of tears they weep,
+To escape the lives they couldn’t keep.
+A lake of blood, fathoms deep,
+Where the ones who sunk still sleep.
+
+Ensnared in silence, there’s no sound.
+Except the bodies of those who drowned.
+But they’re not dead, the stories found,
+They just won’t ever come back around.
+
+Those who kill and those who die,
+Those who torture and those who cry.
+Those who just didn’t want to try.
+A lake of blood is where they lie.
+
+The ones stranded without a friend,
+Who shattered ties they couldn’t mend.
+The forfeited time they couldn’t spend,
+They’ve found that death is not the end.
+
+The slowest death is life itself,
+The ones who die from it are quelled.
+The ones who don’t, the ones who delve,
+Fall into the lake of blood’s shelves.
+
+Sometimes the pain cuts to the bone,
+Sometimes they just feel all alone,
+So they delve into depths unknown,
+In search of life, they take their own.
+
+Those who suffer, those who survive,
+Those who feel this joy-deprived,
+Those who can’t handle their lives,
+Into the lake of blood they dive.
+
+And there, they find a calm release,
+They find the closest thing to peace.
+And still, under the cruel seas,
+They are never truly deceased.
+
+They live in an endless fantasy,
+To live their true selves scantily.
+To escape from harsh reality,
+They rest in that fallacy.
+
+The bodies there float on blood,
+Through each storm, through each flood.
+There, down below, they rise above,
+Even though they’ll never come back up.
+
+Those who just can’t bear to fight,
+Those who just can’t find their light,
+They delve into an eternal night,
+In the lake of blood, they’ll be alright.
                 `
             },
 
