@@ -259,11 +259,13 @@
             position: fixed; 
             z-index: 10;
             top:0;
-            border-radius: 50px;
-            animation: ghostFloat 2s infinite alternate;
-            background-color: #e3e3b8;
+            animation: ghostFloat 2s infinite alternate;]
             width: 30px;
             height: 30px;
+            background: none;
+            border: none;
+            background-image: url('pageghost.png');
+            background-size: cover;
         }
 
         #page-ghost-button:hover {
@@ -613,7 +615,7 @@ button {
   
 </section>
     <br><br>
-    <button title="page ghost" onclick="showPageGhostDialog(meetingCounter)" id="page-ghost-button" style="display: none;">?</button>
+    <button title="page ghost" onclick="showPageGhostDialog(meetingCounter)" id="page-ghost-button" style="display: none;"></button>
 
     <h1 class="glow">Shoreline</h1><br><br>
     <h6>A collection of poems.</h6>
@@ -1121,8 +1123,8 @@ function reloadDisqus() {
     
         
        const dialogText = [
-            "Oh, a visitor...? <br>This is new...<br>...<br>...You can click anywhere to continue.",
-            "A visitor... <br>We haven't had one for... let's see... ages. <br>I don't really have the perception of time you do.",
+            "Oh, someone actually spoke to me...<br>This is new...<br>...<br>...You can click anywhere to continue.",
+            "I guess this means you're a visitor... <br>We haven't had one for... let's see... ages. <br>I don't really have the perception of time you do.",
             "This all is going to be... confusing.<br>Bits of cryptic, odd text. <br>Most of it, at least... <br>But apparently you seem to take an interest in that... so... who am I to say?",
             "I won't stand in your way... <br> Enjoy all the poems this page has to offer... <br>Or that little yellow button in the corner of the screen... <br>Although I'm pretty sure you won't be going there...", "",
             "Oh, you discovered the button... <br>I'm page ghost. I'm just making sure someone visits this page... <br>And I'm supposed to help people understand these poems... <br>but I can't understand them myself...", "",
